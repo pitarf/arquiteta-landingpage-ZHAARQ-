@@ -943,3 +943,97 @@ section > .max-w-4xl > .text-center {
     border-top: 1px solid var(--brand-border);
   }
 }
+
+
+.section-editorial-projects > .max-w-6xl {
+  max-width: 1280px;
+}
+
+.section-editorial-projects .grid {
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+
+.section-editorial-projects .grid > div {
+  grid-column: span 3;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: #DED5CA !important;
+  padding: 0 !important;
+  aspect-ratio: 4 / 5;
+}
+
+.section-editorial-projects .grid > div:nth-child(1),
+.section-editorial-projects .grid > div:nth-child(8) {
+  grid-column: span 6;
+  aspect-ratio: 8 / 5;
+}
+
+.section-editorial-projects .grid > div:nth-child(2),
+.section-editorial-projects .grid > div:nth-child(3),
+.section-editorial-projects .grid > div:nth-child(4) {
+  grid-column: span 2;
+}
+
+.section-editorial-projects .grid > div img {
+  height: 100% !important;
+  border-radius: 0 !important;
+  filter: saturate(.88);
+}
+
+.section-editorial-projects .grid > div:hover {
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.section-editorial-projects .mt-10 {
+  margin-top: 2.5rem;
+}
+
+.section-editorial-case .grid > div {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.section-editorial-case .grid > div > div:first-child {
+  border-radius: 0 !important;
+}
+
+.section-editorial-case .grid > div h4 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+  margin-top: .25rem;
+}
+
+.section-editorial-case .grid > div span {
+  border-radius: 0 !important;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.section-editorial-case .grid > div img {
+  filter: saturate(.9);
+}
+
+@media (max-width: 767px) {
+  .section-editorial-projects .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .section-editorial-projects .grid > div,
+  .section-editorial-projects .grid > div:nth-child(1),
+  .section-editorial-projects .grid > div:nth-child(8) {
+    grid-column: span 1;
+    aspect-ratio: 1 / 1.12;
+  }
+
+  .section-editorial-projects .grid > div:nth-child(1) {
+    grid-column: span 2;
+    aspect-ratio: 16 / 10;
+  }
+}
