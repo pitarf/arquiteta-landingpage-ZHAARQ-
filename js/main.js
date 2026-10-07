@@ -56,7 +56,7 @@ function initFaqAccordion() {
 
 function initWhatsAppTracking() {
   const whatsappButtons = document.querySelectorAll('.btn-whatsapp');
-  const baseMessage = 'Olá, encontrei a ZHAARQ pelo Google e gostaria de entender como regularizar meu imóvel.';
+  const baseMessage = 'Olá, encontrei a ZHAARQ pelo Google. Quero entender como regularizar meu imóvel e posso enviar as informações para uma análise inicial.';
 
   whatsappButtons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
