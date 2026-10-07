@@ -1552,3 +1552,367 @@ section.bg-white.border-t .faq-content {
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* =========================================================
+   V7 — ESTRUTURA DE PORTFÓLIO PREMIUM
+   Referência de composição: hero escuro + destaque + prova +
+   serviços + conteúdo + fechamento. Sem copiar identidade.
+   ========================================================= */
+
+.site-header {
+  position: absolute !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: transparent !important;
+  border: 0 !important;
+  color: #fff;
+  z-index: 50;
+}
+
+.site-header .max-w-6xl {
+  min-height: 82px;
+}
+
+.site-header img {
+  filter: brightness(0) invert(1);
+}
+
+.site-header .btn-whatsapp {
+  border: 1px solid rgba(255,255,255,.35) !important;
+  background: rgba(154,60,32,.9) !important;
+  box-shadow: none !important;
+}
+
+.site-header .text-brand-muted {
+  color: rgba(255,255,255,.75) !important;
+}
+
+.hero-editorial {
+  min-height: 760px;
+  background: #181614 !important;
+  color: #fff;
+}
+
+.hero-editorial::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(12,11,10,.9) 0%, rgba(12,11,10,.65) 42%, rgba(12,11,10,.12) 78%),
+    linear-gradient(0deg, rgba(12,11,10,.55), transparent 45%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-editorial .max-w-6xl:first-child {
+  max-width: 1320px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-editorial .grid {
+  min-height: 760px !important;
+}
+
+.hero-editorial .lg\:col-span-7 {
+  padding-top: 8rem !important;
+  padding-bottom: 7rem !important;
+  color: #fff;
+}
+
+.hero-editorial h1 {
+  color: #fff !important;
+  font-family: 'Newsreader', Georgia, serif !important;
+  font-size: clamp(3.4rem, 6.3vw, 6.8rem) !important;
+  line-height: .9 !important;
+  max-width: 680px;
+}
+
+.hero-editorial h1 + p {
+  color: rgba(255,255,255,.76) !important;
+}
+
+.hero-editorial .hero-image-frame {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 57%;
+  height: 100%;
+  min-height: 760px;
+  background: #27231f;
+}
+
+.hero-editorial .hero-image-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(20,18,16,.55), transparent 35%);
+}
+
+.hero-editorial .hero-image-frame img {
+  min-height: 760px;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0 !important;
+  filter: saturate(.8) contrast(1.05);
+}
+
+.hero-editorial .hero-image-caption {
+  z-index: 2;
+  left: auto !important;
+  right: 2.5rem;
+  bottom: 2.5rem;
+}
+
+.hero-editorial .hero-trust-strip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  max-width: none !important;
+  margin: 0 !important;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  background: rgba(20,18,16,.88);
+}
+
+.hero-editorial .hero-trust-strip > div {
+  border-top: 1px solid rgba(255,255,255,.18) !important;
+  border-right: 1px solid rgba(255,255,255,.12);
+  color: #fff;
+  background: transparent !important;
+  padding: 1rem 2rem !important;
+}
+
+.hero-editorial .hero-trust-strip p {
+  color: #fff !important;
+}
+
+.hero-editorial .hero-trust-strip p:first-child {
+  color: #C4966B !important;
+}
+
+.hero-editorial .btn-whatsapp {
+  border-radius: 2px !important;
+  box-shadow: none !important;
+}
+
+/* featured projects */
+.section-editorial-projects {
+  background: #F4EFE7 !important;
+  padding-top: 5.5rem !important;
+  padding-bottom: 5.5rem !important;
+}
+
+.section-editorial-projects .grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr) !important;
+  gap: 1.1rem !important;
+  grid-auto-rows: auto !important;
+}
+
+.section-editorial-projects .grid > div,
+.section-editorial-projects .grid > div:nth-child(n) {
+  grid-column: auto !important;
+  grid-row: auto !important;
+  aspect-ratio: 1.25 / 1 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-editorial-projects .grid > div img {
+  height: 100% !important;
+  transition: transform .7s ease !important;
+}
+
+.section-editorial-projects .grid > div:hover img {
+  transform: scale(1.04);
+}
+
+.section-editorial-projects .grid > div:nth-child(1) {
+  grid-column: span 1 !important;
+  aspect-ratio: 1.15 / 1.1 !important;
+}
+
+.section-editorial-projects .grid > div:nth-child(2),
+.section-editorial-projects .grid > div:nth-child(3) {
+  aspect-ratio: 1.15 / 1.1 !important;
+}
+
+.section-editorial-projects .grid > div:nth-child(n+4) {
+  display: none;
+}
+
+.section-editorial-projects .grid::after {
+  content: "";
+  display: block;
+}
+
+.section-editorial-projects .mt-8 {
+  margin-top: 2.5rem !important;
+}
+
+/* authority ribbon */
+.section-editorial-projects + section {
+  background: #171513 !important;
+  padding: 5rem 0 !important;
+}
+
+.section-editorial-projects + section > .max-w-4xl {
+  max-width: 1180px !important;
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  align-items: center;
+  gap: 4rem;
+  text-align: left !important;
+}
+
+.section-editorial-projects + section .text-6xl,
+.section-editorial-projects + section .text-7xl,
+.section-editorial-projects + section .text-8xl {
+  font-size: clamp(7rem, 13vw, 11rem) !important;
+  line-height: .72 !important;
+  text-align: left;
+}
+
+.section-editorial-projects + section h2 {
+  color: #fff !important;
+  font-family: 'Newsreader', Georgia, serif !important;
+  font-size: clamp(2rem, 3.5vw, 3.2rem) !important;
+}
+
+/* services like reference */
+.section-editorial-services {
+  background: #F4EFE7 !important;
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+.section-editorial-services .grid {
+  grid-template-columns: repeat(5,1fr) !important;
+  border-top: 0 !important;
+}
+
+.section-editorial-services .grid > div {
+  min-height: 230px;
+  text-align: center;
+  padding: 1.5rem !important;
+  margin: 0 !important;
+  border-right: 1px solid #D7CDC0 !important;
+  border-bottom: 0 !important;
+}
+
+.section-editorial-services .grid > div:last-child {
+  border-right: 0 !important;
+}
+
+.section-editorial-services .grid > div::before {
+  content: "";
+  display: block;
+  width: 76px;
+  height: 76px;
+  border: 1px solid #CFC2B3;
+  border-radius: 50%;
+  margin: 0 auto 1.2rem;
+}
+
+.section-editorial-services .grid > div span {
+  display: none !important;
+}
+
+.section-editorial-services .grid > div h3 {
+  margin-top: 0 !important;
+  font-family: 'Newsreader', Georgia, serif !important;
+  font-size: 1.35rem !important;
+}
+
+.section-editorial-services .grid > div p {
+  max-width: 180px;
+  margin: .5rem auto 0;
+  font-size: .78rem !important;
+}
+
+/* other sections */
+.section-editorial-problems {
+  background: #F8F5EF !important;
+}
+
+section.bg-brand-bg-warm {
+  background: #E7DED1 !important;
+}
+
+.section-editorial-case {
+  background: #F8F5EF !important;
+}
+
+@media (max-width: 900px) {
+  .hero-editorial {
+    min-height: auto;
+  }
+
+  .site-header {
+    position: absolute !important;
+  }
+
+  .hero-editorial .grid {
+    min-height: auto !important;
+  }
+
+  .hero-editorial .lg\:col-span-7 {
+    min-height: 620px;
+    padding-top: 8rem !important;
+  }
+
+  .hero-editorial .hero-image-frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 620px;
+  }
+
+  .hero-editorial .hero-trust-strip {
+    display: none;
+  }
+
+  .section-editorial-projects + section > .max-w-4xl {
+    grid-template-columns: 1fr;
+    text-align: center !important;
+    gap: 2rem;
+  }
+
+  .section-editorial-projects + section .text-6xl,
+  .section-editorial-projects + section .text-7xl,
+  .section-editorial-projects + section .text-8xl {
+    text-align: center;
+  }
+
+  .section-editorial-services .grid {
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-editorial .hero-image-frame {
+    min-height: 700px;
+  }
+
+  .hero-editorial .hero-image-frame img {
+    min-height: 700px;
+  }
+
+  .hero-editorial h1 {
+    font-size: clamp(3rem, 14vw, 4.6rem) !important;
+  }
+
+  .section-editorial-projects .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .section-editorial-services .grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
