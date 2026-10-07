@@ -168,3 +168,70 @@ body {
     margin-bottom: 0;
   }
 }
+
+
+/* ==========================================
+   SCROLL REVEAL - EXPERIENCIA EDITORIAL
+   ========================================== */
+.scroll-section {
+  --reveal-distance: 28px;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translate3d(0, var(--reveal-distance), 0);
+  filter: blur(2px);
+  transition:
+    opacity 0.72s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.72s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.72s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+.scroll-reveal.is-visible,
+.scroll-section.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0);
+}
+
+/* A secao entra primeiro; os elementos internos chegam em cascata. */
+.scroll-section:not(.is-visible) {
+  opacity: 0.98;
+}
+
+.scroll-section.is-visible .scroll-reveal {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0);
+}
+
+/* Imagens ganham uma entrada mais suave sem parecer um carrossel. */
+.scroll-section img.scroll-reveal {
+  transform: translate3d(0, 22px, 0) scale(0.985);
+}
+
+.scroll-section img.scroll-reveal.is-visible {
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* Evita animar a barra fixa mobile e elementos de interface. */
+.md\\:fixed,
+#toast-container,
+#lgpd-banner,
+#lightbox-modal {
+  transform: none !important;
+}
+
+/* Acessibilidade: desliga todas as transicoes de entrada. */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-section,
+  .scroll-reveal,
+  .scroll-section img.scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
