@@ -629,3 +629,14 @@ body {
     box-shadow: 0 10px 28px rgba(25, 23, 21, 0.045);
   }
 }
+
+
+/* ==========================================
+   FLUXO DE CONVERSÃO - PROVA ANTES DA BUROCRACIA
+   ========================================== */
+
+.bg-dark-section .max-w-4xl > .text-6xl,
+.bg-dark-section .max-w-4xl > .text-7xl,
+.bg-dark-section .max-w-4xl > .text-8xl {
+  text-shadow: 0 8px 28px rgba(196, 150, 107, 0.12);
+}
