@@ -235,3 +235,234 @@ body {
     transition: none !important;
   }
 }
+
+
+/* ==========================================
+   MICROINTERAÇÕES - HOVER PREMIUM
+   ========================================== */
+
+/* Botões de conversão: resposta visual imediata ao mouse */
+.btn-whatsapp {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.2s ease;
+}
+
+.btn-whatsapp::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    transparent 42%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 58%,
+    transparent 100%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.65s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px) scale(1.015);
+  box-shadow: 0 14px 30px rgba(153, 56, 25, 0.22);
+}
+
+.btn-whatsapp:hover::after {
+  transform: translateX(120%);
+}
+
+.btn-whatsapp svg {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-whatsapp:hover svg {
+  transform: scale(1.12) rotate(-5deg);
+}
+
+/* Cards: o cursor "acorda" o conteúdo */
+.pain-card {
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s ease,
+    border-color 0.25s ease;
+}
+
+.pain-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(25, 23, 21, 0.09);
+  border-color: rgba(153, 56, 25, 0.28);
+}
+
+.pain-card .pain-icon {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pain-card:hover .pain-icon {
+  transform: translateX(3px) scale(1.08);
+}
+
+/* Imagens: zoom mínimo, mais sensação de site premium */
+.zoomable-image {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  cursor: zoom-in;
+}
+
+.zoomable-image:hover {
+  transform: scale(1.025);
+  filter: saturate(1.04) contrast(1.01);
+}
+
+/* FAQ reage ao mouse mesmo fechado */
+.faq-item {
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.faq-item:hover {
+  transform: translateX(3px);
+  border-color: rgba(153, 56, 25, 0.24);
+  box-shadow: 0 8px 24px rgba(25, 23, 21, 0.045);
+}
+
+.faq-trigger {
+  transition: color 0.2s ease;
+}
+
+.faq-item:hover .faq-trigger {
+  color: var(--brand-primary);
+}
+
+/* ==========================================
+   WHATSAPP FLUTUANTE - DESKTOP
+   ========================================== */
+
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--brand-primary);
+  color: #fff;
+  z-index: 45;
+  box-shadow:
+    0 10px 28px rgba(25, 23, 21, 0.18),
+    0 0 0 0 rgba(153, 56, 25, 0.34);
+  animation: whatsappPulse 2.8s ease-out infinite;
+  transition:
+    transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.28s ease,
+    background-color 0.2s ease;
+}
+
+.whatsapp-float::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border: 1px solid rgba(153, 56, 25, 0.28);
+  border-radius: inherit;
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.whatsapp-float:hover {
+  background: var(--brand-primary-hover);
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 16px 36px rgba(153, 56, 25, 0.28);
+  animation-play-state: paused;
+}
+
+.whatsapp-float:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.whatsapp-float svg {
+  width: 29px;
+  height: 29px;
+  fill: currentColor;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.whatsapp-float:hover svg {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.whatsapp-float-label {
+  position: absolute;
+  right: calc(100% + 12px);
+  white-space: nowrap;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #191715;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  opacity: 0;
+  transform: translateX(8px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.whatsapp-float:hover .whatsapp-float-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes whatsappPulse {
+  0%, 72%, 100% {
+    box-shadow:
+      0 10px 28px rgba(25, 23, 21, 0.18),
+      0 0 0 0 rgba(153, 56, 25, 0.34);
+  }
+  82% {
+    box-shadow:
+      0 10px 28px rgba(25, 23, 21, 0.18),
+      0 0 0 10px rgba(153, 56, 25, 0);
+  }
+}
+
+/* No mobile, a barra inferior já cumpre o papel do CTA fixo. */
+@media (max-width: 767px) {
+  .whatsapp-float {
+    display: none;
+  }
+}
+
+/* Respeita acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .btn-whatsapp,
+  .pain-card,
+  .zoomable-image,
+  .faq-item,
+  .whatsapp-float,
+  .btn-whatsapp svg,
+  .pain-card .pain-icon,
+  .whatsapp-float svg {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .btn-whatsapp:hover,
+  .pain-card:hover,
+  .faq-item:hover,
+  .whatsapp-float:hover {
+    transform: none !important;
+  }
+}
