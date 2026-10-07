@@ -1,9 +1,8 @@
-/**
+/** 
  * main.js - Comportamentos interativos, rastreamento Google Ads/GA4 e UX da ZHAARQ
  * Inclui: FAQ Acordeão, Rastreamento com UTMs e dataLayer, Lightbox, Toast e LGPD
  */
 
-// Inicializa dataLayer para Google Tag Manager / Google Ads
 window.dataLayer = window.dataLayer || [];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,12 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initLgpdBanner();
   initScrollReveal();
+  initPremiumInteractions();
 });
 
-/**
- * Captura parâmetros de rastreamento UTM e GCLID da URL atual
- * @returns {string} Texto formatado com as tags de campanha
- */
 function getTrackingSuffix() {
   const params = new URLSearchParams(window.location.search);
   const utmSource = params.get('utm_source');
@@ -31,14 +27,11 @@ function getTrackingSuffix() {
   if (utmCampaign) tags.push(`Campanha: ${utmCampaign}`);
   if (utmMedium) tags.push(`Mídia: ${utmMedium}`);
   if (utmContent) tags.push(`Conteúdo: ${utmContent}`);
-  if (gclid) tags.push(`Google Ads: Sim`);
+  if (gclid) tags.push('Google Ads: Sim');
 
   return tags.length > 0 ? ` (${tags.join(' | ')})` : '';
 }
 
-/**
- * Inicializa o acordeão da seção de FAQ (Dúvidas Frequentes)
- */
 function initFaqAccordion() {
   const faqButtons = document.querySelectorAll('.faq-trigger');
 
@@ -47,14 +40,12 @@ function initFaqAccordion() {
       const parentItem = button.closest('.faq-item');
       const isAlreadyActive = parentItem.classList.contains('active');
 
-      // Fecha todos os itens abertos
       document.querySelectorAll('.faq-item').forEach((item) => {
         item.classList.remove('active');
         const trigger = item.querySelector('.faq-trigger');
         if (trigger) trigger.setAttribute('aria-expanded', 'false');
       });
 
-      // Se não estava ativo, abre o item clicado
       if (!isAlreadyActive) {
         parentItem.classList.add('active');
         button.setAttribute('aria-expanded', 'true');
@@ -63,9 +54,6 @@ function initFaqAccordion() {
   });
 }
 
-/**
- * Configura os botões do WhatsApp com rastreamento Google Ads e preservação de UTMs
- */
 function initWhatsAppTracking() {
   const whatsappButtons = document.querySelectorAll('.btn-whatsapp');
   const baseMessage = 'Olá, encontrei a ZHAARQ pelo Google e gostaria de entender como regularizar meu imóvel.';
@@ -80,7 +68,6 @@ function initWhatsAppTracking() {
       const encodedMsg = encodeURIComponent(fullMessage);
       const url = `https://wa.me/${phone}?text=${encodedMsg}`;
 
-      // Dispara evento de conversão para Google Tag Manager / Google Ads / GA4
       window.dataLayer.push({
         event: 'whatsapp_conversion',
         event_category: 'Lead',
@@ -91,7 +78,6 @@ function initWhatsAppTracking() {
 
       showToast('Redirecionando para o WhatsApp da ZHAARQ...', 'success');
 
-      // Abre o WhatsApp imediatamente em nova aba
       setTimeout(() => {
         window.open(url, '_blank', 'noopener,noreferrer');
       }, 350);
@@ -99,11 +85,6 @@ function initWhatsAppTracking() {
   });
 }
 
-/**
- * Exibe notificação visual estilo Toast
- * @param {string} message - Texto informativo
- * @param {'success' | 'info' | 'warning' | 'error'} type - Categoria
- */
 function showToast(message, type = 'info') {
   let container = document.getElementById('toast-container');
   if (!container) {
@@ -138,9 +119,6 @@ function showToast(message, type = 'info') {
   }, 3500);
 }
 
-/**
- * Lightbox modal com zoom e tecla Escape
- */
 function initLightbox() {
   const zoomableImages = document.querySelectorAll('.zoomable-image');
   const modal = document.getElementById('lightbox-modal');
@@ -169,15 +147,10 @@ function initLightbox() {
   });
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-      closeModal();
-    }
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
   });
 }
 
-/**
- * Banner de conformidade LGPD / Cookies
- */
 function initLgpdBanner() {
   const hasAccepted = localStorage.getItem('zhaarq_lgpd_accepted');
   if (hasAccepted) return;
@@ -202,11 +175,6 @@ function initLgpdBanner() {
   });
 }
 
-
-/**
- * Revelacao progressiva das secoes durante o scroll.
- * A animacao e discreta e respeita prefers-reduced-motion.
- */
 function initScrollReveal() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const sections = document.querySelectorAll('main section, body > section');
@@ -247,4 +215,84 @@ function initScrollReveal() {
   });
 
   sections.forEach((section) => observer.observe(section));
+}
+
+function initPremiumInteractions() {
+  const header = document.querySelector('header');
+  const hero = document.querySelector('body > section:first-of-type');
+
+  if (header) {
+    header.classList.add('site-header');
+
+    const updateHeader = () => {
+      header.classList.toggle('is-scrolled', window.scrollY > 24);
+    };
+
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+  }
+
+  const progress = document.createElement('div');
+  progress.className = 'reading-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(progress);
+
+  const updateProgress = () => {
+    const doc = document.documentElement;
+    const scrollable = doc.scrollHeight - doc.clientHeight;
+    const ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
+    progress.style.transform = `scaleX(${Math.min(Math.max(ratio, 0), 1)})`;
+  };
+
+  updateProgress();
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
+  if (!hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  hero.classList.add('hero-premium');
+
+  const heroImage = hero.querySelector('img');
+  const heroCard = hero.querySelector('.editorial-shadow');
+
+  if (!heroImage || !heroCard || !window.matchMedia('(pointer: fine)').matches) return;
+
+  let frame = null;
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+
+  const render = () => {
+    currentX += (targetX - currentX) * 0.08;
+    currentY += (targetY - currentY) * 0.08;
+
+    hero.style.setProperty('--hero-x', `${currentX}px`);
+    hero.style.setProperty('--hero-y', `${currentY}px`);
+    heroCard.style.setProperty('--card-x', `${currentX * 0.18}px`);
+    heroCard.style.setProperty('--card-y', `${currentY * 0.18}px`);
+
+    frame = requestAnimationFrame(render);
+  };
+
+  const onPointerMove = (event) => {
+    const rect = hero.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    targetX = x * 12;
+    targetY = y * 10;
+  };
+
+  const reset = () => {
+    targetX = 0;
+    targetY = 0;
+  };
+
+  hero.addEventListener('pointermove', onPointerMove);
+  hero.addEventListener('pointerleave', reset);
+
+  frame = requestAnimationFrame(render);
+
+  window.addEventListener('pagehide', () => {
+    if (frame) cancelAnimationFrame(frame);
+  }, { once: true });
 }
