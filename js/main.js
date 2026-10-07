@@ -1,17 +1,38 @@
 /**
- * main.js - Comportamentos interativos da Landing Page ZHAARQ
- * Inclui: FAQ Acordeão, Gerenciamento de WhatsApp, Toast Notifications e Modal Lightbox
+ * main.js - Comportamentos interativos, rastreamento Google Ads/GA4 e UX da ZHAARQ
+ * Inclui: FAQ Acordeão, Rastreamento com UTMs e dataLayer, Lightbox, Toast e LGPD
  */
+
+// Inicializa dataLayer para Google Tag Manager / Google Ads
+window.dataLayer = window.dataLayer || [];
 
 document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initWhatsAppTracking();
   initLightbox();
+  initLgpdBanner();
 });
 
 /**
+ * Captura parâmetros de rastreamento UTM e GCLID da URL atual
+ * @returns {string} Texto formatado com as tags de campanha
+ */
+function getTrackingSuffix() {
+  const params = new URLSearchParams(window.location.search);
+  const utmSource = params.get('utm_source');
+  const utmCampaign = params.get('utm_campaign');
+  const gclid = params.get('gclid');
+
+  let tags = [];
+  if (utmSource) tags.push(`Origem: ${utmSource}`);
+  if (utmCampaign) tags.push(`Campanha: ${utmCampaign}`);
+  if (gclid) tags.push(`Google Ads: Sim`);
+
+  return tags.length > 0 ? ` (${tags.join(' | ')})` : '';
+}
+
+/**
  * Inicializa o acordeão da seção de FAQ (Dúvidas Frequentes)
- * Permite alternar a visualização das respostas com controle acessível
  */
 function initFaqAccordion() {
   const faqButtons = document.querySelectorAll('.faq-trigger');
@@ -38,35 +59,45 @@ function initFaqAccordion() {
 }
 
 /**
- * Configura os links do WhatsApp para incluir a mensagem do briefing
- * Exibe notificação toast elegante informando o redirecionamento
+ * Configura os botões do WhatsApp com rastreamento Google Ads e preservação de UTMs
  */
 function initWhatsAppTracking() {
   const whatsappButtons = document.querySelectorAll('.btn-whatsapp');
-  const defaultMessage = 'Olá, encontrei a ZHAARQ pelo Google e gostaria de entender como regularizar meu imóvel.';
+  const baseMessage = 'Olá, encontrei a ZHAARQ pelo Google e gostaria de entender como regularizar meu imóvel.';
 
   whatsappButtons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-      // Se não houver número configurado, usa um placeholder seguro ou abre link
+      e.preventDefault();
+
       const phone = btn.getAttribute('data-phone') || '5511999999999';
-      const encodedMsg = encodeURIComponent(defaultMessage);
+      const ctaLocation = btn.getAttribute('data-cta-location') || 'geral';
+      const fullMessage = baseMessage + getTrackingSuffix();
+      const encodedMsg = encodeURIComponent(fullMessage);
       const url = `https://wa.me/${phone}?text=${encodedMsg}`;
 
+      // Dispara evento de conversão para Google Tag Manager / Google Ads / GA4
+      window.dataLayer.push({
+        event: 'whatsapp_conversion',
+        event_category: 'Lead',
+        event_action: 'Click WhatsApp',
+        event_label: ctaLocation,
+        cta_position: ctaLocation
+      });
+
       showToast('Redirecionando para o WhatsApp da ZHAARQ...', 'success');
-      
-      // Permite o clique seguir após breve feedback
+
+      // Abre o WhatsApp imediatamente em nova aba
       setTimeout(() => {
         window.open(url, '_blank', 'noopener,noreferrer');
-      }, 400);
-      e.preventDefault();
+      }, 350);
     });
   });
 }
 
 /**
- * Exibe uma notificação visual moderna no estilo Toast (evita alert nativo)
- * @param {string} message - Texto descritivo da notificação
- * @param {'success' | 'info' | 'warning' | 'error'} type - Categoria da notificação
+ * Exibe notificação visual estilo Toast
+ * @param {string} message - Texto informativo
+ * @param {'success' | 'info' | 'warning' | 'error'} type - Categoria
  */
 function showToast(message, type = 'info') {
   let container = document.getElementById('toast-container');
@@ -84,7 +115,7 @@ function showToast(message, type = 'info') {
     error: 'border-red-600 text-red-900',
   };
 
-  toast.className = `toast mb-3 px-5 py-3.5 rounded-xl bg-white shadow-xl border-l-4 ${borderColors[type] || borderColors.info} flex items-center space-x-3 text-sm font-medium`;
+  toast.className = `toast mb-3 px-5 py-3.5 rounded-xl bg-white shadow-xl border-l-4 ${borderColors[type] || borderColors.info} flex items-center space-x-3 text-sm font-semibold`;
   toast.innerHTML = `
     <svg class="w-5 h-5 text-[#993819] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -96,14 +127,14 @@ function showToast(message, type = 'info') {
 
   setTimeout(() => {
     toast.style.opacity = '0';
-    toast.style.transform = 'translateY(20px)';
+    toast.style.transform = 'translateY(15px)';
     toast.style.transition = 'all 0.3s ease';
     setTimeout(() => toast.remove(), 300);
   }, 3500);
 }
 
 /**
- * Modal Lightbox para visualização ampliada das fachadas e etapas de projetos
+ * Lightbox modal com zoom e tecla Escape
  */
 function initLightbox() {
   const zoomableImages = document.querySelectorAll('.zoomable-image');
@@ -132,10 +163,36 @@ function initLightbox() {
     if (e.target === modal) closeModal();
   });
 
-  // Fecha o modal ao pressionar a tecla Escape (Esc)
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
       closeModal();
     }
+  });
+}
+
+/**
+ * Banner de conformidade LGPD / Cookies
+ */
+function initLgpdBanner() {
+  const hasAccepted = localStorage.getItem('zhaarq_lgpd_accepted');
+  if (hasAccepted) return;
+
+  const banner = document.createElement('div');
+  banner.id = 'lgpd-banner';
+  banner.className = 'fixed bottom-20 md:bottom-5 left-4 right-4 md:left-6 md:right-auto md:max-w-md bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-[#E5DCD2] shadow-2xl z-40 text-xs text-[#6B635B] space-y-3';
+  banner.innerHTML = `
+    <p>Utilizamos cookies essenciais e tecnologias de medição para otimizar a navegação e melhorar nossos atendimentos em conformidade com a <strong>LGPD</strong>.</p>
+    <div class="flex items-center justify-end space-x-2">
+      <button id="lgpd-accept" class="bg-[#141312] text-white font-bold px-4 py-1.5 rounded-lg text-xs hover:bg-[#993819] transition-colors">
+        Entendi e Aceito
+      </button>
+    </div>
+  `;
+
+  document.body.appendChild(banner);
+
+  document.getElementById('lgpd-accept')?.addEventListener('click', () => {
+    localStorage.setItem('zhaarq_lgpd_accepted', 'true');
+    banner.remove();
   });
 }

@@ -1,18 +1,19 @@
 /**
  * styles.css - Estilos complementares e tipografia refinada para ZHAARQ
- * Integração com Tailwind CSS e variáveis de cor personalizadas da marca
+ * Integração com Tailwind CSS, contraste editorial e variáveis corporativas
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
 
 :root {
   --brand-primary: #993819;
   --brand-primary-hover: #7D2306;
-  --brand-dark: #641C04;
+  --brand-dark: #191715;
   --brand-bg: #F4F0EA;
-  --brand-card: #F9F3EC;
-  --brand-border: #E6DDD2;
-  --brand-title: #1F1D1B;
+  --brand-bg-warm: #EFE9E1;
+  --brand-card: #FFFFFF;
+  --brand-border: #E5DCD2;
+  --brand-title: #141312;
   --brand-muted: #6B635B;
   --brand-gold: #C4966B;
 }
@@ -29,21 +30,44 @@ body {
   font-family: 'Playfair Display', Georgia, serif;
 }
 
-/* Efeito de granulação/textura sutil para visual de prancheta/linho */
+/* Fundo com textura e textura de linho técnico */
 .bg-subtle-pattern {
   background-color: #F4F0EA;
   background-image: radial-gradient(#d3c9bd 0.75px, transparent 0.75px);
   background-size: 24px 24px;
 }
 
-/* Transições suaves e sombras quentes */
-.card-warm-shadow {
-  box-shadow: 0 4px 20px -2px rgba(107, 99, 91, 0.08);
+/* Seções de Alto Contraste (Grafite Editorial) */
+.bg-dark-section {
+  background-color: #171513;
+  color: #F4F0EA;
+}
+
+/* Linha do tempo conectora entre etapas */
+.timeline-connector {
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .timeline-connector::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -1rem;
+    width: 2rem;
+    height: 1px;
+    background: #E5DCD2;
+    z-index: 10;
+  }
+}
+
+/* Sombras refinadas sem peso excessivo */
+.editorial-shadow {
+  box-shadow: 0 10px 30px -5px rgba(25, 23, 21, 0.05);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.card-warm-shadow:hover {
-  box-shadow: 0 12px 30px -4px rgba(153, 56, 25, 0.12);
+.editorial-shadow:hover {
+  box-shadow: 0 15px 35px -5px rgba(153, 56, 25, 0.10);
   transform: translateY(-2px);
 }
 
@@ -64,13 +88,18 @@ body {
   transform: rotate(180deg);
 }
 
-/* Toast Notification customizado */
+/* Toast Notification */
 #toast-container {
   position: fixed;
-  bottom: 24px;
+  bottom: 84px;
   right: 24px;
   z-index: 9999;
   pointer-events: none;
+}
+@media (min-width: 768px) {
+  #toast-container {
+    bottom: 24px;
+  }
 }
 
 .toast {

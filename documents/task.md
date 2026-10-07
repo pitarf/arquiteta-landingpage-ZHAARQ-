@@ -15,27 +15,27 @@
 - [x] Mapeamento e catalogação das imagens da pasta `SITE ARQT`.
 - [x] Pipeline de otimização de imagens: conversão para WebP de alto desempenho com compressão de até 74%.
 - [x] Estruturação modular de diretórios (`/assets/images`, `/css`, `/js`, `/documents`).
-- [x] Estilização e tipografia refinada em `css/styles.css` (Playfair Display + Plus Jakarta Sans).
-- [x] Lógica interativa em `js/main.js` (Acordeão FAQ acessível, toast notifications, disparador WhatsApp e lightbox com tecla Esc).
-- [x] Construção integral do `index.html` com as 12 seções do Briefing:
-  - [x] Seção 01: Hero com headline persuasiva, apoio técnico e foto da arquiteta
-  - [x] Seção 02: 6 cards de situações comuns de irregularidade
-  - [x] Seção 03: Consequência e riscos de adiar a regularização
-  - [x] Seção 04: 6 soluções completas da ZHAARQ
-  - [x] Seção 05: Como funciona em 4 etapas claras
-  - [x] Seção 06: Autoridade (+100 projetos e processos)
-  - [x] Seção 07: Galeria com 14 fachadas urbanas reais de clientes atendidos
-  - [x] Seção 08: Case de Processo Completo (obra em andamento, vistoria, conclusão e averbação)
-  - [x] Seção 09: Quebra de objeção ("Não sei o que está irregular")
-  - [x] Seção 10: Sobre a Arquiteta & ZHAARQ com credenciais e CAU
-  - [x] Seção 11: FAQ com as 7 perguntas e respostas do briefing
-  - [x] Seção 12: Super CTA final para WhatsApp
-  - [x] Rodapé institucional e barra flutuante mobile de conversão
-- [x] Auditoria minuciosa de Qualidade e Conformidade via subagente (Nota: 100/100).
-- [x] Refinamentos de acessibilidade e resiliência de links concluídos.
+- [x] **Refatoração V2 - Máquina de Conversão para Google Ads (18 Pontos Implementados):**
+  - [x] Hero dominante e agressivo com microfrase de apoio e CTA de largura total no mobile
+  - [x] Seção de Problemas reescrita em primeira pessoa com alto apelo emocional
+  - [x] Seção de Consequências em bloco grafite de alto contraste visual
+  - [x] Linha de atuação clara nos 5 eixos técnicos com salvaguarda jurídica
+  - [x] Fluxo de atendimento didático em 4 passos lineares
+  - [x] Bloco monumental de autoridade (+100 projetos e processos) em grafite/ouro
+  - [x] Ancoragem forte nos projetos reais ("Regularização não é só para imóveis de alto padrão")
+  - [x] Case didático de ponta a ponta (01 Projeto ➔ 02 Prefeitura ➔ 03 Habite-se ➔ 04 CND ➔ 05 Averbação)
+  - [x] Quebra de objeção isolada com super CTA ("Tudo bem. Você não precisa saber.")
+  - [x] Seção Sobre a ZHAARQ posicionada estrategicamente após as provas
+  - [x] FAQ expandido com a 8ª pergunta essencial sobre documentos
+  - [x] Barra fixa mobile otimizada ("WhatsApp | Falar com especialista")
+  - [x] Preservação de UTMs na URL e repasse na mensagem do WhatsApp
+  - [x] Disparo de eventos `whatsapp_conversion` via `dataLayer` para Google Tag Manager/GA4
+  - [x] Banner discreto de conformidade LGPD
+  - [x] Logotipo do rodapé ampliado com fundo transparente de alto contraste
+  - [x] Ritmo visual alternando seções claras e escuras (fim da monotonia bege)
 
 ### Fazendo
-- [ ] Validação final com o cliente.
+- [ ] Validação final dos novos blocos no navegador.
 
 ### Pendentes
 - [ ] Configuração do número real do WhatsApp no botão (quando fornecido).

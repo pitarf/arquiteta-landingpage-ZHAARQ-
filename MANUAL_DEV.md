@@ -9,9 +9,11 @@ Landing Page de alta conversão para o escritório de arquitetura **ZHAARQ**, de
 - **CSS3 (`css/styles.css`):** Fontes Google (Playfair Display para títulos editoriais e Plus Jakarta Sans para leitura técnica), variáveis e transições suaves.
 - **JavaScript Vanilla (`js/main.js`):** Sem dependências externas pesadas:
   - Acordeão do FAQ com atributos ARIA para acessibilidade.
-  - Lightbox modal nativo para zoom de fachadas e projetos.
+  - Lightbox modal nativo com suporte a tecla `Escape`.
   - Toast Notifications para feedbacks amigáveis (evitando `alert()` nativo).
-  - Redirecionador automático para o WhatsApp com encoding de mensagem.
+  - Preservação e repasse de UTMs e GCLID diretamente na mensagem enviada.
+  - Integração com `window.dataLayer.push({ event: 'whatsapp_conversion' })` para Google Ads e GTM.
+  - Banner de consentimento LGPD com armazenamento em `localStorage`.
 
 ## 3. Estrutura de Arquivos
 ```text

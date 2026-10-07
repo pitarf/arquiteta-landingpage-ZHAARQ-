@@ -2,6 +2,18 @@
 
 Todas as alterações notáveis deste projeto serão registradas neste arquivo.
 
+## [0.3.0] - 2026-10-07
+### Adicionado & Aprimorado (V2 - Máquina de Conversão Google Ads)
+- **Hero Dominante:** Headline ampliada com máxima dominância tipográfica e microfrase de apoio direto (`Projetos • Prefeitura • Habite-se • CND • Averbação`).
+- **Problemas Humanizados:** Reescrita dos 6 cards em primeira pessoa do cliente (ex: *"Construí ou ampliei meu imóvel"*, *"Minha planta não corresponde ao imóvel"*).
+- **Contraste Visual Rítmico:** Introdução de seções em grafite escuro editorial (`#171513`), eliminando a monotonia monocromática de tons bege.
+- **Autoridade +100 Monumental:** Bloco escuro com o número `+100` em destaque expressivo de alta credibilidade.
+- **Case Didático:** Linha do tempo visual detalhando as 5 etapas da regularização técnica (01 Projeto ➔ 02 Aprovação ➔ 03 Habite-se ➔ 04 CND ➔ 05 Averbação).
+- **Quebra de Objeção Isolada:** Bloco de fechamento dedicado com a copy *"Você não precisa saber"* e CTA imediato.
+- **Rastreamento Google Ads / GA4:** Disparo de eventos `whatsapp_conversion` no `dataLayer` com a posição de clique e repasse de parâmetros UTM/GCLID.
+- **Banner LGPD:** Controle de consentimento de privacidade conforme legislação brasileira.
+- **Barra Mobile:** Refinada para *"WhatsApp | Falar com especialista"*.
+
 ## [0.2.5] - 2026-10-07
 ### Alterado
 - Aumento do tamanho do logotipo no rodapé de 40px (`h-10`) para 64px–80px (`h-16 sm:h-20`), aprimorando o destaque visual e a legibilidade da marca em telas de alta densidade.
