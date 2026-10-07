@@ -21,11 +21,15 @@ function getTrackingSuffix() {
   const params = new URLSearchParams(window.location.search);
   const utmSource = params.get('utm_source');
   const utmCampaign = params.get('utm_campaign');
+  const utmMedium = params.get('utm_medium');
+  const utmContent = params.get('utm_content');
   const gclid = params.get('gclid');
 
   let tags = [];
   if (utmSource) tags.push(`Origem: ${utmSource}`);
   if (utmCampaign) tags.push(`Campanha: ${utmCampaign}`);
+  if (utmMedium) tags.push(`Mídia: ${utmMedium}`);
+  if (utmContent) tags.push(`Conteúdo: ${utmContent}`);
   if (gclid) tags.push(`Google Ads: Sim`);
 
   return tags.length > 0 ? ` (${tags.join(' | ')})` : '';

@@ -1,3 +1,12 @@
+
+## [0.3.1] - 2026-10-07
+### Refinado
+- Substituição dos emojis dos 6 cards de identificação por ícones SVG lineares consistentes com a identidade editorial.
+- Ajuste visual dos cards para aparência mais arquitetônica e menos genérica.
+- Refinamento do Hero para reduzir altura no primeiro viewport e melhorar hierarquia da headline.
+- Texto de apoio da seção de identificação simplificado para leitura rápida.
+- Preservação adicional de `utm_medium` e `utm_content` na mensagem enviada ao WhatsApp.
+
 # Changelog - Landing Page ZHAARQ
 
 Todas as alterações notáveis deste projeto serão registradas neste arquivo.
