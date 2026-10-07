@@ -3,7 +3,7 @@
  * Integração com Tailwind CSS, contraste editorial e variáveis corporativas
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
 
 :root {
   --brand-primary: #993819;
@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--brand-bg);
   color: var(--brand-title);
   scroll-behavior: smooth;
@@ -27,7 +27,7 @@ body {
 }
 
 .font-editorial {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Newsreader', Georgia, serif;
 }
 
 /* Fundo com textura e textura de linho técnico */
@@ -639,4 +639,307 @@ body {
 .bg-dark-section .max-w-4xl > .text-7xl,
 .bg-dark-section .max-w-4xl > .text-8xl {
   text-shadow: 0 8px 28px rgba(196, 150, 107, 0.12);
+}
+
+
+/* ==========================================
+   DIREÇÃO DE ARTE V5
+   Arquitetura editorial, menos interface
+   ========================================== */
+
+:root {
+  --brand-primary: #8F351C;
+  --brand-primary-hover: #702711;
+  --brand-dark: #171513;
+  --brand-bg: #F3EFE8;
+  --brand-bg-warm: #EAE2D7;
+  --brand-border: #DCD1C4;
+  --brand-title: #181614;
+  --brand-muted: #675F57;
+  --brand-gold: #B78A5C;
+}
+
+body {
+  font-size: 16px;
+  letter-spacing: -0.005em;
+}
+
+.font-editorial {
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.site-header {
+  background: rgba(243, 239, 232, 0.92) !important;
+  border-color: rgba(80, 67, 55, 0.14) !important;
+  box-shadow: none !important;
+}
+
+.site-header .btn-whatsapp {
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+}
+
+.hero-editorial {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  background-image: none !important;
+}
+
+.hero-editorial::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 42%;
+  background:
+    linear-gradient(90deg, rgba(243,239,232,.98) 0%, rgba(243,239,232,.88) 42%, rgba(243,239,232,0) 72%),
+    linear-gradient(180deg, rgba(243,239,232,.7), rgba(243,239,232,0));
+  pointer-events: none;
+}
+
+.hero-editorial > .max-w-6xl {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+}
+
+.hero-editorial > .max-w-6xl:first-child {
+  padding-top: clamp(2rem, 6vw, 5.5rem);
+  padding-bottom: clamp(2.5rem, 7vw, 6rem);
+}
+
+.hero-editorial .grid {
+  gap: clamp(2rem, 5vw, 6rem) !important;
+}
+
+.hero-editorial h1 {
+  max-width: 720px;
+  font-size: clamp(2.8rem, 5.8vw, 5.5rem) !important;
+  line-height: .93 !important;
+  font-weight: 500 !important;
+  letter-spacing: -.045em !important;
+}
+
+.hero-editorial h1 + p {
+  max-width: 570px;
+  font-size: 1.08rem !important;
+  line-height: 1.6 !important;
+}
+
+.hero-editorial .inline-flex.items-center.space-x-2.bg-brand-bg-warm {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  color: var(--brand-primary) !important;
+  letter-spacing: .12em !important;
+  font-size: .68rem !important;
+}
+
+.hero-editorial .inline-flex.items-center.space-x-2.bg-brand-bg-warm .w-2 {
+  display: none;
+}
+
+.hero-editorial .btn-whatsapp {
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  padding: 1rem 1.5rem !important;
+}
+
+.hero-image-frame {
+  min-height: 560px;
+  background: #D8CEC1;
+}
+
+.hero-image-frame img {
+  height: 100%;
+  min-height: 560px;
+  object-fit: cover;
+  border-radius: 0 !important;
+  filter: saturate(.9) contrast(1.02);
+}
+
+.hero-image-caption {
+  color: #F4F0EA;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.hero-image-caption p:first-child {
+  color: #fff !important;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.15rem !important;
+  font-weight: 500 !important;
+}
+
+.hero-image-caption p:last-child {
+  color: rgba(244,240,234,.72) !important;
+}
+
+.hero-trust-strip {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  gap: 0 !important;
+}
+
+.hero-trust-strip > div {
+  background: transparent !important;
+  border-top: 1px solid var(--brand-border);
+  border-radius: 0 !important;
+  padding: 1rem 1.25rem !important;
+  text-align: left !important;
+}
+
+.hero-trust-strip > div:first-child {
+  border-left: 0;
+}
+
+.hero-trust-strip > div p:first-child {
+  font-size: .62rem !important;
+  letter-spacing: .14em !important;
+}
+
+.section-editorial-problems .pain-card {
+  background: transparent !important;
+  border: 0 !important;
+  border-top: 1px solid var(--brand-border) !important;
+  border-radius: 0 !important;
+  padding: 1.5rem 1rem 2rem 0 !important;
+  box-shadow: none !important;
+}
+
+.section-editorial-problems .pain-card:nth-child(1) {
+  grid-column: span 2;
+}
+
+.section-editorial-problems .pain-card:nth-child(4) {
+  grid-column: span 2;
+}
+
+.section-editorial-problems .pain-icon {
+  width: 30px !important;
+  height: 30px !important;
+  margin-bottom: 1.1rem;
+  color: var(--brand-primary) !important;
+}
+
+.section-editorial-problems .pain-card h3 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.45rem !important;
+  font-weight: 500 !important;
+  letter-spacing: -.02em;
+}
+
+.section-editorial-problems .pain-card p {
+  max-width: 460px;
+  font-size: .92rem !important;
+}
+
+.section-editorial-problems .pain-card:hover {
+  transform: none !important;
+  background: transparent !important;
+}
+
+.section-editorial-dark {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-editorial-dark::after {
+  content: "";
+  position: absolute;
+  width: 42vw;
+  height: 42vw;
+  max-width: 520px;
+  max-height: 520px;
+  right: -12%;
+  top: -20%;
+  border: 1px solid rgba(196,150,107,.16);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.section-editorial-dark .grid > div {
+  background: transparent !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(244,240,234,.15) !important;
+  border-radius: 0 !important;
+  padding: 1.35rem 1rem 1.5rem 0 !important;
+}
+
+.section-editorial-dark .grid > div h3 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.35rem !important;
+  font-weight: 500 !important;
+}
+
+.section-editorial-services .grid {
+  gap: 0 !important;
+  border-top: 1px solid var(--brand-border);
+}
+
+.section-editorial-services .grid > div {
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--brand-border) !important;
+  border-radius: 0 !important;
+  padding: 1.5rem 1rem 1.75rem 0 !important;
+  min-height: 190px;
+}
+
+.section-editorial-services .grid > div h3 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.45rem !important;
+  font-weight: 500 !important;
+}
+
+.section-editorial-services .grid > div span {
+  font-size: .62rem !important;
+  letter-spacing: .16em !important;
+}
+
+section h2 {
+  font-weight: 500 !important;
+  letter-spacing: -.035em !important;
+}
+
+section > .max-w-6xl > .text-center,
+section > .max-w-5xl > .text-center,
+section > .max-w-4xl > .text-center {
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem) !important;
+}
+
+.bg-white.p-6,
+.bg-brand-bg.p-6 {
+  box-shadow: none !important;
+}
+
+@media (max-width: 1023px) {
+  .hero-image-frame,
+  .hero-image-frame img {
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 639px) {
+  .hero-editorial h1 {
+    font-size: clamp(2.45rem, 12vw, 3.7rem) !important;
+  }
+
+  .hero-image-frame,
+  .hero-image-frame img {
+    min-height: 420px;
+  }
+
+  .section-editorial-problems .pain-card:nth-child(1),
+  .section-editorial-problems .pain-card:nth-child(4) {
+    grid-column: auto;
+  }
+
+  .hero-trust-strip > div {
+    border-top: 1px solid var(--brand-border);
+  }
 }
