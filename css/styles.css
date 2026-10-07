@@ -1037,3 +1037,29 @@ section > .max-w-4xl > .text-center {
     aspect-ratio: 16 / 10;
   }
 }
+
+
+/* ==========================================
+   CTA V6 - Ícone consistente e sem distorção
+   ========================================== */
+
+.hero-editorial .btn-whatsapp {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: .75rem !important;
+}
+
+.hero-editorial .btn-whatsapp > svg {
+  width: 1.15rem !important;
+  height: 1.15rem !important;
+  min-width: 1.15rem !important;
+  min-height: 1.15rem !important;
+  flex: 0 0 1.15rem !important;
+  display: block !important;
+  transform: none !important;
+}
+
+.hero-editorial .btn-whatsapp:hover > svg {
+  transform: translateX(2px) !important;
+}
