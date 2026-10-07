@@ -120,35 +120,86 @@ function showToast(message, type = 'info') {
 }
 
 function initLightbox() {
-  const zoomableImages = document.querySelectorAll('.zoomable-image');
+  const zoomableImages = Array.from(document.querySelectorAll('.zoomable-image'));
   const modal = document.getElementById('lightbox-modal');
   const modalImg = document.getElementById('lightbox-img');
   const modalClose = document.getElementById('lightbox-close');
+  const prevBtn = document.getElementById('lightbox-prev');
+  const nextBtn = document.getElementById('lightbox-next');
+  const counterEl = document.getElementById('lightbox-counter');
+  const captionEl = document.getElementById('lightbox-caption');
 
-  if (!modal || !modalImg) return;
+  if (!modal || !modalImg || zoomableImages.length === 0) return;
 
-  zoomableImages.forEach((img) => {
+  let currentIndex = 0;
+
+  // Atualiza a imagem exibida no modal
+  const updateImage = (index) => {
+    currentIndex = (index + zoomableImages.length) % zoomableImages.length;
+    const target = zoomableImages[currentIndex];
+    
+    modalImg.style.opacity = '0.3';
+    setTimeout(() => {
+      modalImg.src = target.src;
+      modalImg.alt = target.alt || 'Foto da galeria';
+      if (counterEl) counterEl.textContent = `${currentIndex + 1} / ${zoomableImages.length}`;
+      if (captionEl) captionEl.textContent = target.alt || 'ZHAARQ Arquitetura';
+      modalImg.style.opacity = '1';
+    }, 120);
+  };
+
+  // Abre a galeria na foto clicada
+  zoomableImages.forEach((img, idx) => {
     img.addEventListener('click', () => {
-      modalImg.src = img.src;
-      modalImg.alt = img.alt;
+      updateImage(idx);
       modal.classList.remove('hidden');
       modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
     });
   });
 
   const closeModal = () => {
     modal.classList.add('hidden');
     modal.classList.remove('flex');
+    document.body.style.overflow = '';
   };
 
+  const showNext = () => updateImage(currentIndex + 1);
+  const showPrev = () => updateImage(currentIndex - 1);
+
   if (modalClose) modalClose.addEventListener('click', closeModal);
+  if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+  if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+
+  // Fecha clicando no fundo escuro
   modal.addEventListener('click', (e) => {
     if (e.target === modal) closeModal();
   });
 
+  // Navegação por teclado: Setas e Esc
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    if (modal.classList.contains('hidden')) return;
+    if (e.key === 'Escape') closeModal();
+    else if (e.key === 'ArrowRight') showNext();
+    else if (e.key === 'ArrowLeft') showPrev();
   });
+
+  // Suporte a swipe em telas touch (mobile)
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  modal.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  modal.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchEndX - touchStartX;
+    if (Math.abs(diff) > 40) {
+      if (diff < 0) showNext(); // arrastou pra esquerda -> próxima
+      else showPrev(); // arrastou pra direita -> anterior
+    }
+  }, { passive: true });
 }
 
 function initLgpdBanner() {

@@ -11,6 +11,15 @@
 
 Todas as alterações notáveis deste projeto serão registradas neste arquivo.
 
+## [0.3.1] - 2026-10-07
+### Alterado & Aprimorado
+- **Galeria de Fotos Otimizada:** Remoção das 4 imagens indicadas pelo cliente (`fachada-05`, `fachada-08`, `fachada-09` e `fachada-14`), mantendo 10 fotos institucionais de alto padrão distribuídas em 5 colunas no desktop.
+- **Lightbox Interativo com Navegação Completa:**
+  - Botões visuais de "Anterior" e "Próximo" para passar de uma foto para outra continuamente.
+  - Navegação por teclado utilizando as setas direcionais (`←` e `→`) e `Escape`.
+  - Suporte a toque/arrasto (swipe) em dispositivos móveis.
+  - Indicador numérico de posição (`1 / 10`) e legenda descritiva da foto.
+
 ## [0.3.0] - 2026-10-07
 ### Adicionado & Aprimorado (V2 - Máquina de Conversão Google Ads)
 - **Hero Dominante:** Headline ampliada com máxima dominância tipográfica e microfrase de apoio direto (`Projetos • Prefeitura • Habite-se • CND • Averbação`).
