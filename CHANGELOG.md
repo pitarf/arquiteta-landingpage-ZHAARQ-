@@ -1,0 +1,58 @@
+# Changelog - Landing Page ZHAARQ
+
+Todas as alterações notáveis deste projeto serão registradas neste arquivo.
+
+## [0.2.5] - 2026-10-07
+### Alterado
+- Aumento do tamanho do logotipo no rodapé de 40px (`h-10`) para 64px–80px (`h-16 sm:h-20`), aprimorando o destaque visual e a legibilidade da marca em telas de alta densidade.
+
+## [0.2.4] - 2026-10-07
+### Corrigido
+- Ajuste do logotipo no rodapé: remoção de filtros de inversão de cor que causavam bloco branco opaco.
+- Criação de versões dedicadas da logo com canal Alpha (fundo transparente): `logo.webp` para fundos claros no cabeçalho e `logo-branca.webp` para o rodapé escuro.
+
+## [0.2.3] - 2026-10-07
+### Melhorado
+- Auditoria de Qualidade e Conformidade concluída com 100% de aderência ao briefing.
+- Adicionado listener de teclado para fechamento do Lightbox via tecla `Escape` (Esc).
+- Implementação de atributos de acessibilidade ARIA (`role="dialog"`, `aria-modal="true"`) no modal de visualização.
+- Fallback resiliente nos links de conversão do WhatsApp com URL e parâmetros pré-codificados diretamente no HTML.
+- Blindagem de compliance no atributo `alt` das imagens de projetos.
+
+## [0.2.2] - 2026-10-07
+### Adicionado
+- Conversão integral do arquivo de briefing (`Briefing_Landing_Page_ZHAARQ (1).pdf`) para formato Markdown estruturado em `documents/BRIEFING_LANDING_PAGE_ZHAARQ.md`, preservando todas as 16 seções, copies, diretrizes de SEO, Google Ads e regras de conformidade.
+
+## [0.2.1] - 2026-10-07
+### Corrigido
+- Ajuste das imagens na Seção 08 (Case de Processo): separação rigorosa entre as fotos identificadas com "OBRA" no canteiro de construção (`PROJETO 1 - ANDAMENTO DA OBRA 2.jpeg` e `PROJETO 1 - ANDAMENTO DA OBRA.jpeg`) e as fotos da casa pronta e averbada (`PROJETO 1 - 1.jpeg` e `PROJETO 1 - 4.jpeg`), alinhando a narrativa visual à realidade da obra.
+- Inversão das imagens entre os cards 3 e 4 conforme preferência do usuário.
+
+## [0.2.0] - 2026-10-07
+### Adicionado
+- Pipeline de otimização de imagens: conversão de fotos JPEG para formato WebP moderno em `assets/images/`, gerando reduções de tamanho de até 74%.
+- Implementação de `css/styles.css` com tipografia editorial elegante e variáveis de cor personalizadas da ZHAARQ.
+- Implementação de `js/main.js` com acordeão interativo de FAQ com acessibilidade ARIA, sistema de Toast Notification moderno, lightbox para zoom das imagens e rastreamento de cliques para o WhatsApp com mensagem configurada.
+- Criação do `index.html` completo contendo as 12 seções obrigatórias do briefing oficial:
+  - Hero com proposta de valor e CTA direto.
+  - 6 situações de identificação do problema.
+  - Bloco de consequências e segurança patrimonial.
+  - 6 soluções e frentes de atuação técnica.
+  - Passo a passo de atendimento em 4 etapas.
+  - Destaque de autoridade (+100 projetos/processos).
+  - Galeria de 14 fachadas reais de imóveis atendidos.
+  - Case de processo completo com as 4 fases documentadas.
+  - Quebra de objeção para clientes em dúvida.
+  - Seção institucional da arquiteta com dados profissionais.
+  - FAQ com 7 perguntas e respostas essenciais.
+  - Super CTA de conversão final.
+  - Rodapé escuro elegante e barra de contato flutuante mobile.
+
+## [0.1.0] - 2026-10-07
+### Adicionado
+- Extração precisa da paleta de cores corporativa a partir do layout de referência.
+- Análise completa do arquivo de briefing (`Briefing_Landing_Page_ZHAARQ (1).pdf`).
+- Levantamento e catalogação inteligente das 81 imagens fornecidas na pasta `SITE ARQT`.
+- Mapeamento das 12 imagens pré-selecionadas pelo usuário (Perfil, Textos, Projeto 1 e Projeto 2).
+- Agrupamento das fotos do WhatsApp por similaridade para seleção da galeria de fachadas reais.
+- Criação do roadmap de tarefas em `documents/task.md`.
