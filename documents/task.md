@@ -33,10 +33,12 @@
   - [x] Banner discreto de conformidade LGPD
   - [x] Logotipo do rodapé ampliado com fundo transparente de alto contraste
   - [x] Ritmo visual alternando seções claras e escuras (fim da monotonia bege)
+  - [x] Galeria de fotos atualizada com remoção das imagens dispensadas e adição das 4 fotos selecionadas pelo cliente (`projeto-destaque-01` a `04`)
+  - [x] Lightbox com navegação contínua (Next, Prev, Keyboard, Touch swipe)
 
 ### Fazendo
-- [ ] Validação final dos novos blocos no navegador.
+- [ ] Validação visual e testes da nova galeria no navegador.
 
 ### Pendentes
 - [ ] Configuração do número real do WhatsApp no botão (quando fornecido).
-- [ ] Integração com domínio / deploy quando solicitado.
+- [ ] Deploy em produção (Vercel, Hostinger, Netlify, etc.) quando solicitado.

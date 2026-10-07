@@ -1,18 +1,11 @@
-
-## [0.3.1] - 2026-10-07
-### Refinado
-- Substituição dos emojis dos 6 cards de identificação por ícones SVG lineares consistentes com a identidade editorial.
-- Ajuste visual dos cards para aparência mais arquitetônica e menos genérica.
-- Refinamento do Hero para reduzir altura no primeiro viewport e melhorar hierarquia da headline.
-- Texto de apoio da seção de identificação simplificado para leitura rápida.
-- Preservação adicional de `utm_medium` e `utm_content` na mensagem enviada ao WhatsApp.
-
 # Changelog - Landing Page ZHAARQ
 
 Todas as alterações notáveis deste projeto serão registradas neste arquivo.
 
-## [0.3.1] - 2026-10-07
-### Alterado & Aprimorado
+## [0.3.2] - 2026-10-07
+### Finalizado & Consolidado
+- **Galeria Consolidada (10 Fotos):** Mantida estritamente a grade com as 10 fotos institucionais e reais validadas pelo cliente (fotos de levantamento técnico, vistorias de campo, atendimento presencial nas Prefeituras de Guarulhos e Itaquaquecetuba e obras regularizadas).
+- **Lightbox Interativo Ativo:** Navegação contínua entre as 10 imagens com botões circulares, setas do teclado (`←` e `→`) e toque móvel (swipe).
 - **Galeria de Fotos Otimizada:** Remoção das 4 imagens indicadas pelo cliente (`fachada-05`, `fachada-08`, `fachada-09` e `fachada-14`), mantendo 10 fotos institucionais de alto padrão distribuídas em 5 colunas no desktop.
 - **Lightbox Interativo com Navegação Completa:**
   - Botões visuais de "Anterior" e "Próximo" para passar de uma foto para outra continuamente.
