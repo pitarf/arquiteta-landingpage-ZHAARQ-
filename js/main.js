@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initWhatsAppTracking();
   initLightbox();
   initLgpdBanner();
+  initScrollReveal();
 });
 
 /**
@@ -199,4 +200,51 @@ function initLgpdBanner() {
     localStorage.setItem('zhaarq_lgpd_accepted', 'true');
     banner.remove();
   });
+}
+
+
+/**
+ * Revelacao progressiva das secoes durante o scroll.
+ * A animacao e discreta e respeita prefers-reduced-motion.
+ */
+function initScrollReveal() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const sections = document.querySelectorAll('main section, body > section');
+
+  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+    sections.forEach((section) => section.classList.add('is-visible'));
+    return;
+  }
+
+  sections.forEach((section) => {
+    section.classList.add('scroll-section');
+
+    const revealItems = section.querySelectorAll(
+      ':scope > div > div, .pain-card, .timeline-connector, .faq-item, .editorial-shadow, [data-reveal]'
+    );
+
+    revealItems.forEach((item, index) => {
+      if (item.closest('.faq-item') && !item.classList.contains('faq-item')) return;
+      item.classList.add('scroll-reveal');
+      item.style.setProperty('--reveal-delay', `${Math.min(index * 70, 420)}ms`);
+    });
+  });
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      entry.target.classList.add('is-visible');
+
+      const items = entry.target.querySelectorAll('.scroll-reveal');
+      items.forEach((item) => item.classList.add('is-visible'));
+
+      obs.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -8% 0px'
+  });
+
+  sections.forEach((section) => observer.observe(section));
 }
