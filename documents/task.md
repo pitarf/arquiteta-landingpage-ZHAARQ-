@@ -50,6 +50,7 @@
   - [x] Correção de sintaxe CSS na regra `.hero-premium::before`
   - [x] Verificação de compliance integral: zero termos proibidos (sem burocracia, garantida, etc.)
   - [x] Ampliação e destaque monumental das 4 fotos do Case Real (largura total da página e ganho de >60% em área visual)
+  - [x] Correção matemática de proporção e eliminação de distorção anamórfica em todas as fotos (Projetos, Diagnóstico, Case Real e Perfil da Arquiteta)
 - [x] Servidor de desenvolvimento local iniciado e rodando ativamente na porta 3000 (`http://localhost:3000`).
 
 ### Fazendo

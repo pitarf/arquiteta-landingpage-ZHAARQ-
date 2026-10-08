@@ -2,6 +2,16 @@
 
 Todas as alterações notáveis deste projeto serão registradas neste arquivo.
 
+## [0.7.2] - 2026-10-08
+### Correção Matemática de Proporção e Eliminação de Distorção em Todas as Fotos
+- **Diagnóstico de Distorção Anamórfica:** Identificado que recortes anteriores aplicavam redimensionamentos para aspect ratios diferentes das caixas cortadas, gerando distorções horizontais de até 34% (achatamento de edificações e pessoas).
+- **Recorte Isomórfico de Precisão (Escala 1:1 Sem Distorção):**
+  - **Projetos em Destaque (`proj_real_1`, `proj_real_2`, `proj_real_3`):** Recortados em proporção 16:10 exata antes da conversão para 800x500 WebP. Ajustada a classe dos cards secundários para `aspect-[16/10]` em harmonia perfeita com o card master.
+  - **Diagnóstico Técnico (`diagnostico_real`):** Recorte perfeitamente isotrópico de proporção 4:3 (800x600 WebP), restaurando a anatomia real e natural da arquiteta com a prancheta de vistoria.
+  - **Case Real (`case_1_em_obras`, `case_2_acompanhamento`, `case_3_concluida`, `case_4_averbada`):** Recortadas em proporção 4:3 estrita (600x450 WebP) a partir dos originais, eliminando qualquer achatamento na arquiteta e nas edificações.
+  - **Sobre a Arquiteta (`arquiteta_real`):** Gerada em proporção vertical 3:4 nativa (768x1024 WebP) e classe CSS ajustada para `aspect-[3/4]` consistente em mobile e desktop.
+- **Validação com Playwright:** Captura completa inspecionada e validada em `crop_sec03_corrigido.png`, `crop_sec06_diag_exato.png`, `crop_sec08_corrigido.png` e `crop_sec09_corrigido.png`.
+
 ## [0.7.1] - 2026-10-08
 ### Ampliação e Destaque Monumental das Fotos do Case Real
 - **Layout de Largura Total (Full-Width Container):**
