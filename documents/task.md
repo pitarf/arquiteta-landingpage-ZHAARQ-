@@ -49,6 +49,7 @@
   - [x] Rodapé Arquitetônico completo em 4 colunas com marca, especialidades, regiões e dados institucionais
   - [x] Correção de sintaxe CSS na regra `.hero-premium::before`
   - [x] Verificação de compliance integral: zero termos proibidos (sem burocracia, garantida, etc.)
+  - [x] Ampliação e destaque monumental das 4 fotos do Case Real (largura total da página e ganho de >60% em área visual)
 - [x] Servidor de desenvolvimento local iniciado e rodando ativamente na porta 3000 (`http://localhost:3000`).
 
 ### Fazendo

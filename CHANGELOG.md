@@ -2,6 +2,15 @@
 
 Todas as alterações notáveis deste projeto serão registradas neste arquivo.
 
+## [0.7.1] - 2026-10-08
+### Ampliação e Destaque Monumental das Fotos do Case Real
+- **Layout de Largura Total (Full-Width Container):**
+  - Desacoplada a grade fotográfica da coluna lateral; o cabeçalho editorial com dados de resultado e botão de ação foi movido para o topo em duas colunas elegantes com linha divisória de 1px hairline.
+  - As 4 imagens da sequência do Case Real (`01 // DIAGNÓSTICO`, `02 // VISTORIA`, `03 // CONCLUSÃO`, `04 // AVERBADA`) agora ocupam toda a largura útil de 1280px (`max-w-7xl`).
+  - O tamanho de cada foto foi ampliado em mais de 60% em telas desktop (passando de ~180px para ~290px a 300px cada), preservando a proporção 4:3 com cantos arredondados finos e badges translúcidas.
+  - No mobile, cada imagem se expande para a largura total da tela do aparelho com leitura fluida e confortável.
+- **Validação com Playwright:** Captura completa confirmada em `test_crop_case_ampliado_exato.png` e `test_crop_mobile_case_ampliado.png`.
+
 ## [0.7.0] - 2026-10-08
 ### Reestruturação Editorial Completa (Auditoria gstack Design-Review & Anti-AI-Slop)
 - **Eliminação de Vícios Visuais de IA (AI Slop):**
