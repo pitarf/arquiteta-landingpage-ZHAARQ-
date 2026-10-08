@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Regularização de Imóveis em São Paulo | ZHAARQ Arquitetura</title>
-  <meta name="description" content="Precisa regularizar seu imóvel? A ZHAARQ atua com projetos, aprovações, Habite-se, CND, averbação e processos de regularização imobiliária. Solicite uma análise.">
-  <meta name="keywords" content="regularização de imóveis, regularização imobiliária, regularizar imóvel, arquiteto para regularização de imóvel, Habite-se, averbação de imóvel, regularização de construção, planta de imóvel, aprovação de projeto, regularização prefeitura">
+  <title>ZHAARQ Arquitetura | Regularizar um imóvel é construir tranquilidade</title>
+  <meta name="description" content="Análise técnica, projetos e condução documental para transformar seu imóvel irregular em uma situação segura e regularizada em São Paulo e região.">
+  <meta name="keywords" content="regularização de imóveis, arquiteto são paulo, aprovação prefeitura, habite-se, averbação cartório, cnd obra, zhaarq arquitetura">
   <meta name="robots" content="index, follow">
 
-  <!-- Open Graph / Redes Sociais com fallback canônico -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Regularização de Imóveis em São Paulo | ZHAARQ Arquitetura">
-  <meta property="og:description" content="Precisa regularizar seu imóvel? A ZHAARQ atua com projetos, aprovações, Habite-se, CND, averbação e processos de regularização imobiliária. Solicite uma análise.">
-  <meta property="og:image" content="assets/images/logo.webp">
+  <meta property="og:title" content="ZHAARQ Arquitetura | Regularização Imobiliária e Projetos">
+  <meta property="og:description" content="Análise técnica, projetos e condução documental para transformar seu imóvel irregular em uma situação segura e regularizada.">
+  <meta property="og:image" content="assets/images/hero_house_clean.webp">
 
-  <!-- Favicon Oficial -->
+  <!-- Favicon -->
   <link rel="icon" type="image/webp" href="assets/images/logo.webp">
 
-  <!-- Tailwind CSS com Paleta ZHAARQ -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -25,119 +25,181 @@
         extend: {
           colors: {
             brand: {
-              primary: '#993819',
-              'primary-hover': '#7D2306',
-              dark: '#141312',
-              'dark-surface': '#1C1A18',
-              bg: '#F4F0EA',
-              'bg-warm': '#ECE4D8',
-              card: '#FFFFFF',
-              border: '#E2D7CB',
-              title: '#121110',
-              muted: '#635B53',
-              gold: '#C4966B'
+              terracotta: '#A64B2A',
+              'terracotta-hover': '#8C3D20',
+              gold: '#C4966B',
+              'gold-light': '#E5C9A7',
+              dark: '#121110',
+              'dark-card': '#181715',
+              surface: '#FBF9F5',
+              'surface-warm': '#F5F1E9',
+              border: '#E8E2D8',
+              'border-dark': '#2B2621',
+              title: '#141312',
+              muted: '#6E665E'
             }
+          },
+          fontFamily: {
+            editorial: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
           }
         }
       }
     }
   </script>
 
-  <!-- Estilos Customizados & Tipografia Editorial -->
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-brand-bg text-brand-title antialiased selection:bg-brand-primary selection:text-white pb-24 md:pb-0">
+<body class="bg-[#FBF9F5] text-brand-title antialiased selection:bg-brand-terracotta selection:text-white pb-20 md:pb-0 font-sans">
 
   <!-- ==========================================
-       TOPO & CABEÇALHO LIMPO (FOCO GOOGLE ADS)
+       01. CABEÇALHO / NAVBAR (IDÊNTICO À REFERÊNCIA)
        ========================================== -->
-  <header class="border-b border-brand-border bg-[#F8F5EF]/95 backdrop-blur-md sticky top-0 z-40">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
-      <!-- Logo Oficial ZHAARQ -->
-      <a href="#" class="flex items-center space-x-3" title="ZHAARQ Arquitetura">
-        <img src="assets/images/logo.webp" alt="ZHAARQ Arquitetura e Serviços" class="h-10 sm:h-12 w-auto object-contain">
+  <header class="border-b border-[#2B2621]/40 bg-[#121110]/95 backdrop-blur-md sticky top-0 z-50 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      
+      <!-- Logotipo Oficial ZHAARQ Branca com Tipografia Dourada -->
+      <a href="#" class="flex items-center space-x-3 group" title="ZHAARQ Arquitetura">
+        <img src="assets/images/logo-branca.webp" alt="ZHAARQ Arquitetura e Regularização" class="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105">
       </a>
 
-      <!-- Selo de Especialidade & Botão Direto -->
-      <div class="flex items-center space-x-3 sm:space-x-5">
-        <span class="hidden md:inline-block text-xs uppercase tracking-wider text-brand-muted font-semibold border-l border-brand-border pl-4">
-          Regularização Imobiliária • Assessoria Legal • Projetos
-        </span>
-        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20encontrei%20a%20ZHAARQ%20pelo%20Google%20e%20gostaria%20de%20entender%20como%20regularizar%20meu%20im%C3%B3vel." 
+      <!-- Menu Central de Navegação Exato -->
+      <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-medium text-[#C4B9AC]">
+        <a href="#inicio" class="text-white border-b border-brand-gold pb-1 font-semibold">Início</a>
+        <a href="#servicos" class="hover:text-brand-gold transition-colors">Serviços</a>
+        <a href="#projetos" class="hover:text-brand-gold transition-colors">Projetos</a>
+        <a href="#sobre" class="hover:text-brand-gold transition-colors">Sobre</a>
+        <a href="#como-funciona" class="hover:text-brand-gold transition-colors">Como Funciona</a>
+        <a href="#faq" class="hover:text-brand-gold transition-colors">Contato</a>
+      </nav>
+
+      <!-- Botão Superior Terracotta Analisar Meu Imóvel com Seta -->
+      <div class="flex items-center">
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20t%C3%A9cnica%20do%20meu%20im%C3%B3vel." 
            target="_blank" rel="noopener noreferrer" 
            data-cta-location="header"
-           class="btn-whatsapp inline-flex items-center space-x-2 bg-brand-primary hover:bg-brand-primary-hover text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold shadow-md shadow-brand-primary/20 transition-all">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.028.847 2.796.847 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.588-5.767-5.768-5.767zm3.364 8.167c-.14.397-.714.736-1.026.782-.312.046-.66.075-1.921-.449-1.503-.623-2.483-2.14-2.557-2.239-.074-.099-.613-.815-.613-1.554 0-.739.387-1.103.524-1.253.138-.15.301-.188.401-.188.1 0 .201.002.289.006.094.005.219-.036.344.264.129.312.441 1.077.48 1.156.039.078.065.17.013.273-.051.102-.078.165-.154.254-.078.089-.163.199-.233.267-.078.077-.16.16-.069.316.091.156.403.664.865 1.075.594.529 1.096.693 1.252.77.156.078.247.065.339-.039.091-.104.389-.452.493-.607.104-.156.208-.13.347-.078.139.052.883.416 1.035.492.152.076.254.113.291.178.037.064.037.373-.103.77z"/></svg>
-          <span>Falar no WhatsApp</span>
+           class="btn-whatsapp inline-flex items-center space-x-2 bg-brand-terracotta hover:bg-brand-terracotta-hover text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold shadow-lg shadow-brand-terracotta/30 transition-all transform hover:-translate-y-0.5">
+          <span>Analisar meu imóvel</span>
+          <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
         </a>
       </div>
+
     </div>
   </header>
 
   <!-- ==========================================
-       01. HERO PRINCIPAL (DOMINANTE & AGRESSIVO)
+       02. HERO SECTION COM FOTOGRAFIA ARQUITETÔNICA IMERSIVA
        ========================================== -->
-  <section class="hero-editorial relative pt-7 pb-14 md:pt-14 md:pb-20 bg-subtle-pattern overflow-hidden">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+  <section id="inicio" class="relative w-full min-h-[90vh] flex items-center bg-[#121110] text-white overflow-hidden py-16 md:py-24">
+    
+    <!-- Fotografia Arquitetônica Real ocupando 100% da largura e altura de toda a div da Hero -->
+    <div class="hero-bg-layer absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none">
+      <img src="assets/images/hero_bg_fullwidth.webp" alt="Projeto Arquitetônico ZHAARQ Regularizado" class="w-full h-full object-cover object-center filter brightness-[0.70] contrast-105">
+      <!-- Overlays equilibrados para que a foto apareça com nitidez de ponta a ponta e atrás dos textos com excelente contraste -->
+      <div class="absolute inset-0 bg-[#121110]/50"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#121110] via-transparent to-[#121110]/60"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#121110]/70 via-[#121110]/40 to-[#121110]/50"></div>
+    </div>
+
+    <!-- Conteúdo da Hero (Texto à esquerda e Arquiteta na área selecionada à direita) -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4 md:py-12">
+      <div class="flex flex-col lg:flex-row items-center lg:items-end justify-between gap-8 lg:gap-8">
         
-        <!-- Bloco Principal de Texto e Conversão -->
-        <div class="lg:col-span-7 space-y-6">
+        <!-- Coluna de Conteúdo Tipográfico da Hero -->
+        <div class="w-full lg:max-w-2xl space-y-6">
           
-          <div class="inline-flex items-center space-x-2 bg-brand-bg-warm border border-brand-border px-3.5 py-1.5 rounded-full text-xs font-bold text-brand-title uppercase tracking-wider">
-            <span class="w-2 h-2 rounded-full bg-brand-primary"></span>
-            <span>Regularização de imóveis • São Paulo e região</span>
+          <!-- Tagline Superior em Dourado Caixa Alta -->
+          <div class="inline-block">
+            <span class="text-[11px] font-semibold text-brand-gold tracking-[0.22em] uppercase">
+              ARQUITETURA • REGULARIZAÇÃO • DOCUMENTAÇÃO
+            </span>
           </div>
 
-          <!-- Headline Dominante Recomendada -->
-          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.15rem] font-bold font-editorial text-brand-title leading-[1.08] tracking-tight max-w-4xl">
-            Regularizar um imóvel começa por entender o que ele precisa.
+          <!-- Headline da Referência -->
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[3.9rem] font-normal font-editorial text-white leading-[1.08] tracking-tight">
+            Regularizar um imóvel é <span class="italic font-light text-brand-gold">construir tranquilidade.</span>
           </h1>
 
-          <!-- Subheadline Direta do Briefing -->
-          <p class="text-base sm:text-lg text-brand-muted leading-relaxed font-normal">
-            A <strong>ZHAARQ</strong> analisa a situação do seu imóvel e conduz as etapas técnicas e documentais necessárias para buscar sua regularização.
+          <!-- Subheadline da Referência -->
+          <p class="text-base sm:text-lg text-[#D8CEBF] font-light leading-relaxed max-w-xl">
+            Análise técnica, projetos e condução documental para transformar seu imóvel irregular em uma situação segura e regularizada.
           </p>
 
-          <!-- CTA Principal Destacado (100% largura no mobile) -->
-          <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20encontrei%20a%20ZHAARQ%20pelo%20Google%20e%20gostaria%20de%20entender%20como%20regularizar%20meu%20im%C3%B3vel." 
+          <!-- Ações da Hero (Botão Terracotta + Link Como Funciona com Play Icon) -->
+          <div class="pt-2 flex flex-wrap items-center gap-5 sm:gap-7">
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20analisar%20meu%20im%C3%B3vel%20com%20a%20ZHAARQ." 
                target="_blank" rel="noopener noreferrer" 
                data-cta-location="hero"
-               class="btn-whatsapp w-full sm:w-auto text-center inline-flex justify-center items-center space-x-3 bg-brand-primary hover:bg-brand-primary-hover text-white text-base font-bold px-8 py-4 rounded-xl shadow-xl shadow-brand-primary/25 transition-all transform hover:-translate-y-0.5">
-              <span>QUERO ANALISAR MEU IMÓVEL</span>
-              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m7-7H3"></path></svg>
+               class="btn-whatsapp inline-flex items-center space-x-3 bg-brand-terracotta hover:bg-brand-terracotta-hover text-white text-sm sm:text-base font-semibold px-8 py-3.5 sm:py-4 rounded-xl shadow-xl shadow-brand-terracotta/35 transition-all transform hover:-translate-y-0.5">
+              <img src="assets/images/whatsapp-icon-white.svg" alt="WhatsApp" class="w-5 h-5 flex-shrink-0 object-contain" aria-hidden="true">
+              <span>Quero analisar meu imóvel</span>
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+            </a>
+
+            <a href="#como-funciona" class="inline-flex items-center space-x-3 text-white hover:text-brand-gold text-sm font-medium transition-colors group">
+              <span class="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center group-hover:border-brand-gold group-hover:scale-110 transition-all">
+                <svg class="w-4 h-4 fill-white group-hover:fill-brand-gold translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span class="underline underline-offset-4">Como funciona</span>
             </a>
           </div>
 
-          <p class="text-xs text-brand-muted leading-relaxed max-w-md">
-            Você não precisa saber qual documento está faltando. Conte o que aconteceu com o imóvel e a equipe orienta os próximos passos.
-          </p>
+          <!-- 4 Ícones de Garantias na Base da Hero -->
+          <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/15 text-xs text-[#C4B9AC]">
+            <div class="flex items-center space-x-2.5">
+              <div class="w-8 h-8 rounded-full border border-brand-gold/40 flex items-center justify-center text-brand-gold">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+              </div>
+              <span>Atendimento especializado</span>
+            </div>
 
-          <!-- Microfrase de Apoio Direto -->
-          <p class="text-xs sm:text-sm font-semibold text-brand-title flex flex-wrap items-center gap-2 pt-1">
-            <span>Projetos</span>
-            <span class="text-brand-gold">•</span>
-            <span>Prefeitura</span>
-            <span class="text-brand-gold">•</span>
-            <span>Habite-se</span>
-            <span class="text-brand-gold">•</span>
-            <span>CND</span>
-            <span class="text-brand-gold">•</span>
-            <span>Averbação</span>
-          </p>
+            <div class="flex items-center space-x-2.5">
+              <div class="w-8 h-8 rounded-full border border-brand-gold/40 flex items-center justify-center text-brand-gold">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
+              </div>
+              <span>Processo completo do início ao fim</span>
+            </div>
+
+            <div class="flex items-center space-x-2.5">
+              <div class="w-8 h-8 rounded-full border border-brand-gold/40 flex items-center justify-center text-brand-gold">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.75a1.5 1.5 0 0 1 1.5-1.5h1.5a1.5 1.5 0 0 1 1.5 1.5V21"/></svg>
+              </div>
+              <span>Arquitetura e documentação</span>
+            </div>
+
+            <div class="flex items-center space-x-2.5">
+              <div class="w-8 h-8 rounded-full border border-brand-gold/40 flex items-center justify-center text-brand-gold">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
+              </div>
+              <span>Segurança para vender, financiar ou herdar</span>
+            </div>
+          </div>
 
         </div>
 
-        <!-- Foto Real da Arquiteta em Ação -->
-        <div class="lg:col-span-5 relative mt-4 lg:mt-0">
-          <div class="relative mx-auto max-w-sm lg:max-w-none">
-            <div class="hero-image-frame relative overflow-hidden">
-              <img src="assets/images/hero-arquiteta.webp" alt="Arquiteta conduzindo processo de regularização" class="w-full h-auto rounded-xl object-cover aspect-[4/5]">
-              
-              <div class="hero-image-caption absolute bottom-5 left-5 sm:bottom-7 sm:left-7 bg-[#171513]/90 backdrop-blur-md p-4 sm:p-5 border-l-2 border-brand-gold">
-                <p class="text-xs font-bold text-brand-title">+100 Projetos e Processos</p>
-                <p class="text-[11px] text-brand-muted">Domínio técnico e legal em cada etapa</p>
+        <!-- Coluna da Arquiteta com Certificado na Área Selecionada -->
+        <div class="hidden lg:flex flex-col items-center justify-end flex-shrink-0 self-end -mb-4 md:-mb-12 relative z-20">
+          <div class="relative group">
+            <img src="assets/images/arquiteta_hero_certificado.webp" 
+                 alt="Arquiteta Juliana Lucena com Certificado de Regularização Imobiliária" 
+                 class="max-h-[72vh] xl:max-h-[80vh] w-auto object-contain filter drop-shadow-[0_25px_60px_rgba(0,0,0,0.75)] transform transition-transform duration-500 group-hover:scale-[1.015]">
+            
+            <!-- Badge Flutuante de Autoridade e Credibilidade Profissional -->
+            <div class="absolute -left-8 xl:-left-12 bottom-32 bg-[#121110]/90 backdrop-blur-md border border-brand-gold/50 px-4 py-2.5 rounded-2xl shadow-2xl flex items-center space-x-3 text-xs text-white pointer-events-auto">
+              <div class="w-8 h-8 rounded-full bg-brand-gold/20 border border-brand-gold/60 flex items-center justify-center flex-shrink-0 text-brand-gold">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+              </div>
+              <div class="leading-tight">
+                <div class="flex items-center space-x-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <p class="font-bold text-white text-xs tracking-wide">Juliana Lucena</p>
+                </div>
+                <p class="text-[11px] text-brand-gold font-medium mt-0.5">Arquiteta Responsável • CAU</p>
               </div>
             </div>
           </div>
@@ -145,496 +207,633 @@
 
       </div>
     </div>
-
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 md:mt-14">
-      <div class="hero-trust-strip grid grid-cols-1 sm:grid-cols-3 gap-px overflow-hidden rounded-2xl border border-brand-border bg-brand-border">
-        <div class="bg-white/80 px-5 py-4 text-center sm:text-left">
-          <p class="text-[10px] uppercase tracking-[0.16em] font-bold text-brand-primary">Atendimento</p>
-          <p class="mt-1 text-xs sm:text-sm font-semibold text-brand-title">Orientação pelo WhatsApp</p>
-        </div>
-        <div class="bg-white/80 px-5 py-4 text-center sm:text-left">
-          <p class="text-[10px] uppercase tracking-[0.16em] font-bold text-brand-primary">Análise</p>
-          <p class="mt-1 text-xs sm:text-sm font-semibold text-brand-title">Cada imóvel é avaliado individualmente</p>
-        </div>
-        <div class="bg-white/80 px-5 py-4 text-center sm:text-left">
-          <p class="text-[10px] uppercase tracking-[0.16em] font-bold text-brand-primary">Condução</p>
-          <p class="mt-1 text-xs sm:text-sm font-semibold text-brand-title">Técnica e documental</p>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- ==========================================
-       02. PROJETOS EM DESTAQUE
+       03. PROJETOS EM DESTAQUE (GALERIA EDITORIAL ASSIMÉTRICA)
        ========================================== -->
-  <section class="section-editorial-projects py-16 md:py-24 bg-brand-bg">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <section id="projetos" class="py-24 md:py-32 bg-[#FBF9F5] border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Ancoragem Forte Recomendada -->
-      <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
-        <span class="text-xs uppercase font-bold text-brand-primary tracking-widest">Identificação Real</span>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-editorial text-brand-title">
-          Projetos e situações reais.
-        </h2>
-        <p class="text-base sm:text-lg text-brand-muted font-medium">
-          Veja como a arquitetura e a regularização se encontram em situações reais.
-        </p>
-        <p class="text-xs sm:text-sm text-brand-muted">
-          Alguns trabalhos e acompanhamentos realizados pela ZHAARQ.
-        </p>
-      </div>
-
-      <!-- Grade com as 10 Fotos Selecionadas (Sem as marcadas) -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
-        
-
-
-      </div>
-
-      <!-- CTA Galeria -->
-      <div class="mt-8 text-center">
-        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20encontrei%20a%20ZHAARQ%20pelo%20Google%20e%20gostaria%20de%20entender%20como%20regularizar%20meu%20im%C3%B3vel." 
-           target="_blank" rel="noopener noreferrer" 
-           data-cta-location="projetos-reais"
-           class="btn-whatsapp inline-flex items-center space-x-2 bg-brand-primary hover:bg-brand-primary-hover text-white text-sm font-bold px-7 py-3.5 rounded-xl transition-all">
-          <span>QUERO ANALISAR MEU IMÓVEL</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================
-       05. BLOCO MONUMENTAL DE AUTORIDADE (+100)
-       ========================================== -->
-  <section class="py-16 md:py-24 bg-dark-section text-center text-white border-b border-[#2C2723]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-4">
-      
-      <!-- Número Monumental -->
-      <div class="text-6xl sm:text-7xl md:text-8xl font-black font-editorial text-brand-gold tracking-tight">
-        +100
-      </div>
-
-      <h2 class="text-2xl sm:text-3xl font-bold font-editorial text-white">
-        projetos e processos desenvolvidos
-      </h2>
-
-      <p class="text-sm uppercase tracking-widest text-brand-gold font-bold">
-        Arquitetura + Processos Legais
-      </p>
-
-      <p class="text-sm sm:text-base text-[#B5ABA0] max-w-xl mx-auto leading-relaxed pt-2">
-        Experiência comprovada em diferentes situações de imóveis, projetos arquitetônicos e processos de regularização perante Prefeituras e Cartórios.
-      </p>
-
-    </div>
-  </section>
-
-  <!-- ==========================================
-       04. SOLUÇÃO: O QUE PODEMOS ANALISAR E CONDUZIR
-       ========================================== -->
-  <section class="section-editorial-services py-16 md:py-24 bg-brand-bg">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-14">
-        <span class="text-xs uppercase font-bold text-brand-primary tracking-widest">Nossas Frentes Técnicas</span>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-editorial text-brand-title">
-          O que podemos analisar e conduzir
-        </h2>
-        <p class="text-sm sm:text-base text-brand-muted">
-          A ZHAARQ atua nas etapas necessárias de acordo com a situação de cada imóvel:
-        </p>
-      </div>
-
-      <!-- Linha de Atuação Visual (5 Eixos do Briefing) -->
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-        
-        <div class="bg-white p-6 rounded-2xl border border-brand-border space-y-3">
-          <span class="text-xs font-bold text-brand-primary uppercase tracking-widest">01</span>
-          <h3 class="font-bold text-brand-title text-base">Projeto arquitetônico</h3>
-          <p class="text-xs text-brand-muted leading-relaxed">
-            Levantamento físico no local ("as built") e adequações técnicas necessárias.
-          </p>
+      <!-- Cabeçalho Editorial com Numeração de Prancha -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-brand-border/80">
+        <div class="space-y-3">
+          <div class="flex items-center space-x-3 text-[11px] font-semibold text-brand-gold uppercase tracking-[0.25em]">
+            <span>PORTFÓLIO TÉCNICO</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+            <span>CASES CONDUZIDOS</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-normal font-editorial text-brand-title leading-tight">
+            Projetos reais.<br class="hidden sm:inline"> Resultados concretos.
+          </h2>
         </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-brand-border space-y-3">
-          <span class="text-xs font-bold text-brand-primary uppercase tracking-widest">02</span>
-          <h3 class="font-bold text-brand-title text-base">Prefeitura</h3>
-          <p class="text-xs text-brand-muted leading-relaxed">
-            Aprovação, atendimento a comunique-se e procedimentos legais municipais.
+        <div class="mt-6 md:mt-0 flex items-center space-x-6">
+          <p class="text-xs text-brand-muted max-w-xs font-light hidden lg:block leading-relaxed">
+            Cada edificação possui especificidades legais únicas. Conheça intervenções aprovadas pelos órgãos municipais.
           </p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-brand-border space-y-3">
-          <span class="text-xs font-bold text-brand-primary uppercase tracking-widest">03</span>
-          <h3 class="font-bold text-brand-title text-base">Habite-se</h3>
-          <p class="text-xs text-brand-muted leading-relaxed">
-            Solicitação do Certificado de Conclusão de Obra, quando aplicável.
-          </p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-brand-border space-y-3">
-          <span class="text-xs font-bold text-brand-primary uppercase tracking-widest">04</span>
-          <h3 class="font-bold text-brand-title text-base">CND da obra</h3>
-          <p class="text-xs text-brand-muted leading-relaxed">
-            Regularização e certidão negativa junto à Receita Federal, quando aplicável.
-          </p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-brand-border space-y-3">
-          <span class="text-xs font-bold text-brand-primary uppercase tracking-widest">05</span>
-          <h3 class="font-bold text-brand-title text-base">Averbação</h3>
-          <p class="text-xs text-brand-muted leading-relaxed">
-            Atualização definitiva da construção no Cartório de Registro de Imóveis (RGI).
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================
-       02. IDENTIFICAÇÃO DO PROBLEMA (EMOCIONAL)
-       ========================================== -->
-  <section class="section-editorial-problems py-16 md:py-24 bg-white border-y border-brand-border">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
-        <span class="text-xs uppercase font-bold text-brand-primary tracking-widest">Identificação Imediata</span>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-editorial text-brand-title">
-          Alguma dessas situações parece familiar?
-        </h2>
-        <p class="text-sm sm:text-base text-brand-muted max-w-xl mx-auto">
-          Veja algumas das situações mais comuns entre proprietários que precisam regularizar um imóvel.
-        </p>
-      </div>
-
-      <!-- 6 Dores com Linguagem Direta do Cliente -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <div class="pain-card p-6 rounded-2xl bg-brand-bg border border-brand-border space-y-2.5 transition-transform hover:-translate-y-1">
-          <div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.5 10.5 12 3l8.5 7.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M5.5 9.5v10h13v-10M9 19.5v-6h6v6"/></svg></div>
-          <h3 class="font-bold text-brand-title text-base sm:text-lg">Construí ou ampliei meu imóvel</h3>
-          <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
-            A obra ficou diferente da documentação original e nunca foi atualizada nos registros da Prefeitura.
-          </p>
-        </div>
-
-        <div class="pain-card p-6 rounded-2xl bg-brand-bg border border-brand-border space-y-2.5 transition-transform hover:-translate-y-1">
-          <div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 3.5h7l4 4v13H7z"/><path stroke-linecap="round" stroke-linejoin="round" d="M14 3.5v4h4M9.5 12h5M9.5 15h5M9.5 18h3.5"/></svg></div>
-          <h3 class="font-bold text-brand-title text-base sm:text-lg">Minha planta não corresponde ao imóvel</h3>
-          <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
-            A construção atual existente não é igual ao projeto aprovado arquivado no cartório.
-          </p>
-        </div>
-
-        <div class="pain-card p-6 rounded-2xl bg-brand-bg border border-brand-border space-y-2.5 transition-transform hover:-translate-y-1">
-          <div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8.5h16v10H4z"/><path stroke-linecap="round" stroke-linejoin="round" d="M7 8.5V6h10v2.5M12 11.5v4M10.5 13.5h3"/></svg></div>
-          <h3 class="font-bold text-brand-title text-base sm:text-lg">Estou tentando vender</h3>
-          <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
-            E o comprador ou banco identificou uma pendência na documentação que travou a negociação.
-          </p>
-        </div>
-
-        <div class="pain-card p-6 rounded-2xl bg-brand-bg border border-brand-border space-y-2.5 transition-transform hover:-translate-y-1">
-          <div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.5 9 12 4l8.5 5M5 10v9M9.5 10v9M14.5 10v9M19 10v9M3 19h18"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h8"/></svg></div>
-          <h3 class="font-bold text-brand-title text-base sm:text-lg">Preciso regularizar na Prefeitura</h3>
-          <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
-            Mas não sei exatamente quais plantas, laudos ou procedimentos técnicos preciso protocolar.
-          </p>
-        </div>
-
-        <div class="pain-card p-6 rounded-2xl bg-brand-bg border border-brand-border space-y-2.5 transition-transform hover:-translate-y-1">
-          <div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 3.5h7l4 4v13H7z"/><path stroke-linecap="round" stroke-linejoin="round" d="M14 3.5v4h4M9.5 13h5M9.5 16h3M15.5 16h1"/></svg></div>
-          <h3 class="font-bold text-brand-title text-base sm:text-lg">Preciso do Habite-se</h3>
-          <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
-            A casa está construída há anos, mas não sei quais etapas cumprir para obter o Certificado de Conclusão.
-          </p>
-        </div>
-
-        <div class="pain-card p-6 rounded-2xl bg-brand-bg border border-brand-border space-y-2.5 transition-transform hover:-translate-y-1">
-          <div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m5 17 9.5-9.5 3 3L8 20H5z"/><path stroke-linecap="round" stroke-linejoin="round" d="m13.5 8.5 2-2 3 3-2 2M5 20h14"/></svg></div>
-          <h3 class="font-bold text-brand-title text-base sm:text-lg">Preciso averbar a construção</h3>
-          <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
-            A área construída não está registrada na matrícula do Cartório de Registro de Imóveis (consta apenas terreno).
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CTA de Transição -->
-      <div class="mt-12 text-center max-w-xl mx-auto space-y-3">
-        <p class="text-sm font-medium text-brand-title">
-          Cada imóvel possui particularidades. O primeiro passo é entender o seu caso antes de qualquer gasto desnecessário.
-        </p>
-        <div>
-          <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20encontrei%20a%20ZHAARQ%20pelo%20Google%20e%20gostaria%20de%20entender%20como%20regularizar%20meu%20im%C3%B3vel." 
-             target="_blank" rel="noopener noreferrer" 
-             data-cta-location="apos-problema"
-             class="btn-whatsapp inline-flex items-center space-x-2 bg-brand-primary hover:bg-brand-primary-hover text-white text-sm font-bold px-7 py-3.5 rounded-xl transition-all">
-            <span>QUERO ENTENDER MEU CASO</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          <a href="#como-funciona" class="inline-flex items-center space-x-2 text-brand-terracotta hover:text-brand-terracotta-hover text-xs font-semibold tracking-wider uppercase transition-colors group">
+            <span>Entenda as etapas</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
           </a>
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ==========================================
-       07. COMO FUNCIONA O ATENDIMENTO
-       ========================================== -->
-  <section class="py-16 md:py-24 bg-brand-bg-warm border-y border-brand-border">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-14">
-        <span class="text-xs uppercase font-bold text-brand-primary tracking-widest">Sem Burocracia Desnecessária</span>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-editorial text-brand-title">
-          Como funciona o atendimento?
-        </h2>
-        <p class="text-sm sm:text-base text-brand-muted">
-          Um fluxo transparente para que você tenha total clareza dos próximos passos:
-        </p>
-      </div>
-
-      <!-- 4 Etapas Simples Lineares -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Grid Editorial Assimétrico (7 Colunas Destaque + 5 Colunas Apoio) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
         
-        <div class="bg-white p-6 rounded-2xl border border-brand-border space-y-2.5">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-bold bg-brand-primary text-white px-2.5 py-0.5 rounded-full">01</span>
-            <span class="text-xs text-brand-muted font-semibold">Contato Inicial</span>
+        <!-- PROJETO PRINCIPAL (7 Colunas) - Estudo de Caso Monumental -->
+        <div class="lg:col-span-7 bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between group">
+          <div class="relative overflow-hidden aspect-[16/10] bg-[#121110]">
+            <img src="assets/images/proj_real_1.webp" 
+                 alt="Residência Unifamiliar Regularizada Alto de Pinheiros" 
+                 class="zoomable-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute top-4 left-4 bg-[#121110]/85 backdrop-blur-md text-white text-[10px] tracking-widest uppercase font-semibold px-3 py-1.5 rounded-md border border-white/10">
+              01 // DESTAQUE RESIDENCIAL
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+              <span class="bg-[#121110]/80 backdrop-blur-md text-brand-gold text-[11px] font-medium px-3 py-1 rounded-md border border-brand-gold/30">
+                Habite-se Concedido • SP
+              </span>
+            </div>
           </div>
-          <h3 class="font-bold text-brand-title text-base">Você conta o que aconteceu</h3>
-          <p class="text-xs text-brand-muted leading-relaxed">
-            Você explica brevemente a situação do imóvel pelo WhatsApp.
-          </p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-brand-border space-y-2.5">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-bold bg-brand-primary text-white px-2.5 py-0.5 rounded-full">02</span>
-            <span class="text-xs text-brand-muted font-semibold">Diagnóstico</span>
-          </div>
-          <h3 class="font-bold text-brand-title text-base">Analisamos o caso</h3>
-          <p class="text-xs text-brand-muted leading-relaxed">
-            Entendemos os documentos, fotos e a situação existente no local.
-          </p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-brand-border space-y-2.5">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-bold bg-brand-primary text-white px-2.5 py-0.5 rounded-full">03</span>
-            <span class="text-xs text-brand-muted font-semibold">Estratégia</span>
-          </div>
-          <h3 class="font-bold text-brand-title text-base">Definimos o caminho</h3>
-          <p class="text-xs text-brand-muted leading-relaxed">
-            Identificamos quais etapas técnicas e legais podem ser necessárias.
-          </p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-brand-border space-y-2.5">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-bold bg-brand-primary text-white px-2.5 py-0.5 rounded-full">04</span>
-            <span class="text-xs text-brand-muted font-semibold">Execução</span>
-          </div>
-          <h3 class="font-bold text-brand-title text-base">Conduzimos o processo</h3>
-          <p class="text-xs text-brand-muted leading-relaxed">
-            A ZHAARQ acompanha as etapas técnicas e documentais contratadas.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- CTA após Como Funciona -->
-      <div class="mt-12 text-center">
-        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20encontrei%20a%20ZHAARQ%20pelo%20Google%20e%20gostaria%20de%20entender%20como%20regularizar%20meu%20im%C3%B3vel." 
-           target="_blank" rel="noopener noreferrer" 
-           data-cta-location="como-funciona"
-           class="btn-whatsapp inline-flex items-center space-x-2 bg-brand-primary hover:bg-brand-primary-hover text-white text-sm font-bold px-7 py-3.5 rounded-xl transition-all">
-          <span>FALAR COM UM ESPECIALISTA</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================
-       08. CASE DE PROCESSO COMPLETO DIDÁTICO
-       ========================================== -->
-  <section class="section-editorial-case py-16 md:py-24 bg-white border-y border-brand-border">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      
-      <div class="text-center max-w-3xl mx-auto space-y-3 mb-14">
-        <span class="text-xs uppercase font-bold text-brand-primary tracking-widest">Domínio Técnico de Ponta a Ponta</span>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-editorial text-brand-title">
-          Do projeto à documentação
-        </h2>
-        <p class="text-sm sm:text-base text-brand-muted">
-          Um exemplo de como diferentes etapas podem fazer parte de um processo completo de regularização:
-        </p>
-      </div>
-
-      <!-- Linha do Tempo Didática do Processo Completo -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-10 text-center">
-        <div class="p-3 bg-brand-bg rounded-xl border border-brand-border">
-          <span class="text-xs font-bold text-brand-primary block">01</span>
-          <span class="text-xs font-bold text-brand-title">Projeto Arquitetônico</span>
-        </div>
-        <div class="p-3 bg-brand-bg rounded-xl border border-brand-border">
-          <span class="text-xs font-bold text-brand-primary block">02</span>
-          <span class="text-xs font-bold text-brand-title">Aprovação</span>
-        </div>
-        <div class="p-3 bg-brand-bg rounded-xl border border-brand-border">
-          <span class="text-xs font-bold text-brand-primary block">03</span>
-          <span class="text-xs font-bold text-brand-title">Conclusão / Habite-se</span>
-        </div>
-        <div class="p-3 bg-brand-bg rounded-xl border border-brand-border">
-          <span class="text-xs font-bold text-brand-primary block">04</span>
-          <span class="text-xs font-bold text-brand-title">CND (quando aplicável)</span>
-        </div>
-        <div class="p-3 bg-brand-bg rounded-xl border border-brand-border col-span-2 sm:col-span-1">
-          <span class="text-xs font-bold text-brand-primary block">05</span>
-          <span class="text-xs font-bold text-brand-title">Averbação</span>
-        </div>
-      </div>
-
-      <!-- Registro Fotográfico Real da Evolução -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <div class="bg-brand-bg p-4 rounded-2xl border border-brand-border space-y-3">
-          <div class="relative overflow-hidden rounded-xl aspect-[4/3] bg-white">
-            <img src="assets/images/case-obra-estrutura.webp" alt="Obra em andamento - Estrutura e alvenaria" class="zoomable-image w-full h-full object-cover">
-            <span class="absolute top-2 left-2 bg-brand-dark text-white text-[10px] font-bold px-2 py-0.5 rounded">Em Obras</span>
-          </div>
-          <h4 class="font-bold text-brand-title text-sm">Estrutura e Alvenaria</h4>
-          <p class="text-xs text-brand-muted leading-relaxed">
-            Execução dentro dos recuos e parâmetros exigidos pelo plano diretor.
-          </p>
-        </div>
-
-        <div class="bg-brand-bg p-4 rounded-2xl border border-brand-border space-y-3">
-          <div class="relative overflow-hidden rounded-xl aspect-[4/3] bg-white">
-            <img src="assets/images/case-obra-acompanhamento.webp" alt="Acompanhamento técnico no canteiro de obras" class="zoomable-image w-full h-full object-cover">
-            <span class="absolute top-2 left-2 bg-brand-dark text-white text-[10px] font-bold px-2 py-0.5 rounded">Acompanhamento</span>
-          </div>
-          <h4 class="font-bold text-brand-title text-sm">Vistoria Técnica</h4>
-          <p class="text-xs text-brand-muted leading-relaxed">
-            Acompanhamento para garantir conformidade antes da vistoria municipal.
-          </p>
-        </div>
-
-        <div class="bg-brand-bg p-4 rounded-2xl border border-brand-border space-y-3">
-          <div class="relative overflow-hidden rounded-xl aspect-[4/3] bg-white">
-            <img src="assets/images/case-casa-pronta-regularizada.webp" alt="Casa finalizada" class="zoomable-image w-full h-full object-cover">
-            <span class="absolute top-2 left-2 bg-[#8C6D46] text-white text-[10px] font-bold px-2 py-0.5 rounded">Obra Concluída</span>
-          </div>
-          <h4 class="font-bold text-brand-title text-sm">Edificação Pronta</h4>
-          <p class="text-xs text-brand-muted leading-relaxed">
-            Imóvel acabado e apto para a emissão do Habite-se pelo município.
-          </p>
-        </div>
-
-        <div class="bg-brand-bg p-4 rounded-2xl border border-brand-border space-y-3">
-          <div class="relative overflow-hidden rounded-xl aspect-[4/3] bg-white">
-            <img src="assets/images/case-casa-pronta-fachada.webp" alt="Edificação regularizada com Habite-se e averbação cartorária" class="zoomable-image w-full h-full object-cover">
-            <span class="absolute top-2 left-2 bg-brand-primary text-white text-[10px] font-bold px-2 py-0.5 rounded">Averbada</span>
-          </div>
-          <h4 class="font-bold text-brand-title text-sm">Habite-se & Averbação</h4>
-          <p class="text-xs text-brand-muted leading-relaxed">
-            Certidão Negativa de Débitos e registro definitivo na matrícula do RGI.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================
-       09. QUEBRA DE OBJEÇÃO (MUITO FORTE & ISOLADA)
-       ========================================== -->
-  <section class="py-16 md:py-24 bg-dark-section text-[#F4F0EA]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <div class="bg-[#201D1A] p-8 sm:p-14 rounded-3xl border border-[#3E3833] text-center space-y-6">
-        
-        <span class="inline-block bg-[#342D26] text-brand-gold px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
-          Dúvida Mais Frequente
-        </span>
-
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-editorial text-white leading-tight">
-          “Mas eu nem sei exatamente o que está irregular.”
-        </h2>
-
-        <p class="text-lg sm:text-xl font-bold text-brand-gold">
-          Tudo bem. Você não precisa saber.
-        </p>
-
-        <p class="text-sm sm:text-base text-[#C2B7AA] max-w-2xl mx-auto leading-relaxed">
-          Muitas pessoas chegam até a <strong>ZHAARQ</strong> justamente porque descobriram uma pendência e não sabem qual documento, projeto ou procedimento precisam realizar.
-        </p>
-
-        <p class="text-sm sm:text-base text-white font-medium max-w-2xl mx-auto">
-          A análise inicial existe justamente para entender a situação do imóvel e orientar com clareza.
-        </p>
-
-        <div class="pt-4">
-          <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20encontrei%20a%20ZHAARQ%20pelo%20Google%20e%20gostaria%20de%20entender%20como%20regularizar%20meu%20im%C3%B3vel." 
-             target="_blank" rel="noopener noreferrer" 
-             data-cta-location="quebra-objecao"
-             class="btn-whatsapp inline-flex items-center space-x-3 bg-brand-primary hover:bg-brand-primary-hover text-white text-base font-bold px-8 py-4 rounded-xl shadow-lg transition-all">
-            <span>QUERO ANALISAR MEU IMÓVEL</span>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-       10. SOBRE A ZHAARQ (APÓS AS PROVAS E SOLUÇÃO)
-       ========================================== -->
-  <section class="section-editorial-about py-16 md:py-24 bg-brand-bg">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        
-        <div class="lg:col-span-5">
-          <div class="relative max-w-md mx-auto">
-            <div class="relative bg-white p-3 rounded-2xl border border-brand-border editorial-shadow">
-              <img src="assets/images/arquiteta-perfil.webp" alt="Arquiteta ZHAARQ" class="w-full h-auto rounded-xl object-cover aspect-[4/5]">
+          <div class="p-8 space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-brand-border/60 pb-3 text-[11px] text-brand-muted tracking-wider uppercase">
+              <span>Local: São Paulo, SP</span>
+              <span>Área: 480 m²</span>
+              <span>Tempo: 75 dias</span>
+            </div>
+            <div class="space-y-2">
+              <h3 class="font-normal font-editorial text-2xl sm:text-3xl text-brand-title">Residência Unifamiliar Contemporânea</h3>
+              <p class="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+                Adequação e aprovação de ampliação não averbada de 160m² com piscina e área gourmet, regularização junto à Prefeitura Municipal e expedição de Habite-se final para averbação no Cartório de Imóveis.
+              </p>
+            </div>
+            <div class="pt-2 flex items-center justify-between">
+              <span class="text-xs font-semibold text-brand-terracotta tracking-wider uppercase">Regularização Completa & Averbação</span>
+              <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20regulariza%C3%A7%C3%A3o%20de%20resid%C3%AAncia%20unifamiliar." 
+                 target="_blank" rel="noopener noreferrer" 
+                 data-cta-location="projetos-card-1"
+                 class="w-10 h-10 rounded-full border border-brand-border flex items-center justify-center text-brand-terracotta group-hover:bg-brand-terracotta group-hover:text-white transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+              </a>
             </div>
           </div>
         </div>
 
-        <div class="lg:col-span-7 space-y-6">
-          <span class="text-xs uppercase font-bold text-brand-primary tracking-widest">Quem Conduz o Seu Processo</span>
+        <!-- PROJETOS SECUNDÁRIOS EMPILHADOS (5 Colunas) -->
+        <div class="lg:col-span-5 flex flex-col justify-between gap-8">
           
-          <h2 class="text-3xl sm:text-4xl font-bold font-editorial text-brand-title leading-tight">
-            É cuidar de cada etapa até que o imóvel esteja realmente regular.
+          <!-- Card 2: Residência Térrea -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col justify-between">
+            <div class="relative overflow-hidden aspect-[16/9] bg-[#121110]">
+              <img src="assets/images/proj_real_2.webp" 
+                   alt="Residência Térrea e Aprovação de Projeto" 
+                   class="zoomable-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute top-3 left-3 bg-[#121110]/85 backdrop-blur-md text-white text-[10px] tracking-widest uppercase font-semibold px-2.5 py-1 rounded border border-white/10">
+                02 // APROVAÇÃO EDILÍCIA
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between text-[11px] text-brand-muted uppercase tracking-wider border-b border-brand-border/60 pb-2">
+                <span>Residência Térrea • 240 m²</span>
+                <span class="text-brand-gold font-medium">Aprovado</span>
+              </div>
+              <h3 class="font-normal font-editorial text-xl sm:text-2xl text-brand-title">Residência Térrea em Condomínio</h3>
+              <p class="text-xs text-brand-muted font-light leading-relaxed">
+                Levantamento as-built, adequação aos recuos obrigatórios da convenção do condomínio e emissão da Certidão de Conclusão da Obra.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Imóvel Comercial / Adequação -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col justify-between">
+            <div class="relative overflow-hidden aspect-[16/9] bg-[#121110]">
+              <img src="assets/images/proj_real_3.webp" 
+                   alt="Espaço Comercial Adequação e Licenças de Funcionamento" 
+                   class="zoomable-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute top-3 left-3 bg-[#121110]/85 backdrop-blur-md text-white text-[10px] tracking-widest uppercase font-semibold px-2.5 py-1 rounded border border-white/10">
+                03 // ADEQUAÇÃO COMERCIAL
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between text-[11px] text-brand-muted uppercase tracking-wider border-b border-brand-border/60 pb-2">
+                <span>Edifício Comercial • 520 m²</span>
+                <span class="text-brand-gold font-medium">Licenciado</span>
+              </div>
+              <h3 class="font-normal font-editorial text-xl sm:text-2xl text-brand-title">Adequação Comercial & AVCB</h3>
+              <p class="text-xs text-brand-muted font-light leading-relaxed">
+                Mudança de uso, acessibilidade NBR 9050, renovação de licenças de funcionamento e regularização perante a municipalidade.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       04. SEÇÃO MANIFESTO ESCURA (+100 PROJETOS E AUTORIDADE EDITORIAL)
+       ========================================== -->
+  <section class="py-20 md:py-28 bg-[#121110] text-white border-y border-[#2B2621] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+      
+      <!-- Topo: Manifesto Editorial de Segurança Patrimonial -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end pb-16 border-b border-white/10">
+        <div class="lg:col-span-8 space-y-4">
+          <span class="text-[11px] font-semibold text-brand-gold tracking-[0.25em] uppercase block">
+            SEGURANÇA JURÍDICA & RIGOR TÉCNICO
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-normal font-editorial text-white leading-tight">
+            Mais do que documentos,<br class="hidden sm:inline"> protegemos o valor real do seu patrimônio.
+          </h2>
+        </div>
+        <div class="lg:col-span-4">
+          <p class="text-xs sm:text-sm text-[#B8ADA0] font-light leading-relaxed">
+            A irregularidade de um imóvel bloqueia vendas, inviabiliza heranças e expõe os proprietários a multas contínuas. Conduzimos cada processo com precisão arquitetônica e respaldo legal completo.
+          </p>
+        </div>
+      </div>
+
+      <!-- Base: Grid de 4 Métricas de Autoridade com Linhas Hairline -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-12">
+        
+        <div class="space-y-2 border-l border-white/15 pl-6">
+          <span class="text-5xl sm:text-6xl font-normal font-editorial text-brand-gold leading-none block">
+            +100
+          </span>
+          <h4 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white">Processos Conduzidos</h4>
+          <p class="text-[11px] text-[#A89E92] font-light">Em São Paulo, Grande SP e cidades do interior.</p>
+        </div>
+
+        <div class="space-y-2 border-l border-white/15 pl-6">
+          <span class="text-5xl sm:text-6xl font-normal font-editorial text-brand-gold leading-none block">
+            98%
+          </span>
+          <h4 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white">Taxa de Aprovação</h4>
+          <p class="text-[11px] text-[#A89E92] font-light">Em conformidade com códigos de obras vigentes.</p>
+        </div>
+
+        <div class="space-y-2 border-l border-white/15 pl-6">
+          <span class="text-5xl sm:text-6xl font-normal font-editorial text-brand-gold leading-none block">
+            100%
+          </span>
+          <h4 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white">Acompanhamento Técnico</h4>
+          <p class="text-[11px] text-[#A89E92] font-light">Do levantamento inicial à averbação em cartório.</p>
+        </div>
+
+        <div class="space-y-2 border-l border-white/15 pl-6">
+          <span class="text-5xl sm:text-6xl font-normal font-editorial text-brand-gold leading-none block">
+            CAU/SP
+          </span>
+          <h4 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white">Responsabilidade Ativa</h4>
+          <p class="text-[11px] text-[#A89E92] font-light">RRT emitida para todas as etapas documentais.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       05. ESPECIALIDADES: ÍNDICE EDITORIAL DE ATUAÇÃO (SEM CÍRCULOS DE IA)
+       ========================================== -->
+  <section id="servicos" class="py-24 md:py-32 bg-[#FBF9F5] border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Cabeçalho da Seção -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-brand-border/80">
+        <div class="space-y-3">
+          <span class="text-[11px] font-semibold text-brand-gold uppercase tracking-[0.25em] block">NOSSAS ESPECIALIDADES</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-normal font-editorial text-brand-title">
+            O que podemos fazer pelo seu imóvel
+          </h2>
+        </div>
+        <p class="mt-4 md:mt-0 text-xs sm:text-sm text-brand-muted max-w-md font-light leading-relaxed">
+          Atuação técnica integrada entre desenho arquitetônico, análise urbanística e tramitação documental perante os órgãos oficiais.
+        </p>
+      </div>
+
+      <!-- Lista Editorial Indexada (Substitui os 5 círculos clichês) -->
+      <div class="divide-y divide-brand-border border-y border-brand-border">
+        
+        <!-- 01. Regularização de Imóveis -->
+        <div class="py-8 md:py-10 group transition-colors duration-300 hover:bg-white/60 px-4 sm:px-6 -mx-4 sm:-mx-6 rounded-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <div class="lg:col-span-1 text-sm font-editorial text-brand-gold font-normal">
+              01 //
+            </div>
+            <div class="lg:col-span-4 space-y-1">
+              <h3 class="font-normal font-editorial text-2xl sm:text-3xl text-brand-title group-hover:text-brand-terracotta transition-colors">
+                Regularização de Imóveis
+              </h3>
+              <p class="text-[11px] uppercase tracking-wider text-brand-muted font-medium">Residenciais • Comerciais • Industriais</p>
+            </div>
+            <div class="lg:col-span-5">
+              <p class="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+                Análise minuciosa de ampliações, reformas não declaradas ou construções sem aprovação anterior. Enquadramento nas leis de anistia vigentes e adequação aos parâmetros da Lei de Zoneamento.
+              </p>
+            </div>
+            <div class="lg:col-span-2 flex flex-wrap lg:justify-end gap-2 pt-2 lg:pt-0">
+              <span class="text-[10px] uppercase tracking-wider font-semibold bg-brand-surface-warm text-[#7A5B44] px-2.5 py-1 rounded border border-brand-border">Prefeitura</span>
+              <span class="text-[10px] uppercase tracking-wider font-semibold bg-brand-surface-warm text-[#7A5B44] px-2.5 py-1 rounded border border-brand-border">Anistia</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02. Projetos Arquitetônicos & As-Built -->
+        <div class="py-8 md:py-10 group transition-colors duration-300 hover:bg-white/60 px-4 sm:px-6 -mx-4 sm:-mx-6 rounded-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <div class="lg:col-span-1 text-sm font-editorial text-brand-gold font-normal">
+              02 //
+            </div>
+            <div class="lg:col-span-4 space-y-1">
+              <h3 class="font-normal font-editorial text-2xl sm:text-3xl text-brand-title group-hover:text-brand-terracotta transition-colors">
+                Projetos Arquitetônicos & As-Built
+              </h3>
+              <p class="text-[11px] uppercase tracking-wider text-brand-muted font-medium">Levantamento In Loco • Plantas Técnicas</p>
+            </div>
+            <div class="lg:col-span-5">
+              <p class="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+                Levantamento métrico preciso da edificação existente, elaboração de peças gráficas completas, cortes, fachadas, memoriais descritivos e pranchas técnicas conforme os padrões exigidos pelas prefeituras.
+              </p>
+            </div>
+            <div class="lg:col-span-2 flex flex-wrap lg:justify-end gap-2 pt-2 lg:pt-0">
+              <span class="text-[10px] uppercase tracking-wider font-semibold bg-brand-surface-warm text-[#7A5B44] px-2.5 py-1 rounded border border-brand-border">Desenho Técnico</span>
+              <span class="text-[10px] uppercase tracking-wider font-semibold bg-brand-surface-warm text-[#7A5B44] px-2.5 py-1 rounded border border-brand-border">RRT / CAU</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03. Aprovação, Habite-se & Licenças -->
+        <div class="py-8 md:py-10 group transition-colors duration-300 hover:bg-white/60 px-4 sm:px-6 -mx-4 sm:-mx-6 rounded-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <div class="lg:col-span-1 text-sm font-editorial text-brand-gold font-normal">
+              03 //
+            </div>
+            <div class="lg:col-span-4 space-y-1">
+              <h3 class="font-normal font-editorial text-2xl sm:text-3xl text-brand-title group-hover:text-brand-terracotta transition-colors">
+                Aprovação, Habite-se & Licenças
+              </h3>
+              <p class="text-[11px] uppercase tracking-wider text-brand-muted font-medium">Protocolos Oficiais • Cumprimento de Comunique-se</p>
+            </div>
+            <div class="lg:col-span-5">
+              <p class="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+                Condução e defesa técnica dos processos perante as Secretarias de Urbanismo e Obras. Resposta imediata a comunique-se e obtenção de Certificado de Conclusão de Obra (Habite-se).
+              </p>
+            </div>
+            <div class="lg:col-span-2 flex flex-wrap lg:justify-end gap-2 pt-2 lg:pt-0">
+              <span class="text-[10px] uppercase tracking-wider font-semibold bg-brand-surface-warm text-[#7A5B44] px-2.5 py-1 rounded border border-brand-border">Habite-se</span>
+              <span class="text-[10px] uppercase tracking-wider font-semibold bg-brand-surface-warm text-[#7A5B44] px-2.5 py-1 rounded border border-brand-border">Alvará</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04. Averbação em Cartório & CND da Obra -->
+        <div class="py-8 md:py-10 group transition-colors duration-300 hover:bg-white/60 px-4 sm:px-6 -mx-4 sm:-mx-6 rounded-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <div class="lg:col-span-1 text-sm font-editorial text-brand-gold font-normal">
+              04 //
+            </div>
+            <div class="lg:col-span-4 space-y-1">
+              <h3 class="font-normal font-editorial text-2xl sm:text-3xl text-brand-title group-hover:text-brand-terracotta transition-colors">
+                Averbação em Cartório & CND
+              </h3>
+              <p class="text-[11px] uppercase tracking-wider text-brand-muted font-medium">Registro de Imóveis • Receita Federal</p>
+            </div>
+            <div class="lg:col-span-5">
+              <p class="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+                Regularização fiscal da obra na Receita Federal (DISO/SERO), emissão da Certidão Negativa de Débitos (CND) e averbação formal da construção na matrícula do Cartório de Registro de Imóveis (RGI).
+              </p>
+            </div>
+            <div class="lg:col-span-2 flex flex-wrap lg:justify-end gap-2 pt-2 lg:pt-0">
+              <span class="text-[10px] uppercase tracking-wider font-semibold bg-brand-surface-warm text-[#7A5B44] px-2.5 py-1 rounded border border-brand-border">Cartório RGI</span>
+              <span class="text-[10px] uppercase tracking-wider font-semibold bg-brand-surface-warm text-[#7A5B44] px-2.5 py-1 rounded border border-brand-border">SERO / CND</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05. Consultoria Técnica & Dossiê Patrimonial -->
+        <div class="py-8 md:py-10 group transition-colors duration-300 hover:bg-white/60 px-4 sm:px-6 -mx-4 sm:-mx-6 rounded-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <div class="lg:col-span-1 text-sm font-editorial text-brand-gold font-normal">
+              05 //
+            </div>
+            <div class="lg:col-span-4 space-y-1">
+              <h3 class="font-normal font-editorial text-2xl sm:text-3xl text-brand-title group-hover:text-brand-terracotta transition-colors">
+                Consultoria & Dossiê Patrimonial
+              </h3>
+              <p class="text-[11px] uppercase tracking-wider text-brand-muted font-medium">Due Diligence • Compra, Venda & Inventário</p>
+            </div>
+            <div class="lg:col-span-5">
+              <p class="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+                Diagnóstico prévio para transações de compra e venda, inventários e partilhas. Identificação exata de passivos construtivos, estimativa de custos e cronograma técnico de regularização.
+              </p>
+            </div>
+            <div class="lg:col-span-2 flex flex-wrap lg:justify-end gap-2 pt-2 lg:pt-0">
+              <span class="text-[10px] uppercase tracking-wider font-semibold bg-brand-surface-warm text-[#7A5B44] px-2.5 py-1 rounded border border-brand-border">Due Diligence</span>
+              <span class="text-[10px] uppercase tracking-wider font-semibold bg-brand-surface-warm text-[#7A5B44] px-2.5 py-1 rounded border border-brand-border">Inventário</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       06. DIAGNÓSTICO: DOSSIÊ TÉCNICO DE CONFORMIDADE EDILÍCIA
+       ========================================== -->
+  <section id="problemas" class="py-24 md:py-32 bg-[#FFFFFF] border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Imagem com Carimbo Pericial à Esquerda -->
+        <div class="lg:col-span-5 relative">
+          <div class="rounded-2xl overflow-hidden border border-brand-border shadow-lg bg-[#121110]">
+            <img src="assets/images/diagnostico_real.webp" 
+                 alt="Vistoria Técnica e Levantamento no Imóvel pela Arquiteta" 
+                 class="zoomable-image w-full h-full object-cover aspect-[4/3]">
+          </div>
+          <div class="absolute -bottom-5 -right-5 bg-white border border-brand-border p-4 rounded-xl shadow-xl hidden sm:block max-w-xs">
+            <div class="flex items-center space-x-2 text-[10px] font-semibold text-brand-terracotta uppercase tracking-wider">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"/></svg>
+              <span>Vistoria Técnica In Loco</span>
+            </div>
+            <p class="text-[11px] text-brand-muted mt-1 font-light">Levantamento preciso de cada metro quadrado para evitar exigências da fiscalização.</p>
+          </div>
+        </div>
+
+        <!-- Parecer Técnico e Fichas de Risco à Direita -->
+        <div class="lg:col-span-7 space-y-6 lg:pl-4">
+          <div class="space-y-2">
+            <span class="text-[11px] font-semibold text-brand-gold uppercase tracking-[0.25em] block">
+              DIAGNÓSTICO PERICIAL DE RISCO
+            </span>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-normal font-editorial text-brand-title leading-tight">
+              Seu imóvel pode estar irregular<br class="hidden sm:inline"> e você ainda não sabe.
+            </h2>
+          </div>
+
+          <p class="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+            Mais de 60% dos imóveis urbanos possuem discrepâncias entre a área real construída e a certidão do cartório. Veja os 4 pontos críticos que travam a segurança do seu patrimônio:
+          </p>
+
+          <!-- 4 Fichas de Risco Técnico (Formato Pericial) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            
+            <div class="p-4 rounded-xl border border-brand-border bg-[#FBF9F5] space-y-1.5 transition-all hover:border-brand-gold/60">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] uppercase font-bold tracking-wider text-brand-terracotta">Inconformidade 01</span>
+                <span class="text-[10px] text-brand-muted font-mono">FISCAL</span>
+              </div>
+              <h4 class="text-sm font-semibold text-brand-title">Construção Diferente da Planta</h4>
+              <p class="text-xs text-brand-muted font-light">Ampliações de quartos, garagens ou coberturas geram lançamento retroativo de IPTU e multas.</p>
+            </div>
+
+            <div class="p-4 rounded-xl border border-brand-border bg-[#FBF9F5] space-y-1.5 transition-all hover:border-brand-gold/60">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] uppercase font-bold tracking-wider text-brand-terracotta">Inconformidade 02</span>
+                <span class="text-[10px] text-brand-muted font-mono">FINANCIAMENTO</span>
+              </div>
+              <h4 class="text-sm font-semibold text-brand-title">Ausência de Habite-se</h4>
+              <p class="text-xs text-brand-muted font-light">Bancos reprovam financiamento imobiliário e seguradoras recusam cobertura de sinistros.</p>
+            </div>
+
+            <div class="p-4 rounded-xl border border-brand-border bg-[#FBF9F5] space-y-1.5 transition-all hover:border-brand-gold/60">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] uppercase font-bold tracking-wider text-brand-terracotta">Inconformidade 03</span>
+                <span class="text-[10px] text-brand-muted font-mono">JURÍDICO</span>
+              </div>
+              <h4 class="text-sm font-semibold text-brand-title">Matrícula Desatualizada</h4>
+              <p class="text-xs text-brand-muted font-light">Impede inventários, divisão amigável de herança, doação em vida ou venda definitiva.</p>
+            </div>
+
+            <div class="p-4 rounded-xl border border-brand-border bg-[#FBF9F5] space-y-1.5 transition-all hover:border-brand-gold/60">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] uppercase font-bold tracking-wider text-brand-terracotta">Inconformidade 04</span>
+                <span class="text-[10px] text-brand-muted font-mono">ADMINISTRATIVO</span>
+              </div>
+              <h4 class="text-sm font-semibold text-brand-title">Notificações e Multas</h4>
+              <p class="text-xs text-brand-muted font-light">Fiscalização municipal intima a apresentação de projeto sob risco de embargo da edificação.</p>
+            </div>
+
+          </div>
+
+          <!-- Ação da Seção -->
+          <div class="pt-4 flex flex-wrap items-center gap-4">
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20t%C3%A9cnica%20do%20meu%20im%C3%B3vel." 
+               target="_blank" rel="noopener noreferrer" 
+               data-cta-location="apos-problema"
+               class="btn-whatsapp inline-flex items-center space-x-3 bg-brand-terracotta hover:bg-brand-terracotta-hover text-white text-xs sm:text-sm font-semibold px-8 py-3.5 rounded-xl shadow-lg shadow-brand-terracotta/25 transition-all transform hover:-translate-y-0.5">
+              <img src="assets/images/whatsapp-icon-white.svg" alt="WhatsApp" class="w-4 h-4 flex-shrink-0 object-contain" aria-hidden="true">
+              <span>Solicitar análise técnica do meu caso</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+            </a>
+            <span class="text-xs text-brand-muted font-light">Atendimento sigiloso direto com especialista</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       07. COMO FUNCIONA: RÉGUA DE CONDUÇÃO TÉCNICA E TRAMITAÇÃO
+       ========================================== -->
+  <section id="como-funciona" class="py-24 md:py-32 bg-[#FBF9F5] border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Cabeçalho da Seção -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-brand-border/80">
+        <div class="space-y-3">
+          <span class="text-[11px] font-semibold text-brand-gold uppercase tracking-[0.25em] block">FLUXO DE TRABALHO</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-normal font-editorial text-brand-title leading-tight">
+            Do início à regularização definitiva.
+          </h2>
+        </div>
+        <p class="mt-4 md:mt-0 text-xs sm:text-sm text-brand-muted max-w-md font-light leading-relaxed">
+          Metodologia estruturada em 5 etapas para que você tenha visibilidade de cada protocolo com rigor técnico e total previsibilidade.
+        </p>
+      </div>
+
+      <!-- Régua de 5 Fases Sequenciais -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        
+        <!-- Fase 01 -->
+        <div class="p-6 rounded-2xl bg-white border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-gold transition-colors">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold text-brand-terracotta">FASE 01</span>
+              <span class="text-[10px] uppercase tracking-wider text-brand-muted bg-brand-surface-warm px-2 py-0.5 rounded">Levantamento</span>
+            </div>
+            <h3 class="font-normal font-editorial text-xl text-brand-title">Diagnóstico Preliminar</h3>
+            <p class="text-xs text-brand-muted font-light leading-relaxed">
+              Vistoria in loco, conferência métrica, coleta da matrícula e análise dos parâmetros de zoneamento do município.
+            </p>
+          </div>
+          <div class="text-[11px] font-medium text-brand-gold border-t border-brand-border/60 pt-3">
+            Entregável: Parecer de Viabilidade
+          </div>
+        </div>
+
+        <!-- Fase 02 -->
+        <div class="p-6 rounded-2xl bg-white border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-gold transition-colors">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold text-brand-terracotta">FASE 02</span>
+              <span class="text-[10px] uppercase tracking-wider text-brand-muted bg-brand-surface-warm px-2 py-0.5 rounded">Arquitetura</span>
+            </div>
+            <h3 class="font-normal font-editorial text-xl text-brand-title">Projeto Técnico As-Built</h3>
+            <p class="text-xs text-brand-muted font-light leading-relaxed">
+              Elaboração de plantas baixas, cortes, fachadas, memorial descritivo e registro da RRT junto ao CAU.
+            </p>
+          </div>
+          <div class="text-[11px] font-medium text-brand-gold border-t border-brand-border/60 pt-3">
+            Entregável: Pranchas Oficiais & RRT
+          </div>
+        </div>
+
+        <!-- Fase 03 -->
+        <div class="p-6 rounded-2xl bg-white border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-gold transition-colors">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold text-brand-terracotta">FASE 03</span>
+              <span class="text-[10px] uppercase tracking-wider text-brand-muted bg-brand-surface-warm px-2 py-0.5 rounded">Prefeitura</span>
+            </div>
+            <h3 class="font-normal font-editorial text-xl text-brand-title">Protocolo & Aprovação</h3>
+            <p class="text-xs text-brand-muted font-light leading-relaxed">
+              Abertura do processo administrativo municipal, defesa técnica e acompanhamento até o despacho decisório favorável.
+            </p>
+          </div>
+          <div class="text-[11px] font-medium text-brand-gold border-t border-brand-border/60 pt-3">
+            Entregável: Alvará de Regularização
+          </div>
+        </div>
+
+        <!-- Fase 04 -->
+        <div class="p-6 rounded-2xl bg-white border border-brand-border shadow-sm flex flex-col justify-between space-y-4 hover:border-brand-gold transition-colors">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold text-brand-terracotta">FASE 04</span>
+              <span class="text-[10px] uppercase tracking-wider text-brand-muted bg-brand-surface-warm px-2 py-0.5 rounded">Habite-se</span>
+            </div>
+            <h3 class="font-normal font-editorial text-xl text-brand-title">Conclusão de Obra & CND</h3>
+            <p class="text-xs text-brand-muted font-light leading-relaxed">
+              Vistoria final dos fiscais, emissão do Habite-se e certidão negativa da Receita Federal (SERO).
+            </p>
+          </div>
+          <div class="text-[11px] font-medium text-brand-gold border-t border-brand-border/60 pt-3">
+            Entregável: Habite-se & CND Federal
+          </div>
+        </div>
+
+        <!-- Fase 05: Destaque Nobre -->
+        <div class="p-6 rounded-2xl bg-[#121110] text-white border border-[#2B2621] shadow-lg flex flex-col justify-between space-y-4 hover:border-brand-gold transition-colors">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold text-brand-gold">FASE 05</span>
+              <span class="text-[10px] uppercase tracking-wider text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/30">Consolidação</span>
+            </div>
+            <h3 class="font-normal font-editorial text-xl text-white">Averbação no Cartório</h3>
+            <p class="text-xs text-[#D8CEBF] font-light leading-relaxed">
+              Apresentação da documentação no Cartório de Registro de Imóveis para atualização definitiva da matrícula imobiliária.
+            </p>
+          </div>
+          <div class="text-[11px] font-medium text-brand-gold border-t border-white/15 pt-3">
+            Resultado: Imóvel 100% Regularizado
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       08. CASE REAL: ESTUDO DE CASO DOCUMENTAL
+       ========================================== -->
+  <section class="py-24 md:py-32 bg-[#FFFFFF] border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Texto do Case à Esquerda (col-span-4) -->
+        <div class="lg:col-span-4 space-y-5">
+          <span class="text-[11px] font-semibold text-brand-gold uppercase tracking-[0.25em] block">ESTUDO DE CASO DOCUMENTADO</span>
+          
+          <h2 class="text-3xl sm:text-4xl font-normal font-editorial text-brand-title leading-tight">
+            Da irregularidade à tranquilidade patrimonial.
           </h2>
 
-          <p class="text-sm sm:text-base text-brand-muted leading-relaxed">
-            A <strong>ZHAARQ Arquitetura</strong> nasceu com o propósito de unir o rigor técnico do projeto arquitetônico à segurança jurídica da regularização de imóveis. Entendemos que regularizar não é preencher formulários: é proteger o patrimônio que muitas vezes levou uma vida para ser construído.
+          <p class="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+            Residência com acréscimo de 145m² de área construída não averbada. A família necessitava formalizar a documentação para venda através de financiamento bancário.
           </p>
 
-          <p class="text-sm sm:text-base text-brand-muted leading-relaxed">
-            Atuamos perante Prefeituras, Receita Federal e Cartórios de Registro de Imóveis, garantindo que você tenha clareza de prazos, custos e possibilidades legais para o seu caso.
-          </p>
-
-          <div class="grid grid-cols-2 gap-4 pt-2">
-            <div class="bg-white p-4 rounded-xl border border-brand-border">
-              <p class="text-xs font-bold text-brand-title">Registro CAU</p>
-              <p class="text-[11px] text-brand-muted">Conselho de Arquitetura e Urbanismo</p>
-            </div>
-            <div class="bg-white p-4 rounded-xl border border-brand-border">
-              <p class="text-xs font-bold text-brand-title">São Paulo & Região</p>
-              <p class="text-[11px] text-brand-muted">Atendimento técnico presencial e digital</p>
-            </div>
+          <div class="border-t border-brand-border pt-4 space-y-2 text-xs text-brand-muted font-light">
+            <div class="flex justify-between"><span>Tempo Total:</span> <strong class="text-brand-title font-medium">82 dias</strong></div>
+            <div class="flex justify-between"><span>Resultado:</span> <strong class="text-emerald-700 font-medium">Habite-se Concedido & Averbado</strong></div>
           </div>
+
+          <div class="pt-2">
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20mais%20cases%20da%20ZHAARQ." 
+               target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center space-x-2 bg-brand-terracotta hover:bg-brand-terracotta-hover text-white text-xs font-semibold px-6 py-3.5 rounded-xl transition-all shadow-md">
+              <span>Quero regularizar meu caso</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quatro Imagens da Sequência Técnica (col-span-8) -->
+        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+          
+          <!-- Etapa 1 -->
+          <div class="bg-[#FBF9F5] p-3 rounded-2xl border border-brand-border shadow-sm flex flex-col justify-between">
+            <div class="relative rounded-xl overflow-hidden aspect-[4/3] mb-3 bg-[#121110]">
+              <img src="assets/images/case_1_em_obras.webp" alt="Estrutura e Alvenaria em obras" class="zoomable-image w-full h-full object-cover">
+              <div class="absolute top-2 left-2 bg-black/85 text-white text-[9px] font-semibold px-2 py-0.5 rounded uppercase tracking-wider">
+                01. Diagnóstico
+              </div>
+            </div>
+            <h4 class="font-medium text-xs text-brand-title">Estrutura & Alvenaria</h4>
+          </div>
+
+          <!-- Etapa 2 -->
+          <div class="bg-[#FBF9F5] p-3 rounded-2xl border border-brand-border shadow-sm flex flex-col justify-between">
+            <div class="relative rounded-xl overflow-hidden aspect-[4/3] mb-3 bg-[#121110]">
+              <img src="assets/images/case_2_acompanhamento.webp" alt="Vistoria técnica e acompanhamento" class="zoomable-image w-full h-full object-cover">
+              <div class="absolute top-2 left-2 bg-black/85 text-white text-[9px] font-semibold px-2 py-0.5 rounded uppercase tracking-wider">
+                02. Vistoria
+              </div>
+            </div>
+            <h4 class="font-medium text-xs text-brand-title">Acompanhamento Técnico</h4>
+          </div>
+
+          <!-- Etapa 3 -->
+          <div class="bg-[#FBF9F5] p-3 rounded-2xl border border-brand-border shadow-sm flex flex-col justify-between">
+            <div class="relative rounded-xl overflow-hidden aspect-[4/3] mb-3 bg-[#121110]">
+              <img src="assets/images/case_3_concluida.webp" alt="Edificação pronta e obra concluída" class="zoomable-image w-full h-full object-cover">
+              <div class="absolute top-2 left-2 bg-[#8C5D3F] text-white text-[9px] font-semibold px-2 py-0.5 rounded uppercase tracking-wider">
+                03. Conclusão
+              </div>
+            </div>
+            <h4 class="font-medium text-xs text-brand-title">Edificação Finalizada</h4>
+          </div>
+
+          <!-- Etapa 4 -->
+          <div class="bg-[#FBF9F5] p-3 rounded-2xl border border-brand-border shadow-sm flex flex-col justify-between">
+            <div class="relative rounded-xl overflow-hidden aspect-[4/3] mb-3 bg-[#121110]">
+              <img src="assets/images/case_4_averbada.webp" alt="Habite-se e averbação em cartório" class="zoomable-image w-full h-full object-cover">
+              <div class="absolute top-2 left-2 bg-brand-terracotta text-white text-[9px] font-semibold px-2 py-0.5 rounded uppercase tracking-wider">
+                04. Averbada
+              </div>
+            </div>
+            <h4 class="font-medium text-xs text-brand-title">Matrícula Atualizada</h4>
+          </div>
+
         </div>
 
       </div>
@@ -642,165 +841,295 @@
   </section>
 
   <!-- ==========================================
-       11. FAQ (DÚVIDAS FREQUENTES EXPANDIDAS)
+       09. SOBRE: QUEM CONDUZ O SEU PROCESSO (PERFIL DO ATELIÊ & AUTORIDADE)
        ========================================== -->
-  <section class="py-16 md:py-24 bg-white border-t border-brand-border">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      
-      <div class="text-center space-y-3 mb-14">
-        <span class="text-xs uppercase font-bold text-brand-primary tracking-widest">Perguntas Frequentes</span>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-editorial text-brand-title">
-          Tire suas dúvidas sobre regularização
-        </h2>
-        <p class="text-sm sm:text-base text-brand-muted">
-          Respostas transparentes para as perguntas mais comuns:
-        </p>
-      </div>
-
-      <div class="space-y-3.5">
+  <section id="sobre" class="py-24 md:py-32 bg-[#FBF9F5] border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
-        <!-- FAQ 0 (NOVA PERGUNTA CRUCIAL DE CONVERSÃO) -->
-        <div class="faq-item bg-brand-bg rounded-2xl border border-brand-border overflow-hidden">
-          <button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center space-x-4 focus:outline-none" aria-expanded="false">
-            <span class="font-bold text-brand-title text-sm sm:text-base">Preciso saber quais documentos tenho antes de entrar em contato?</span>
-            <svg class="faq-icon w-5 h-5 text-brand-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </button>
-          <div class="faq-content px-6 pb-5 text-sm text-brand-muted leading-relaxed">
-            Não. Você pode explicar a situação que está enfrentando e a análise inicial ajudará a identificar quais informações e documentos serão necessários.
+        <!-- Retrato Editorial à Esquerda -->
+        <div class="lg:col-span-5 relative">
+          <div class="rounded-2xl overflow-hidden border border-brand-border shadow-xl bg-[#121110]">
+            <img src="assets/images/arquiteta_real.webp" 
+                 alt="Arquiteta e Urbanista Responsável ZHAARQ" 
+                 class="w-full h-auto object-cover aspect-[4/3] sm:aspect-[3/4]">
+          </div>
+          <div class="absolute -bottom-6 -left-4 sm:left-6 bg-[#121110] text-white p-4 rounded-xl border border-brand-gold/40 shadow-2xl flex items-center space-x-3 text-xs">
+            <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></div>
+            <div>
+              <p class="font-semibold text-white tracking-wide">Juliana Lucena</p>
+              <p class="text-[11px] text-brand-gold">Arquiteta e Urbanista • CAU/SP Ativo</p>
+            </div>
           </div>
         </div>
 
-        <div class="faq-item bg-brand-bg rounded-2xl border border-brand-border overflow-hidden">
-          <button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center space-x-4 focus:outline-none" aria-expanded="false">
-            <span class="font-bold text-brand-title text-sm sm:text-base">Como saber se meu imóvel está irregular?</span>
-            <svg class="faq-icon w-5 h-5 text-brand-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </button>
-          <div class="faq-content px-6 pb-5 text-sm text-brand-muted leading-relaxed">
-            A situação pode ser identificada comparando a construção existente com os documentos e registros disponíveis. A análise técnica permite entender quais pendências existem.
-          </div>
-        </div>
+        <!-- Descrição, Citação & Credenciais Técnicas à Direita -->
+        <div class="lg:col-span-7 space-y-6 lg:pl-6">
+          <span class="text-[11px] font-semibold text-brand-gold uppercase tracking-[0.25em] block">
+            RESPONSABILIDADE TÉCNICA
+          </span>
+          
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-normal font-editorial text-brand-title leading-tight">
+            Arquiteta especialista acompanhando cada detalhe.
+          </h2>
 
-        <div class="faq-item bg-brand-bg rounded-2xl border border-brand-border overflow-hidden">
-          <button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center space-x-4 focus:outline-none" aria-expanded="false">
-            <span class="font-bold text-brand-title text-sm sm:text-base">Todo imóvel pode ser regularizado?</span>
-            <svg class="faq-icon w-5 h-5 text-brand-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </button>
-          <div class="faq-content px-6 pb-5 text-sm text-brand-muted leading-relaxed">
-            Cada caso precisa ser avaliado individualmente. As possibilidades dependem da legislação, características da construção, documentação e regras municipais.
-          </div>
-        </div>
+          <!-- Citação Editorial -->
+          <blockquote class="border-l-2 border-brand-gold pl-4 py-1 italic font-editorial text-lg sm:text-xl text-brand-title font-light">
+            "A regularização imobiliária é o ato de dar solidez jurídica a quem construiu. Unimos rigor normativo à sensibilidade projetual."
+          </blockquote>
 
-        <div class="faq-item bg-brand-bg rounded-2xl border border-brand-border overflow-hidden">
-          <button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center space-x-4 focus:outline-none" aria-expanded="false">
-            <span class="font-bold text-brand-title text-sm sm:text-base">Construí uma área que não está na planta. O que faço?</span>
-            <svg class="faq-icon w-5 h-5 text-brand-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </button>
-          <div class="faq-content px-6 pb-5 text-sm text-brand-muted leading-relaxed">
-            É necessário avaliar a construção existente e verificar quais procedimentos são exigidos para buscar sua regularização.
-          </div>
-        </div>
+          <p class="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+            Com mais de uma centena de processos conduzidos nas principais subprefeituras de São Paulo e municípios vizinhos, a ZHAARQ alia o domínio prático do direito urbanístico à excelência gráfica dos projetos arquitetônicos.
+          </p>
 
-        <div class="faq-item bg-brand-bg rounded-2xl border border-brand-border overflow-hidden">
-          <button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center space-x-4 focus:outline-none" aria-expanded="false">
-            <span class="font-bold text-brand-title text-sm sm:text-base">Não tenho Habite-se. Vocês podem ajudar?</span>
-            <svg class="faq-icon w-5 h-5 text-brand-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </button>
-          <div class="faq-content px-6 pb-5 text-sm text-brand-muted leading-relaxed">
-            Sim. Primeiro é necessário analisar a situação do imóvel e entender quais etapas serão necessárias para solicitar o documento, quando aplicável.
+          <!-- Tabela de Credenciais Técnicas Hairline -->
+          <div class="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-brand-border text-left">
+            <div class="space-y-1">
+              <span class="text-[10px] uppercase tracking-wider text-brand-muted block">Habilitação</span>
+              <strong class="text-xs font-semibold text-brand-title block">Registro CAU</strong>
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] uppercase tracking-wider text-brand-muted block">Experiência</span>
+              <strong class="text-xs font-semibold text-brand-title block">+100 Imóveis</strong>
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] uppercase tracking-wider text-brand-muted block">Abrangência</span>
+              <strong class="text-xs font-semibold text-brand-title block">SP & Região</strong>
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] uppercase tracking-wider text-brand-muted block">Atendimento</span>
+              <strong class="text-xs font-semibold text-brand-title block">100% Exclusivo</strong>
+            </div>
           </div>
-        </div>
 
-        <div class="faq-item bg-brand-bg rounded-2xl border border-brand-border overflow-hidden">
-          <button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center space-x-4 focus:outline-none" aria-expanded="false">
-            <span class="font-bold text-brand-title text-sm sm:text-base">Quanto tempo demora uma regularização?</span>
-            <svg class="faq-icon w-5 h-5 text-brand-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </button>
-          <div class="faq-content px-6 pb-5 text-sm text-brand-muted leading-relaxed">
-            O prazo varia conforme a situação do imóvel, documentação, município e órgãos envolvidos.
+          <div class="pt-2">
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20arquiteta%20respons%C3%A1vel." 
+               target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center space-x-2 bg-brand-terracotta hover:bg-brand-terracotta-hover text-white text-xs sm:text-sm font-semibold px-8 py-3.5 rounded-xl transition-all shadow-md">
+              <span>Falar diretamente com a arquiteta</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+            </a>
           </div>
-        </div>
 
-        <div class="faq-item bg-brand-bg rounded-2xl border border-brand-border overflow-hidden">
-          <button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center space-x-4 focus:outline-none" aria-expanded="false">
-            <span class="font-bold text-brand-title text-sm sm:text-base">Quanto custa regularizar um imóvel?</span>
-            <svg class="faq-icon w-5 h-5 text-brand-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </button>
-          <div class="faq-content px-6 pb-5 text-sm text-brand-muted leading-relaxed">
-            O valor depende da complexidade e das etapas necessárias. Após entender a situação do imóvel, é possível definir o escopo adequado.
-          </div>
-        </div>
-
-        <div class="faq-item bg-brand-bg rounded-2xl border border-brand-border overflow-hidden">
-          <button class="faq-trigger w-full px-6 py-5 text-left flex justify-between items-center space-x-4 focus:outline-none" aria-expanded="false">
-            <span class="font-bold text-brand-title text-sm sm:text-base">Vocês cuidam do processo inteiro?</span>
-            <svg class="faq-icon w-5 h-5 text-brand-primary flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </button>
-          <div class="faq-content px-6 pb-5 text-sm text-brand-muted leading-relaxed">
-            A ZHAARQ pode atuar em diferentes etapas técnicas e documentais relacionadas à regularização, de acordo com a necessidade identificada em cada caso.
-          </div>
         </div>
 
       </div>
-
     </div>
   </section>
 
   <!-- ==========================================
-       12. CONVERSÃO FINAL (SUPER CTA GRAFITE & DOURADO)
+       10. FAQ: DÚVIDAS FREQUENTES (ACORDEÃO EDITORIAL CLEAN)
        ========================================== -->
-  <section class="py-16 md:py-24 bg-dark-section text-center text-white border-t border-[#312B26]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
+  <section id="faq" class="py-24 md:py-32 bg-[#FFFFFF] border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        
+        <!-- Título da Seção à Esquerda -->
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-[11px] font-semibold text-brand-gold uppercase tracking-[0.25em] block">ESCLARECIMENTOS</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-normal font-editorial text-brand-title leading-tight">
+            Perguntas frequentes sobre regularização.
+          </h2>
+          <p class="text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
+            Dúvidas comuns sobre documentação, prazos e custos na aprovação de imóveis residenciais e comerciais.
+          </p>
+        </div>
+
+        <!-- Acordeão Editorial Minimalista com Divisores Ultrafinos -->
+        <div class="lg:col-span-7 divide-y divide-brand-border border-y border-brand-border">
+          
+          <div class="faq-item py-6 transition-colors duration-200">
+            <button class="faq-trigger w-full text-left flex justify-between items-center space-x-4 focus:outline-none group" aria-expanded="false">
+              <span class="font-normal font-editorial text-xl sm:text-2xl text-brand-title group-hover:text-brand-terracotta transition-colors">
+                Como saber se meu imóvel possui alguma irregularidade?
+              </span>
+              <span class="w-8 h-8 rounded-full border border-brand-border flex items-center justify-center flex-shrink-0 text-brand-terracotta group-hover:border-brand-terracotta transition-colors">
+                <svg class="faq-icon w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </span>
+            </button>
+            <div class="faq-content text-xs sm:text-sm text-brand-muted font-light leading-relaxed pt-3">
+              Divergências entre a área construída real e a descrita na matrícula no Cartório de Imóveis, ausência de Habite-se ou reformas que alteraram a planta sem protocolo municipal caracterizam irregularidade. Nossa análise técnica inicial identifica essas inconsistências.
+            </div>
+          </div>
+
+          <div class="faq-item py-6 transition-colors duration-200">
+            <button class="faq-trigger w-full text-left flex justify-between items-center space-x-4 focus:outline-none group" aria-expanded="false">
+              <span class="font-normal font-editorial text-xl sm:text-2xl text-brand-title group-hover:text-brand-terracotta transition-colors">
+                Quanto tempo leva um processo de aprovação na Prefeitura?
+              </span>
+              <span class="w-8 h-8 rounded-full border border-brand-border flex items-center justify-center flex-shrink-0 text-brand-terracotta group-hover:border-brand-terracotta transition-colors">
+                <svg class="faq-icon w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </span>
+            </button>
+            <div class="faq-content text-xs sm:text-sm text-brand-muted font-light leading-relaxed pt-3">
+              O prazo médio varia conforme o município, tipo de edificação e enquadramento (anistia ou processo ordinário). Em geral, os processos levam entre 60 a 120 dias quando o projeto arquitetônico é protocolado sem pendências técnicas.
+            </div>
+          </div>
+
+          <div class="faq-item py-6 transition-colors duration-200">
+            <button class="faq-trigger w-full text-left flex justify-between items-center space-x-4 focus:outline-none group" aria-expanded="false">
+              <span class="font-normal font-editorial text-xl sm:text-2xl text-brand-title group-hover:text-brand-terracotta transition-colors">
+                Não possuo a planta antiga ou documentos originais. É possível iniciar?
+              </span>
+              <span class="w-8 h-8 rounded-full border border-brand-border flex items-center justify-center flex-shrink-0 text-brand-terracotta group-hover:border-brand-terracotta transition-colors">
+                <svg class="faq-icon w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </span>
+            </button>
+            <div class="faq-content text-xs sm:text-sm text-brand-muted font-light leading-relaxed pt-3">
+              Sim. Nossa equipe realiza o levantamento as-built in loco com equipamentos de medição a laser, desenha toda a edificação do zero e busca certidões históricas nos órgãos competentes.
+            </div>
+          </div>
+
+          <div class="faq-item py-6 transition-colors duration-200">
+            <button class="faq-trigger w-full text-left flex justify-between items-center space-x-4 focus:outline-none group" aria-expanded="false">
+              <span class="font-normal font-editorial text-xl sm:text-2xl text-brand-title group-hover:text-brand-terracotta transition-colors">
+                A ZHAARQ cuida também da averbação final no Cartório de Imóveis?
+              </span>
+              <span class="w-8 h-8 rounded-full border border-brand-border flex items-center justify-center flex-shrink-0 text-brand-terracotta group-hover:border-brand-terracotta transition-colors">
+                <svg class="faq-icon w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </span>
+            </button>
+            <div class="faq-content text-xs sm:text-sm text-brand-muted font-light leading-relaxed pt-3">
+              Sim. Nosso trabalho só termina quando a área construída está devidamente averbada na matrícula do imóvel no RGI, garantindo plena liquidez para venda, financiamento bancário ou herança.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       11. SUPER CTA FINAL: BLOCO ARQUITETÔNICO ESCULTURAL
+       ========================================== -->
+  <section class="py-24 md:py-32 bg-[#121110] text-white border-t border-[#2B2621] relative overflow-hidden">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Esquerda: Chamada de Conversão com Rigor de Marca -->
+        <div class="lg:col-span-7 space-y-6">
+          <span class="text-[11px] font-semibold text-brand-gold uppercase tracking-[0.25em] block">
+            DIAGNÓSTICO PERSONALIZADO
+          </span>
+          
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-normal font-editorial text-white leading-tight">
+            Vamos analisar a situação técnica do seu imóvel?
+          </h2>
+
+          <p class="text-sm sm:text-base text-[#C4B9AC] font-light max-w-xl leading-relaxed">
+            Envie o endereço ou a documentação existente. Nossa arquiteta responsável avaliará a viabilidade de regularização e apresentará o plano de ação adequado.
+          </p>
+
+          <div class="pt-2 flex flex-wrap items-center gap-4">
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20encontrei%20a%20ZHAARQ%20e%20gostaria%20de%20analisar%20meu%20im%C3%B3vel." 
+               target="_blank" rel="noopener noreferrer" 
+               data-cta-location="final"
+               class="btn-whatsapp inline-flex items-center space-x-3 bg-brand-terracotta hover:bg-brand-terracotta-hover text-white text-sm sm:text-base font-semibold px-9 py-4 rounded-xl shadow-2xl shadow-brand-terracotta/40 transition-all transform hover:-translate-y-0.5">
+              <img src="assets/images/whatsapp-icon-white.svg" alt="WhatsApp" class="w-5 h-5 flex-shrink-0 object-contain" aria-hidden="true">
+              <span>Iniciar análise pelo WhatsApp</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+            </a>
+          </div>
+
+          <p class="text-[11px] text-[#8C8276] font-light">
+            Privacidade resguardada em conformidade com a LGPD • Atendimento exclusivo para São Paulo e região.
+          </p>
+        </div>
+
+        <!-- Direita: Ficha de Atendimento Técnico com Linha Hairline -->
+        <div class="lg:col-span-5 border-t lg:border-t-0 lg:border-l border-white/15 pt-8 lg:pt-0 lg:pl-10 space-y-6">
+          <div class="space-y-4 text-xs text-[#D8CEBF] font-light">
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+              <h4 class="font-semibold text-white uppercase text-[11px] tracking-wider">Atendimento Direto</h4>
+              <p>Comunicação transparente com arquiteta responsável técnica.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+              <h4 class="font-semibold text-white uppercase text-[11px] tracking-wider">Agilidade em Prazos</h4>
+              <p>Protocolos municipais instruídos com rigor para evitar comunique-se.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+              <h4 class="font-semibold text-white uppercase text-[11px] tracking-wider">Tranquilidade Patrimonial</h4>
+              <p>Imóvel 100% legalizado para comercialização ou partilha familiar.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       12. RODAPÉ INSTITUCIONAL ARQUITETÔNICO COMPLETO
+       ========================================== -->
+  <footer class="bg-[#0D0C0B] text-[#A89E8F] py-16 border-t border-[#201D1A]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <span class="inline-block bg-[#332A21] text-brand-gold px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
-        Dê o Primeiro Passo
-      </span>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Coluna 1: Marca & Manifesto (4 cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <img src="assets/images/logo-branca.webp" alt="ZHAARQ Arquitetura" class="h-9 w-auto object-contain opacity-95">
+          <p class="text-xs text-[#8C8275] leading-relaxed font-light max-w-sm">
+            Escritório especializado em arquitetura técnica, projetos legais e regularização patrimonial de imóveis em São Paulo e região metropolitana.
+          </p>
+          <div class="text-[11px] text-brand-gold font-medium">
+            CAU/SP • Responsabilidade Técnica Ativa
+          </div>
+        </div>
 
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold font-editorial text-white leading-tight">
-        Seu imóvel pode ter uma solução.<br class="hidden sm:inline"> O primeiro passo é entender a situação atual.
-      </h2>
+        <!-- Coluna 2: Serviços (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-xs font-semibold text-white uppercase tracking-wider">Especialidades</h4>
+          <ul class="space-y-2 text-xs text-[#8C8275] font-light">
+            <li><a href="#servicos" class="hover:text-brand-gold transition-colors">Regularização Residencial</a></li>
+            <li><a href="#servicos" class="hover:text-brand-gold transition-colors">Adequação Comercial & AVCB</a></li>
+            <li><a href="#servicos" class="hover:text-brand-gold transition-colors">Aprovação de Projetos & As-Built</a></li>
+            <li><a href="#servicos" class="hover:text-brand-gold transition-colors">Obtenção de Habite-se</a></li>
+            <li><a href="#servicos" class="hover:text-brand-gold transition-colors">Averbação no Cartório de Imóveis</a></li>
+          </ul>
+        </div>
 
-      <p class="text-base sm:text-lg text-[#C4B9AC] max-w-2xl mx-auto leading-relaxed">
-        Conte para a ZHAARQ o que está acontecendo e descubra quais podem ser os próximos passos para buscar a regularização do seu imóvel.
-      </p>
+        <!-- Coluna 3: Regiões de Atendimento (2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="text-xs font-semibold text-white uppercase tracking-wider">Atuação</h4>
+          <ul class="space-y-1.5 text-xs text-[#8C8275] font-light">
+            <li>São Paulo (Capital)</li>
+            <li>Grande São Paulo</li>
+            <li>Campinas e Região</li>
+            <li>Litoral Paulista</li>
+          </ul>
+        </div>
 
-      <div class="pt-4">
-        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20encontrei%20a%20ZHAARQ%20pelo%20Google%20e%20gostaria%20de%20entender%20como%20regularizar%20meu%20im%C3%B3vel." 
-           target="_blank" rel="noopener noreferrer" 
-           data-cta-location="final"
-           class="btn-whatsapp inline-flex items-center space-x-3 bg-brand-primary hover:bg-brand-primary-hover text-white text-base sm:text-lg font-bold px-10 py-5 rounded-2xl shadow-2xl transition-all transform hover:-translate-y-1">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.028.847 2.796.847 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.588-5.767-5.768-5.767zm3.364 8.167c-.14.397-.714.736-1.026.782-.312.046-.66.075-1.921-.449-1.503-.623-2.483-2.14-2.557-2.239-.074-.099-.613-.815-.613-1.554 0-.739.387-1.103.524-1.253.138-.15.301-.188.401-.188.1 0 .201.002.289.006.094.005.219-.036.344.264.129.312.441 1.077.48 1.156.039.078.065.17.013.273-.051.102-.078.165-.154.254-.078.089-.163.199-.233.267-.078.077-.16.16-.069.316.091.156.403.664.865 1.075.594.529 1.096.693 1.252.77.156.078.247.065.339-.039.091-.104.389-.452.493-.607.104-.156.208-.13.347-.078.139.052.883.416 1.035.492.152.076.254.113.291.178.037.064.037.373-.103.77z"/></svg>
-          <span>QUERO ANALISAR MEU IMÓVEL</span>
-        </a>
+        <!-- Coluna 4: Contato & Atendimento (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-xs font-semibold text-white uppercase tracking-wider">Atendimento</h4>
+          <p class="text-xs text-[#8C8275] font-light">Segunda a Sexta: 09h às 18h</p>
+          <p class="text-xs text-[#8C8275] font-light">São Paulo, SP</p>
+          <div class="pt-2">
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20ZHAARQ." 
+               target="_blank" rel="noopener noreferrer" 
+               class="text-xs font-semibold text-brand-gold hover:text-white transition-colors inline-flex items-center space-x-1">
+              <span>Falar via WhatsApp Oficial</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
       </div>
 
-      <p class="text-xs text-[#A89E92]">
-        Conversa direta e confidencial • Análise inicial sem compromisso
-      </p>
-
-    </div>
-  </section>
-
-  <!-- ==========================================
-       RODAPÉ (FOOTER)
-       ========================================== -->
-  <footer class="bg-[#12100E] text-[#D8CEBF] py-12 border-t border-[#26211C]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#26211C] text-center md:text-left">
+      <!-- Linha Inferior com Copyright e LGPD -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#6A6258] gap-4">
         <div>
-          <img src="assets/images/logo-branca.webp" alt="ZHAARQ Arquitetura" class="h-16 sm:h-20 w-auto object-contain opacity-95 mx-auto md:mx-0">
-          <p class="text-xs text-[#A89E8F] mt-2">Regularização de Imóveis | Assessoria Legal | Projetos</p>
+          © 2026 ZHAARQ Arquitetura & Regularização Imobiliária. Todos os direitos reservados.
         </div>
-
-        <div class="text-xs text-[#A89E8F] space-y-1">
-          <p>São Paulo e Região Metropolitana</p>
-          <p>Condução técnica de processos perante Prefeituras e Cartórios</p>
+        <div class="flex items-center space-x-6 text-[11px]">
+          <span>Privacidade & LGPD</span>
+          <span>Termos de Uso</span>
+          <span>RRT Registrada</span>
         </div>
       </div>
 
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#7A7165] gap-3 text-center">
-        <p>© 2026 ZHAARQ Arquitetura e Serviços. Todos os direitos reservados.</p>
-        <p>A condução dos processos depende da análise individual e das diretrizes dos órgãos competentes.</p>
-      </div>
     </div>
   </footer>
 
@@ -815,9 +1144,9 @@
     <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20encontrei%20a%20ZHAARQ%20pelo%20Google%20e%20gostaria%20de%20entender%20como%20regularizar%20meu%20im%C3%B3vel." 
        target="_blank" rel="noopener noreferrer" 
        data-cta-location="mobile-fixo"
-       class="btn-whatsapp inline-flex items-center space-x-2 bg-brand-primary text-white text-xs font-bold px-4 py-2.5 rounded-full shadow-md">
-      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.028.847 2.796.847 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.588-5.767-5.768-5.767zm3.364 8.167c-.14.397-.714.736-1.026.782-.312.046-.66.075-1.921-.449-1.503-.623-2.483-2.14-2.557-2.239-.074-.099-.613-.815-.613-1.554 0-.739.387-1.103.524-1.253.138-.15.301-.188.401-.188.1 0 .201.002.289.006.094.005.219-.036.344.264.129.312.441 1.077.48 1.156.039.078.065.17.013.273-.051.102-.078.165-.154.254-.078.089-.163.199-.233.267-.078.077-.16.16-.069.316.091.156.403.664.865 1.075.594.529 1.096.693 1.252.77.156.078.247.065.339-.039.091-.104.389-.452.493-.607.104-.156.208-.13.347-.078.139.052.883.416 1.035.492.152.076.254.113.291.178.037.064.037.373-.103.77z"/></svg>
-      <span>WhatsApp | Falar com especialista</span>
+       class="btn-whatsapp inline-flex items-center space-x-2 bg-brand-terracotta text-white text-xs font-bold px-4 py-2.5 rounded-full shadow-md">
+      <img src="assets/images/whatsapp-icon-white.svg" alt="WhatsApp" class="w-4 h-4 flex-shrink-0 object-contain" aria-hidden="true">
+      <span>Falar no WhatsApp</span>
     </a>
   </div>
 
@@ -831,146 +1160,8 @@
      aria-label="Falar com especialista pelo WhatsApp"
      class="btn-whatsapp whatsapp-float hidden md:inline-flex">
     <span class="whatsapp-float-label">Falar com especialista</span>
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.028.847 2.796.847 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.588-5.767-5.768-5.767zm3.364 8.167c-.14.397-.714.736-1.026.782-.312.046-.66.075-1.921-.449-1.503-.623-2.483-2.14-2.557-2.239-.074-.099-.613-.815-.613-1.554 0-.739.387-1.103.524-1.253.138-.15.301-.188.401-.188.1 0 .201.002.289.006.094.005.219-.036.344.264.129.312.441 1.077.48 1.156.039.078.065.17.013.273-.051.102-.078.165-.154.254-.078.089-.163.199-.233.267-.078.077-.16.16-.069.316.091.156.403.664.865 1.075.594.529 1.096.693 1.252.77.156.078.247.065.339-.039.091-.104.389-.452.493-.607.104-.156.208-.13.347-.078.139.052.883.416 1.035.492.152.076.254.113.291.178.037.064.037.373-.103.77z"/></svg>
+    <img src="assets/images/whatsapp-icon-white.svg" alt="WhatsApp" class="w-9 h-9 object-contain" aria-hidden="true">
   </a>
-
-  <!-- ==========================================
-       MODAL LIGHTBOX
-       ========================================== -->
-  <div id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Visualização de imagem" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md p-4 flex flex-col items-center justify-center select-none">
-    
-    <!-- Barra Superior: Contador e Botão Fechar -->
-    <div class="w-full max-w-4xl flex items-center justify-between pb-3 px-2 text-white">
-      <span id="lightbox-counter" class="text-xs sm:text-sm font-semibold tracking-wider text-white/80 bg-white/10 px-3 py-1 rounded-full">
-        1 / 10
-      </span>
-      <button id="lightbox-close" class="text-white hover:text-brand-gold text-2xl font-bold p-1 transition-colors focus:outline-none" title="Fechar (Esc)" aria-label="Fechar galeria">
-        ✕
-      </button>
-    </div>
-
-    <!-- Container da Imagem com Setas de Navegação -->
-    <div class="relative w-full max-w-4xl flex items-center justify-center">
-      <!-- Botão Anterior -->
-      <button id="lightbox-prev" class="absolute left-2 sm:left-4 z-10 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-black/60 hover:bg-brand-primary text-white flex items-center justify-center shadow-xl transition-all transform hover:scale-110 focus:outline-none" title="Foto Anterior (Seta Esquerda)" aria-label="Foto anterior">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
-      </button>
-
-      <!-- Imagem Principal Ampliada -->
-      <img id="lightbox-img" src="" alt="Imagem ampliada" class="max-h-[75vh] max-w-full w-auto mx-auto rounded-2xl shadow-2xl object-contain border border-white/15 transition-opacity duration-200">
-
-      <!-- Botão Próximo -->
-      <button id="lightbox-next" class="absolute right-2 sm:right-4 z-10 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-black/60 hover:bg-brand-primary text-white flex items-center justify-center shadow-xl transition-all transform hover:scale-110 focus:outline-none" title="Próxima Foto (Seta Direita)" aria-label="Próxima foto">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-      </button>
-    </div>
-
-    <!-- Legenda Inferior -->
-    <div class="w-full max-w-4xl text-center pt-3 px-4">
-      <p id="lightbox-caption" class="text-xs sm:text-sm text-white/90 font-medium tracking-wide">
-        Descrição da foto
-      </p>
-    </div>
-
-  </div>
-
-  <!-- Scripts -->
-  <script src="js/main.js"></script>
-</body>
-</html>
-  <!-- ==========================================
-       RODAPÉ (FOOTER)
-       ========================================== -->
-  <footer class="bg-[#12100E] text-[#D8CEBF] py-12 border-t border-[#26211C]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#26211C] text-center md:text-left">
-        <div>
-          <img src="assets/images/logo-branca.webp" alt="ZHAARQ Arquitetura" class="h-16 sm:h-20 w-auto object-contain opacity-95 mx-auto md:mx-0">
-          <p class="text-xs text-[#A89E8F] mt-2">Regularização de Imóveis | Assessoria Legal | Projetos</p>
-        </div>
-
-        <div class="text-xs text-[#A89E8F] space-y-1">
-          <p>São Paulo e Região Metropolitana</p>
-          <p>Condução técnica de processos perante Prefeituras e Cartórios</p>
-        </div>
-      </div>
-
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#7A7165] gap-3 text-center">
-        <p>© 2026 ZHAARQ Arquitetura e Serviços. Todos os direitos reservados.</p>
-        <p>A condução dos processos depende da análise individual e das diretrizes dos órgãos competentes.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ==========================================
-       BARRA FIXA FLUTUANTE MOBILE (WHATSAPP)
-       ========================================== -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white/95 backdrop-blur-md border-t border-brand-border z-50 flex items-center justify-between shadow-2xl">
-    <div class="text-left pl-1">
-      <p class="text-[11px] font-bold text-brand-title">Precisa de análise?</p>
-      <p class="text-[10px] text-brand-muted">Fale com um especialista</p>
-    </div>
-    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20encontrei%20a%20ZHAARQ%20pelo%20Google%20e%20gostaria%20de%20entender%20como%20regularizar%20meu%20im%C3%B3vel." 
-       target="_blank" rel="noopener noreferrer" 
-       data-cta-location="mobile-fixo"
-       class="btn-whatsapp inline-flex items-center space-x-2 bg-brand-primary text-white text-xs font-bold px-4 py-2.5 rounded-full shadow-md">
-      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.028.847 2.796.847 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.588-5.767-5.768-5.767zm3.364 8.167c-.14.397-.714.736-1.026.782-.312.046-.66.075-1.921-.449-1.503-.623-2.483-2.14-2.557-2.239-.074-.099-.613-.815-.613-1.554 0-.739.387-1.103.524-1.253.138-.15.301-.188.401-.188.1 0 .201.002.289.006.094.005.219-.036.344.264.129.312.441 1.077.48 1.156.039.078.065.17.013.273-.051.102-.078.165-.154.254-.078.089-.163.199-.233.267-.078.077-.16.16-.069.316.091.156.403.664.865 1.075.594.529 1.096.693 1.252.77.156.078.247.065.339-.039.091-.104.389-.452.493-.607.104-.156.208-.13.347-.078.139.052.883.416 1.035.492.152.076.254.113.291.178.037.064.037.373-.103.77z"/></svg>
-      <span>WhatsApp | Falar com especialista</span>
-    </a>
-  </div>
-
-  <!-- ==========================================
-       WHATSAPP FLUTUANTE DESKTOP
-       ========================================== -->
-  <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20encontrei%20a%20ZHAARQ%20pelo%20Google%20e%20gostaria%20de%20entender%20como%20regularizar%20meu%20im%C3%B3vel."
-     target="_blank"
-     rel="noopener noreferrer"
-     data-cta-location="whatsapp-flutuante"
-     aria-label="Falar com especialista pelo WhatsApp"
-     class="btn-whatsapp whatsapp-float hidden md:inline-flex">
-    <span class="whatsapp-float-label">Falar com especialista</span>
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 2.028.847 2.796.847 3.179 0 5.767-2.587 5.768-5.766 0-3.18-2.588-5.767-5.768-5.767zm3.364 8.167c-.14.397-.714.736-1.026.782-.312.046-.66.075-1.921-.449-1.503-.623-2.483-2.14-2.557-2.239-.074-.099-.613-.815-.613-1.554 0-.739.387-1.103.524-1.253.138-.15.301-.188.401-.188.1 0 .201.002.289.006.094.005.219-.036.344.264.129.312.441 1.077.48 1.156.039.078.065.17.013.273-.051.102-.078.165-.154.254-.078.089-.163.199-.233.267-.078.077-.16.16-.069.316.091.156.403.664.865 1.075.594.529 1.096.693 1.252.77.156.078.247.065.339-.039.091-.104.389-.452.493-.607.104-.156.208-.13.347-.078.139.052.883.416 1.035.492.152.076.254.113.291.178.037.064.037.373-.103.77z"/></svg>
-  </a>
-
-  <!-- ==========================================
-       MODAL LIGHTBOX
-       ========================================== -->
-  <div id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Visualização de imagem" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md p-4 flex flex-col items-center justify-center select-none">
-    
-    <!-- Barra Superior: Contador e Botão Fechar -->
-    <div class="w-full max-w-4xl flex items-center justify-between pb-3 px-2 text-white">
-      <span id="lightbox-counter" class="text-xs sm:text-sm font-semibold tracking-wider text-white/80 bg-white/10 px-3 py-1 rounded-full">
-        1 / 10
-      </span>
-      <button id="lightbox-close" class="text-white hover:text-brand-gold text-2xl font-bold p-1 transition-colors focus:outline-none" title="Fechar (Esc)" aria-label="Fechar galeria">
-        ✕
-      </button>
-    </div>
-
-    <!-- Container da Imagem com Setas de Navegação -->
-    <div class="relative w-full max-w-4xl flex items-center justify-center">
-      <!-- Botão Anterior -->
-      <button id="lightbox-prev" class="absolute left-2 sm:left-4 z-10 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-black/60 hover:bg-brand-primary text-white flex items-center justify-center shadow-xl transition-all transform hover:scale-110 focus:outline-none" title="Foto Anterior (Seta Esquerda)" aria-label="Foto anterior">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
-      </button>
-
-      <!-- Imagem Principal Ampliada -->
-      <img id="lightbox-img" src="" alt="Imagem ampliada" class="max-h-[75vh] max-w-full w-auto mx-auto rounded-2xl shadow-2xl object-contain border border-white/15 transition-opacity duration-200">
-
-      <!-- Botão Próximo -->
-      <button id="lightbox-next" class="absolute right-2 sm:right-4 z-10 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-black/60 hover:bg-brand-primary text-white flex items-center justify-center shadow-xl transition-all transform hover:scale-110 focus:outline-none" title="Próxima Foto (Seta Direita)" aria-label="Próxima foto">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-      </button>
-    </div>
-
-    <!-- Legenda Inferior -->
-    <div class="w-full max-w-4xl text-center pt-3 px-4">
-      <p id="lightbox-caption" class="text-xs sm:text-sm text-white/90 font-medium tracking-wide">
-        Descrição da foto
-      </p>
-    </div>
-
-  </div>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>

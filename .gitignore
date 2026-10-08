@@ -16,3 +16,15 @@ $RECYCLE.BIN/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Python & Ambientes Virtuais
+.venv/
+__pycache__/
+
+# Screenshots de teste e auditoria na raiz
+screenshot_*.png
+crop_*.png
+mobile_crop_*.png
+test_*.png
+whatsapp-reminders.png
+
