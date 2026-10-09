@@ -1,10 +1,10 @@
 /**
  * styles.css - Estilos complementares e tipografia refinada para ZHAARQ
  * Inspirado em arquitetura editorial de luxo (Buildora & Elysian)
- * Tipografia: Cormorant Garamond + Plus Jakarta Sans
+ * Tipografia: Cormorant Garamond (Editorial de Luxo) + Jost (Bauhaus Arquitetônica)
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
   --brand-primary: #993819;
@@ -24,7 +24,7 @@
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Jost', 'Urbanist', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--brand-bg);
   color: var(--brand-title);
   scroll-behavior: smooth;
@@ -77,21 +77,30 @@ body {
   transform: translateY(-2px);
 }
 
-/* Acordeão do FAQ com transição suave */
+/* Acordeão do FAQ com transição suave e ícone minimalista */
 .faq-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease-out, opacity 0.3s ease-out;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease-out;
   opacity: 0;
 }
 
 .faq-item.active .faq-content {
-  max-height: 500px;
+  max-height: 600px;
   opacity: 1;
 }
 
-.faq-item.active .faq-icon {
-  transform: rotate(180deg);
+.faq-item.active .faq-icon-line-v {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.faq-item.active .faq-num {
+  color: var(--brand-primary) !important;
+}
+
+.faq-item.active .faq-question {
+  color: var(--brand-primary) !important;
 }
 
 /* Toast Notification */
@@ -347,25 +356,16 @@ body {
   filter: saturate(1.04) contrast(1.01);
 }
 
-/* FAQ reage ao mouse mesmo fechado */
-.faq-item {
-  transition:
-    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.faq-item:hover {
-  transform: translateX(3px);
-  border-color: rgba(153, 56, 25, 0.24);
-  box-shadow: 0 8px 24px rgba(25, 23, 21, 0.045);
-}
-
+/* FAQ editorial suave */
 .faq-trigger {
-  transition: color 0.2s ease;
+  transition: color 0.25s ease;
 }
 
-.faq-item:hover .faq-trigger {
+.faq-item:hover .faq-num {
+  color: var(--brand-primary);
+}
+
+.faq-item:hover .faq-question {
   color: var(--brand-primary);
 }
 
@@ -513,21 +513,24 @@ body {
 }
 
 .site-header {
-  transition: box-shadow 0.35s ease, background-color 0.35s ease;
+  transition: box-shadow 0.35s ease, background-color 0.35s ease, border-color 0.35s ease;
 }
 
-.site-header .max-w-6xl {
-  transition: padding 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+.site-header > div {
+  transition: padding 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .site-header.is-scrolled {
-  box-shadow: 0 8px 28px rgba(25, 23, 21, 0.07);
-  background-color: rgba(248, 245, 239, 0.96);
+  box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.55), 0 1px 3px rgba(0, 0, 0, 0.3);
+  background-color: rgba(18, 17, 16, 0.96) !important;
+  border-bottom: 1px solid rgba(197, 168, 128, 0.22);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
-.site-header.is-scrolled .max-w-6xl {
-  padding-top: 0.55rem;
-  padding-bottom: 0.55rem;
+.site-header.is-scrolled > div {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .hero-premium {
@@ -669,3 +672,22 @@ body {
 .bg-dark-section .max-w-4xl > .text-8xl {
   text-shadow: 0 8px 28px rgba(196, 150, 107, 0.12);
 }
+
+/* ==========================================
+   CARDS DE ETAPAS ORGÂNICOS (SEÇÃO COMO FUNCIONA)
+   Inspirado no design de referência com onda superior
+   ========================================== */
+.organic-card-shadow {
+  filter: drop-shadow(0 12px 24px rgba(197, 168, 128, 0.16));
+  transition: filter 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .organic-card-shadow {
+  filter: drop-shadow(0 18px 32px rgba(197, 168, 128, 0.26));
+}
+
+.icon-badge-warm {
+  background-color: #FCE8B2;
+  border: 1px solid rgba(216, 182, 133, 0.45);
+}
+

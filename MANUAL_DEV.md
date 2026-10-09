@@ -6,15 +6,16 @@ Landing Page de alta conversão para o escritório de arquitetura **ZHAARQ**, de
 ## 2. Tecnologias & Bibliotecas
 - **HTML5 Semântico:** Estrutura modular em 12 seções, metadados Open Graph para redes sociais/WhatsApp e atributos de acessibilidade ARIA.
 - **Tailwind CSS:** CDN com paleta arquitetônica estendida (Terracotta `#993819`, Dourado `#C5A880`, Grafite Dark `#121110`, Off-White `#F7F4EE`).
-- **Tipografia:** `Cormorant Garamond` (títulos editoriais clássicos de arquitetura) + `Plus Jakarta Sans` (leitura técnica limpa e contemporânea).
+- **Tipografia:** `Cormorant Garamond` (títulos editoriais clássicos de arquitetura) + `Jost` (geometria pura Bauhaus de Paul Renner para textos e especificações técnicas).
 - **Padrão Editorial de Arquitetura (gstack Design-Review):**
-  - Galeria Assimétrica de Portfólio (Master Project 7 colunas + 2 Projetos de apoio em 5 colunas).
+  - Hero com grid balanceado 7/5 e retrato da arquiteta em plano médio ancorado na base (`arquiteta_hero_cintura.webp`).
+  - Galeria de Projetos em 3 colunas perfeitamente simétricas (`aspect-[4/3]`).
   - Manifesto de Segurança Patrimonial com linhas hairline de 1px e métricas monumentais douradas.
   - Índice Tipográfico de Especialidades (`01 //`, `02 //`...) com escopo pericial e tags normativas (sem ícones redondos de IA).
   - Dossiê Pericial com 4 fichas técnicas de inconformidade (Fiscal, Financiamento, Jurídico, Administrativo).
-  - Régua Sequencial de 5 Fases de Engenharia e Trâmite com entregáveis formais.
+  - Régua Sequencial de 5 Fases de Engenharia e Trâmite com entregáveis formais e cards orgânicos inspirados na referência.
   - FAQ com linhas horizontais puras e transições suaves.
-  - Rodapé Institucional em 4 colunas clássicas.
+  - Rodapé Institucional em 4 colunas clássicas com divisórias verticais.
 - **JavaScript Vanilla Modular (`js/main.js`):** Sem bibliotecas pesadas:
   - FAQ expansível com animação suave e ARIA controls.
   - Toast Notifications para avisos sem interrupção agressiva.
@@ -28,8 +29,8 @@ Landing Page de alta conversão para o escritório de arquitetura **ZHAARQ**, de
 ├── assets/
 │   ├── images/
 │   │   ├── hero_bg_fullwidth.webp      # Fotografia 100% full-width da Hero (PROJETO 1 - 2 2.jpeg)
-│   │   ├── arquiteta_hero_certificado.webp # Foto da Arquiteta com Certificado na Hero
-│   │   ├── proj_real_1..3.webp         # Projetos reais executados
+│   │   ├── arquiteta_hero_cintura.webp # Retrato da Arquiteta da cintura para cima na Hero
+│   │   ├── proj_real_1..3.webp         # Projetos reais executados (aspect-[4/3])
 │   │   ├── diagnostico_real.webp       # Vistoria técnica in loco
 │   │   ├── case_1..4_*.webp            # Sequência real de 4 etapas (Obras -> Averbação)
 │   │   ├── arquiteta_real.webp         # Foto institucional no CREA-SP
