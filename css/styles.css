@@ -23,6 +23,12 @@
   --brand-gold-light: #DFCDAE;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
 body {
   font-family: 'Jost', 'Urbanist', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--brand-bg);

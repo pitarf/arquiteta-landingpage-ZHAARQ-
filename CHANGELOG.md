@@ -2,6 +2,17 @@
 
 Todas as alterações notáveis deste projeto serão registradas neste arquivo.
 
+## [0.7.17] - 2026-10-09
+### Correção de Overflow Horizontal e Ajuste Responsivo da Seção 04 no Mobile
+- **Eliminação Definitiva de Vazamento Lateral da Tela:**
+  - Adicionadas regras globais em `html, body` (`overflow-x: hidden; width: 100%; max-width: 100vw;`) bloqueando qualquer tentativa de scroll ou arraste horizontal involuntário em dispositivos móveis (iOS Safari e Android Chrome).
+- **Correção da Seção 04 (Manifesto +100 e Métricas de Autoridade):**
+  - **Diagnóstico da Falha:** A métrica `CAU/SP` e os títulos em caixa alta com `tracking-wider` ultrapassavam a largura útil de 160px das colunas no mobile, vazando da tela e sendo cortados à direita.
+  - **Ajuste Cirúrgico:** Aplicada escala tipográfica responsiva (`text-2xl sm:text-4xl lg:text-6xl` e `tracking-tight`), redução do padding esquerdo de `pl-6` para `pl-3 sm:pl-6`, e quebras de linha responsivas (`<br class="block sm:hidden">`) em "Processos Conduzidos", "Taxa de Aprovação", "Acompanhamento Técnico" e "Responsabilidade Ativa".
+- **Contenção da Hero Section no Mobile:**
+  - Aplicada contenção `max-w-full sm:max-w-none` e remoção da margem negativa no mobile (`mr-0 sm:-mr-8`), garantindo que o retrato monumental da arquiteta não ultrapasse a largura física da tela.
+- **Validação com Chromium Headless:** Testes em resolução mobile (390x844) confirmando 100% de alinhamento e zero vazamento de texto ou imagem.
+
 ## [0.7.16] - 2026-10-09
 ### Nova Tipografia de Luxo: Transição de Serif para Tenor Sans Contemporânea
 - **Eliminação Integral de Fontes Serifadas Clássicas:**

@@ -188,10 +188,10 @@
             <!-- Retrato de Perfil Ampliado da Arquiteta Juliana Lucena para preenchimento nobre da Hero -->
             <img src="assets/images/arquiteta_hero_cintura.webp" 
                  alt="Arquiteta Juliana Lucena com Certificado de Regularização Imobiliária" 
-                 class="h-[360px] sm:h-[460px] md:h-[520px] lg:h-[580px] xl:h-[650px] 2xl:h-[720px] w-auto max-w-none -mr-4 sm:-mr-8 lg:-mr-12 xl:-mr-20 object-contain object-bottom filter drop-shadow-[0_25px_60px_rgba(0,0,0,0.95)] transform transition-transform duration-500 hover:scale-[1.01] block select-none">
+                 class="h-[320px] sm:h-[440px] md:h-[520px] lg:h-[580px] xl:h-[650px] 2xl:h-[720px] w-auto max-w-full sm:max-w-none mr-0 sm:-mr-8 lg:-mr-12 xl:-mr-20 object-contain object-bottom filter drop-shadow-[0_25px_60px_rgba(0,0,0,0.95)] transform transition-transform duration-500 hover:scale-[1.01] block select-none">
             
             <!-- Badge Flutuante de Autoridade e Credibilidade Profissional -->
-            <div class="absolute -left-4 sm:-left-8 lg:-left-20 bottom-36 sm:bottom-44 bg-[#121110]/95 backdrop-blur-md border border-brand-gold/60 px-4 py-2.5 rounded-2xl shadow-2xl flex items-center space-x-3 text-xs text-white pointer-events-auto z-30">
+            <div class="absolute left-2 sm:-left-8 lg:-left-20 bottom-4 sm:bottom-36 lg:bottom-44 bg-[#121110]/95 backdrop-blur-md border border-brand-gold/60 px-4 py-2.5 rounded-2xl shadow-2xl flex items-center space-x-3 text-xs text-white pointer-events-auto z-30">
               <div class="w-8 h-8 rounded-full bg-brand-gold/20 border border-brand-gold/60 flex items-center justify-center flex-shrink-0 text-brand-gold">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
               </div>
@@ -392,39 +392,55 @@
         </div>
       </div>
 
-      <!-- Base: Grid de 4 Métricas de Autoridade com Linhas Hairline -->
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-8 sm:pt-10">
+      <!-- Base: Grid de 4 Métricas de Autoridade com Linhas Hairline (100% adaptado para mobile) -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 pt-8 sm:pt-10">
         
-        <div class="space-y-2 border-l border-white/15 pl-6">
-          <span class="text-5xl sm:text-6xl font-normal font-editorial text-brand-gold leading-none block">
+        <div class="space-y-1.5 sm:space-y-2 border-l border-white/15 pl-3 sm:pl-6">
+          <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal font-editorial text-brand-gold leading-none block tracking-tight">
             +100
           </span>
-          <h4 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white">Processos Conduzidos</h4>
-          <p class="text-[11px] text-[#A89E92] font-light">Em São Paulo, Grande SP e cidades do interior.</p>
+          <h4 class="text-[11px] sm:text-sm font-semibold uppercase tracking-tight sm:tracking-wider text-white leading-tight">
+            Processos<br class="block sm:hidden"> Conduzidos
+          </h4>
+          <p class="text-[10px] sm:text-[11px] text-[#A89E92] font-light leading-snug">
+            São Paulo, Grande SP e interior.
+          </p>
         </div>
 
-        <div class="space-y-2 border-l border-white/15 pl-6">
-          <span class="text-5xl sm:text-6xl font-normal font-editorial text-brand-gold leading-none block">
+        <div class="space-y-1.5 sm:space-y-2 border-l border-white/15 pl-3 sm:pl-6">
+          <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal font-editorial text-brand-gold leading-none block tracking-tight">
             98%
           </span>
-          <h4 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white">Taxa de Aprovação</h4>
-          <p class="text-[11px] text-[#A89E92] font-light">Em conformidade com códigos de obras vigentes.</p>
+          <h4 class="text-[11px] sm:text-sm font-semibold uppercase tracking-tight sm:tracking-wider text-white leading-tight">
+            Taxa de<br class="block sm:hidden"> Aprovação
+          </h4>
+          <p class="text-[10px] sm:text-[11px] text-[#A89E92] font-light leading-snug">
+            Em conformidade com códigos vigentes.
+          </p>
         </div>
 
-        <div class="space-y-2 border-l border-white/15 pl-6">
-          <span class="text-5xl sm:text-6xl font-normal font-editorial text-brand-gold leading-none block">
+        <div class="space-y-1.5 sm:space-y-2 border-l border-white/15 pl-3 sm:pl-6">
+          <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal font-editorial text-brand-gold leading-none block tracking-tight">
             100%
           </span>
-          <h4 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white">Acompanhamento Técnico</h4>
-          <p class="text-[11px] text-[#A89E92] font-light">Do levantamento inicial à averbação em cartório.</p>
+          <h4 class="text-[11px] sm:text-sm font-semibold uppercase tracking-tight sm:tracking-wider text-white leading-tight">
+            Acompanhamento<br class="block sm:hidden"> Técnico
+          </h4>
+          <p class="text-[10px] sm:text-[11px] text-[#A89E92] font-light leading-snug">
+            Do levantamento à averbação em cartório.
+          </p>
         </div>
 
-        <div class="space-y-2 border-l border-white/15 pl-6">
-          <span class="text-5xl sm:text-6xl font-normal font-editorial text-brand-gold leading-none block">
+        <div class="space-y-1.5 sm:space-y-2 border-l border-white/15 pl-3 sm:pl-6">
+          <span class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-normal font-editorial text-brand-gold leading-none block tracking-tight">
             CAU/SP
           </span>
-          <h4 class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white">Responsabilidade Ativa</h4>
-          <p class="text-[11px] text-[#A89E92] font-light">RRT emitida para todas as etapas documentais.</p>
+          <h4 class="text-[11px] sm:text-sm font-semibold uppercase tracking-tight sm:tracking-wider text-white leading-tight">
+            Responsabilidade<br class="block sm:hidden"> Ativa
+          </h4>
+          <p class="text-[10px] sm:text-[11px] text-[#A89E92] font-light leading-snug">
+            RRT emitida para todas as etapas.
+          </p>
         </div>
 
       </div>
