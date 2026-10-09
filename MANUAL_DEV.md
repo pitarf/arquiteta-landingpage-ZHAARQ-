@@ -6,7 +6,7 @@ Landing Page de alta conversão para o escritório de arquitetura **ZHAARQ**, de
 ## 2. Tecnologias & Bibliotecas
 - **HTML5 Semântico:** Estrutura modular em 12 seções, metadados Open Graph para redes sociais/WhatsApp e atributos de acessibilidade ARIA.
 - **Tailwind CSS:** CDN com paleta arquitetônica estendida (Terracotta `#993819`, Dourado `#C5A880`, Grafite Dark `#121110`, Off-White `#F7F4EE`).
-- **Tipografia:** `Cormorant Garamond` (títulos editoriais clássicos de arquitetura) + `Jost` (geometria pura Bauhaus de Paul Renner para textos e especificações técnicas).
+- **Tipografia:** `Tenor Sans` (títulos e display contemporâneo de alto luxo e arquitetura sem serifa) + `Jost` (geometria pura Bauhaus de Paul Renner para textos e especificações técnicas).
 - **Padrão Editorial de Arquitetura (gstack Design-Review):**
   - Hero com grid balanceado 7/5 e retrato da arquiteta em plano médio ancorado na base (`arquiteta_hero_cintura.webp`).
   - Galeria de Projetos em 3 colunas perfeitamente simétricas (`aspect-[4/3]`).

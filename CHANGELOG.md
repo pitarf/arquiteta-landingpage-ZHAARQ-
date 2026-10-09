@@ -2,6 +2,18 @@
 
 Todas as alterações notáveis deste projeto serão registradas neste arquivo.
 
+## [0.7.16] - 2026-10-09
+### Nova Tipografia de Luxo: Transição de Serif para Tenor Sans Contemporânea
+- **Eliminação Integral de Fontes Serifadas Clássicas:**
+  - Removida a fonte `Cormorant Garamond` (com serifa tradicional), atendendo à diretriz de modernização e sofisticação de alto luxo sem aspecto literário ou antiquado.
+- **Implementação da Tipografia de Alto Luxo Tenor Sans:**
+  - Adotada a fonte **Tenor Sans** (projetada especificamente para marcas de luxo, alta costura e arquitetura contemporânea), com proporções clássicas monumentais e desenho 100% limpo, sem serifas.
+  - Adicionada a **Syne** como fonte contemporânea secundária no stack tipográfico.
+  - Atualizada a chave `theme.extend.fontFamily.editorial` e a regra `.font-editorial` em todo o projeto (`index.html` e `css/styles.css`).
+- **Refinamento Editorial das Headlines:**
+  - Eliminadas marcações de itálico serifado arcaico na Hero e nas seções principais, conferindo contraste por hierarquia cromática em dourado arquitetônico (`text-brand-gold`).
+- **Validação com Chromium Headless:** Capturas no desktop confirmando leitura limpa, luxuosa, arrojada e perfeitamente integrada à identidade de alto padrão da ZHAARQ.
+
 ## [0.7.15] - 2026-10-09
 ### Ampliação Monumental da Foto da Arquiteta e Preenchimento Total da Hero Section
 - **Escala e Presença Nobre da Arquiteta Juliana Lucena:**

@@ -63,6 +63,7 @@
   - [x] Reenquadramento da Foto 1 e Equalização de Projetos em 3 Colunas: restauração da fotografia do sobrado (platibanda inteira sem cortes), eliminação total do espaço em branco vertical e balanceamento dos 3 cards de projetos em proporção `aspect-[4/3]`.
   - [x] Recorte da Arquiteta da Cintura para Cima e Reestruturação da Hero Section: novo recorte profissional em plano médio (`arquiteta_hero_cintura.webp`), ancoragem do retrato rente à base da página, reorganização do grid 7/5 e criação de micro-cards translúcidos 2x2 para as 4 garantias técnicas, eliminando 100% dos vazios e vácuos laterais.
   - [x] Ampliação da Foto da Arquiteta e Ocupação do Espaço Vazio: aumento de escala para até 720px de altura, deslocamento lateral harmonioso e reposicionamento do badge técnico no ombro para preenchimento completo e equilibrado da Hero Section.
+  - [x] Transição para Tipografia de Alto Luxo sem Serifa: substituição definitiva da fonte serifada (*Cormorant Garamond*) pela **Tenor Sans** (design contemporâneo de alto luxo e arquitetura sem serifa) com secundária **Syne**, eliminando qualquer aspecto rústico ou literário nos títulos.
 - [x] Servidor de desenvolvimento local iniciado e rodando ativamente na porta 3000 (`http://localhost:3000`).
 
 ### Fazendo
