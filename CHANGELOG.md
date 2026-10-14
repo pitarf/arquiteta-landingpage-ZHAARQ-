@@ -2,6 +2,182 @@
 
 Todas as alterações notáveis deste projeto serão registradas neste arquivo.
 
+## [0.7.31] - 2026-10-14
+### Nova Fotografia de Vistoria Técnica In Loco na Seção de Diagnóstico (Seção 06)
+- **Substituição por Fotografia Técnica Real em Campo:**
+  - Substituída a imagem anterior da seção de Diagnóstico Pericial pela nova fotografia enviada pelo usuário, retratando a arquiteta em vistoria externa na calçada com prancheta, caneta e trena de agrimensura profissional laranja (`assets/images/diagnostico_vistoria_trena.webp`).
+- **Otimização e Proporção Editorial:**
+  - Convertida para formato WebP a 95% de qualidade (apenas 75 KB), com proporção adaptativa `aspect-square sm:aspect-[4/5]` que valoriza a trena de medição e a prancheta de anotações.
+  - Alinhamento vertical equilibrado com o bloco de 4 pareceres periciais de risco à direita.
+- **Validação Visual:**
+  - Testado via navegador headless Edge CDP no Desktop e Mobile, confirmando nitidez fotográfica e integração do badge flutuante "Vistoria Técnica In Loco".
+
+## [0.7.30] - 2026-10-14
+### Novo Case Real no Card 03: Regularização e Desdobro de Lote & Expansão de Escopo
+- **Integração de Case Real de Desdobro de Terreno (Card 03):**
+  - Substituído o Card 03 pela obra real de **Regularização e Desdobro de Lote**, incluindo a foto interna do terreno/lote com a edificação existente (`assets/images/proj_real_desdobro.webp`), enquadrada na proporção áurea 4:3 e convertida em WebP de alta fidelidade (148 KB).
+  - Cópia técnica inserida na íntegra:
+    > *"Regularização de edificação e Desdobro de lote junto à Prefeitura Municipal, incluindo levantamento arquitetônico, elaboração de projeto, aprovação da construção existente e individualização do terreno em lotes distintos, conforme a legislação urbanística vigente."*
+  - Badges e metadados configurados: `03. REGULARIZAÇÃO & DESDOBRO`, `Desdobro Aprovado • SP`, `São Paulo, SP • Terreno & Lote`, `Aprovado` e tag `DESDOBRO & INDIVIDUALIZAÇÃO`.
+- **Expansão Estratégica do Serviço de Desdobro e Unificação na Página:**
+  - Adicionado o serviço explícito de **Desdobro e Unificação de Lotes** na Especialidade 01 (Stacking Cards) e na listagem de serviços do Rodapé Institucional, aumentando a atratividade e indexação para uma das maiores buscas do mercado imobiliário paulista.
+- **Simetria Perfeita do Portfólio em 3 Colunas:**
+  - Todos os 3 cards do portfólio apresentam alturas idênticas, fotografias com proporção 4:3, badges superiores/inferiores e botões de ação alinhados na mesma linha horizontal.
+
+## [0.7.29] - 2026-10-14
+### Novo Case Real no Card 02 (Regularização de Residência Unifamiliar)
+- **Substituição e Enquadramento da Nova Fotografia da Obra:**
+  - Substituída a imagem anterior do Card 02 pela foto real do sobrado com faixa de anistia/regularização fornecida pelo cliente.
+  - Enquadramento arquitetônico preciso em proporção 4:3 (`assets/images/proj_real_regularizacao.webp`), capturando o telhado, varanda com balaústres e portão com placa técnica, eliminando o asfalto excedente da rua.
+  - Otimização para formato WebP a 92% de qualidade (140 KB), garantindo carregamento instantâneo e alta nitidez.
+- **Atualização da Copy Técnica Conforme Diretrizes da ZHAARQ:**
+  - Título atualizado para **Regularização de Residência Unifamiliar**.
+  - Descrição oficial inserida na íntegra:
+    > *"Regularização de residência unifamiliar junto à Prefeitura Municipal, incluindo levantamento arquitetônico, elaboração do projeto da edificação existente, aprovação municipal e emissão do Certificado de Regularização."*
+  - Metadados e badges harmonizados: `02. REGULARIZAÇÃO EDILÍCIA`, `Certificado de Regularização • SP`, `São Paulo, SP • Sobrado`, `Regularizado` e tag inferior `REGULARIZAÇÃO MUNICIPAL`.
+- **Equilíbrio Visual e Alinhamento do Grid:**
+  - Altura e rodapés dos 3 cards de projetos 100% alinhados na mesma linha horizontal.
+
+## [0.7.28] - 2026-10-14
+### Configuração Global do WhatsApp Oficial da ZHAARQ
+- **Integração do Número Real em Todo o Ecossistema de Conversão:**
+  - Substituído o número placeholder pelo contato oficial de atendimento da ZHAARQ: **`+55 (11) 97745-3954`** (`5511977453954`) em todos os 19 pontos de conversão da Landing Page:
+    - Botão superior da barra de navegação (Navbar);
+    - Botão principal da Hero Section;
+    - Botões individuais de ação dos 3 Projetos em Destaque;
+    - Botões específicos dos 5 Stacking Cards de Especialidades;
+    - CTA da seção de Diagnóstico Pericial;
+    - CTA da seção de Case Real e Linha do Tempo;
+    - CTA da seção "Sobre a Arquiteta";
+    - Botão de atendimento direto ao final do FAQ;
+    - Super CTA de fechamento;
+    - Botão e linha de contato institucional no Rodapé;
+    - Botão flutuante desktop e barra fixa inferior para celulares.
+- **Roteamento Inteligente com Contexto Preservado (`main.js`):**
+  - O script de rastreamento foi aprimorado para capturar dinamicamente a mensagem contextual do `href` de cada botão (ex: citação de projeto específico ou especialidade), anexando automaticamente os parâmetros de campanha (`utm_source`, `utm_campaign`, `gclid`) e redirecionando diretamente para `5511977453954`.
+- **Exibição Visual no Rodapé:**
+  - Adicionada a linha informativa explícita `<p><strong class="text-white font-medium">WhatsApp:</strong> (11) 97745-3954</p>` na coluna de atendimento do rodapé, elevando a transparência e credibilidade institucional.
+
+## [0.7.27] - 2026-10-14
+### Atualização do Escopo Técnico do Card 01 (Residência Unifamiliar)
+- **Fidelidade Integral ao Escopo Real da Obra:**
+  - Atualizada a descrição técnica do Projeto 01 na seção "Projetos em Destaque" com a cópia oficial fornecida pela cliente (Mafer 99Freelas):
+    > *"Processo legal completo, desde o desenvolvimento do projeto arquitetônico e emissão do alvará junto à Prefeitura até a emissão do Habite-se após a conclusão da obra, regularização junto à Receita Federal (CND) e averbação da construção no Cartório de Registro de Imóveis."*
+- **Preservação do Alinhamento e Proporção do Grid:**
+  - O layout do grid em 3 colunas mantém alinhamento vertical estrito (`items-stretch` com rodapés e botões na mesma linha de base), garantindo harmonia estética perfeita com os Projetos 02 e 03.
+
+## [0.7.26] - 2026-10-14
+### Nova Fotografia da Arquiteta com Características da Profissão na Hero Section
+- **Presença Profissional Autêntica e Elementos da Prática Arquitetônica:**
+  - Substituída a fotografia anterior pela nova imagem solicitada pelo usuário, incorporando os símbolos centrais da profissão: pranchas técnicas/projetos enrolados e capacete branco de obras sob o braço esquerdo, além de caderno/planner técnico na mão direita.
+  - Blazer terracota/rosé elegante perfeitamente alinhado com a identidade visual da ZHAARQ (botões Terracotta e detalhes dourados).
+- **Pipeline de Otimização e Conversão WebP Transparente:**
+  - Convertida a imagem original PNG de 870 KB para WebP de alta fidelidade a 95% de qualidade (`arquiteta_hero_projetos.webp`), resultando em apenas 144 KB (redução de 83,4% no tráfego de dados, mantendo recorte nítido e canal alfa impecável).
+- **Reposicionamento Harmônico do Badge de Credibilidade:**
+  - O selo flutuante de autoridade (`Juliana Lucena • Arquiteta Responsável • CAU`) foi calibrado para a altura da linha da cintura (`lg:bottom-52 xl:bottom-60` e `lg:-left-24 xl:-left-28`), flutuando no espaço escuro à esquerda do cotovelo sem sobrepor o caderno nem as mãos.
+- **Validação de Responsividade e Overflow Zero:**
+  - Testado via navegador headless Edge CDP no Desktop (1440x900) e Mobile (390x844), confirmando encaixe milimétrico ancorado na base e 100% livre de rolagem horizontal.
+
+## [0.7.25] - 2026-10-14
+### Cabeçalho Sticky da Seção de Especialidades Fixo Durante o Scroll dos Stacking Cards
+- **Fixação Visual Contínua do Título da Seção (`.services-sticky-header`):**
+  - Implementada a classe `.services-sticky-header` com `position: sticky` logo abaixo da barra de navegação (`navbar`), garantindo que o título ("NOSSAS ESPECIALIDADES / O que podemos fazer pelo seu imóvel") permaneça 100% visível e nítido enquanto os 5 cartões deslizam e se sobrepõem.
+  - Offsets responsivos precisos: `top: 68px` (mobile), `top: 76px` (sm) e `top: 88px` (desktop), com `z-index: 50`, fundo translúcido nobre `rgba(251, 249, 245, 0.98)` com `backdrop-filter: blur(12px)` e divisor inferior hairline suave.
+- **Hierarquia de Z-Index e Recalibração dos Offsets dos 5 Cartões:**
+  - Definida hierarquia rigorosa: Navbar (`z-[60]`) > Cabeçalho Sticky (`z-50`) > Card 05 (`z-[45]`) > Card 04 (`z-40`) > Card 03 (`z-30`) > Card 02 (`z-20`) > Card 01 (`z-10`).
+  - Offsets dos cartões recalculados para deslizarem e se empilharem perfeitamente abaixo do cabeçalho fixo:
+    - Card 01: `top-[145px] sm:top-[185px] lg:top-[255px]`
+    - Card 02: `top-[160px] sm:top-[205px] lg:top-[275px]`
+    - Card 03: `top-[175px] sm:top-[225px] lg:top-[295px]`
+    - Card 04: `top-[190px] sm:top-[245px] lg:top-[315px]`
+    - Card 05: `top-[205px] sm:top-[265px] lg:top-[335px]`
+- **Otimização Ergonômica Mobile:**
+  - No mobile, o parágrafo longo explicativo é ocultado (`hidden sm:block`) para manter o cabeçalho compacto (~50px de altura útil), deixando o restante do viewport livre para os cartões sem estrangular a tela.
+- **Proteção Anti-Cache e Validação Visual Automatizada:**
+  - Atualizado o cache buster para `css/styles.css?v=20261014_stickytitle`.
+  - Capturas de tela automatizadas via Edge CDP confirmam fixação perfeita no Desktop (1440x900) e Mobile (390x844).
+
+## [0.7.24] - 2026-10-14
+### Eliminação Definitiva do Vácuo em Branco Após o Término dos Stacking Cards
+- **Remoção do Padding Residual no Container:**
+  - Zerado o `padding-bottom` de `.stacking-container` (`padding-bottom: 0 !important` em `css/styles.css` e estilo crítico inline no `<head>`), eliminando os 140px de rolagem vazia após o Card 05.
+- **Equalização Harmoniosa de Transição entre Seções:**
+  - Ajustado o espaçamento inferior de `<section id="servicos">` de `py-14 md:py-24` para `pt-14 md:pt-20 pb-4 md:pb-6`.
+  - Calibrado o espaçamento superior de `<section id="problemas">` (Diagnóstico) para `pt-10 md:pt-14`, permitindo que o título e a ficha pericial subam naturalmente logo abaixo do Card 05.
+- **Validação com Capturas de Tela:**
+  - O vão entre o final do Card 05 e o início da Seção 06 foi reduzido de **237px** para apenas **25px** no Desktop (e 17px no Mobile), garantindo transição contínua sem quebras visuais.
+
+## [0.7.23] - 2026-10-14
+### Espaçamento Ultra-Curto dos Stacking Cards (20px) & Proteção Anti-Cache
+- **Calibragem Idêntica à Referência do Outro Site:**
+  - Reduzida a margem inferior (`margin-bottom`) de `.stack-card` para **20px** com declaração reforçada `!important` em CSS e estilo crítico embutido no `<head>` do `index.html`.
+  - Elimina completamente qualquer vácuo entre os cartões durante a rolagem, fazendo com que o próximo card comece a sobrepor o anterior instantaneamente.
+- **Proteção Definitiva Anti-Cache:**
+  - Adicionado parâmetro de versão no link de stylesheet (`css/styles.css?v=20261014_shortgap`), forçando a invalidação de cache local nos navegadores e garantindo renderização imediata das métricas compactas.
+- **Validação com Capturas de Tela:**
+  - Testes em Desktop (1440x900) e Mobile (390x844) confirmando o gap exato de 20px entre todos os 5 cartões.
+
+## [0.7.22] - 2026-10-14
+### Instalação e Integração do Graphify (Knowledge Graph AST & Redução de Tokens)
+- **Instalação do Pacote Graphify no Ambiente:**
+  - Instalado o pacote oficial `graphifyy` (v0.9.90 com AST Tree-sitter e NetworkX) via Python.
+- **Integração Nativa com Google Antigravity:**
+  - Registradas regras em `.agents/rules/graphify.md`, workflow em `.agents/workflows/graphify.md` e skill global do assistente.
+- **Extração e Clusterização da Base de Código:**
+  - Gerado o grafo de conhecimento semântico e estrutural do projeto em `graphify-out/` (`graph.json`, `graph.html`, `GRAPH_REPORT.md`).
+  - Cache AST incremental configurado para evitar leituras brutas repetitivas de arquivos e economizar processamento e tokens nas iterações do assistente.
+- **Automação Completa via Git Hooks:**
+  - Instalados hooks do Git (`post-commit`, `post-checkout`, `post-merge` e `merge driver`) para atualizar o grafo de forma transparente e automática a cada commit ou troca de branch.
+- **Isolamento de Cache no Git:**
+  - Adicionado `graphify-out/` ao `.gitignore` para manter o repositório e os deploys de produção limpos e enxutos.
+
+## [0.7.21] - 2026-10-14
+### Ajuste Cirúrgico do Espaçamento dos Stacking Cards para 30px
+- **Padronização Exata do Gap entre Cartas no Scroll:**
+  - Ajustada a margem inferior (`margin-bottom`) de `.stack-card` para exatamente `30px` tanto em dispositivos móveis quanto em desktop.
+  - Proporciona encaixe milimétrico imediato durante o scroll, permitindo que o próximo cartão comece a sobrepor o anterior sem qualquer sensação de pausa ou espaçamento residual.
+
+## [0.7.20] - 2026-10-14
+### Calibração de Ritmo e Eliminação de Vácuo entre Stacking Cards no Scroll
+- **Compactação e Equalização das Margens Verticais dos Cards:**
+  - Removidas as margens excessivas em unidades de viewport (`mb-[30vh] sm:mb-[45vh]`) que causavam um vão branco prolongado entre a base de um card e a entrada do próximo.
+  - Definida margem contínua e ágil de `32px` no mobile e `48px` no desktop via regra CSS unificada `.stack-card`, permitindo que o próximo card comece a subir imediatamente assim que o anterior atinge sua posição sticky.
+- **Redimensionamento Proporcional da Base do Container:**
+  - Ajustado o `padding-bottom` da `.stacking-container` de `900px` para `120px` (mobile) e `180px` (desktop), eliminando o vão residual ao término da seção de especialidades.
+- **Validação com Capturas Sequenciais:**
+  - Testes com Edge DevTools confirmando transição contínua sem quebras ou "abismos" em branco entre as cartas durante o scroll.
+
+## [0.7.19] - 2026-10-13
+### Correção e Ativação Plena da Animação do Carrossel Vertical com Stacking Cards
+- **Desbloqueio Crítico do Contexto de Rolagem Sticky (`overflow-x: clip`):**
+  - Identificada a causa raiz que impedia o funcionamento do `position: sticky`: o uso de `overflow-x: hidden` no `html, body` forçava os navegadores (Chrome/Edge/Safari) a computar `overflow-y: auto`, desvinculando o scroll do viewport e cancelando a fixação sticky.
+  - Substituição por `overflow-x: clip`, que bloqueia 100% de qualquer overflow lateral sem criar um scroll container e sem prejudicar o `position: sticky`.
+- **Criação da Classe `.stacking-container` e Espaçamentos de Rolagem:**
+  - Introduzida a classe `.stacking-container` com `padding-bottom: 900px`, assegurando que todos os 5 cards permaneçam empilhados no topo da tela com suas abas acumuladas durante a leitura completa do Card 05.
+  - Aplicação de margem de rolagem substancial (`margin-bottom: 35vh` via classe `.stack-card`) para que o usuário sinta a subida progressiva e o deslizamento de cada card cobrindo o anterior.
+  - Elevação do z-index do Header para `z-[60]`, impedindo que os cards se sobreponham à barra de navegação.
+- **Animação Dinâmica de Escala e Profundidade via JavaScript (`initVerticalStackingCards`):**
+  - Implementada função ultra leve em `js/main.js` com `requestAnimationFrame` e passive scroll listener.
+  - Conforme o card seguinte sobe e começa a cobrir o card atual, o card de baixo sofre uma redução suave de escala (`scale(0.95)` ancorada no topo com `transform-origin: top center`) e um escurecimento gradual (`brightness(0.75)`), transmitindo a sensação física de uma pasta ou baralho de arquitetura sendo guardado sob a nova prancha.
+- **Validação com Capturas de Tela Reais:**
+  - Testes automatizados via Chrome DevTools Protocol no Edge validando os 5 estados de sobreposição tanto no Desktop quanto no Mobile (390x844).
+
+## [0.7.18] - 2026-10-13
+### Carrossel Vertical com Stacking Cards de Alto Padrão (Seção 05 - Especialidades)
+- **Transformação Estrutural da Seção 05 em Carrossel Vertical com Efeito de Empilhamento:**
+  - Substituição da antiga listagem e dos blocos simétricos por 5 **Stacking Cards esculturais** que deslizam e se empilham progressivamente durante o scroll da página (`position: sticky`), criando abas acumuladas no topo exatamente como nas referências de arquitetura e design editorial de luxo.
+- **Hierarquia Visual e Paleta ZHAARQ por Cartão:**
+  - **Card 01 - Regularização de Imóveis:** Fundo Grafite Nobre (`#181715`), tipografia ouro arquitetônico, tags de zoneamento e bloco técnico lateral com status *100% Legal*.
+  - **Card 02 - Projetos Arquitetônicos & As-Built:** Fundo Terracota Nobre (`#A64B2A`), metadados gráficos de alta precisão (NBR & CAU, levantamento a laser e plantas oficiais).
+  - **Card 03 - Aprovação, Habite-se & Licenças:** Fundo Grafite Ébano (`#121110`), condução pericial e ênfase em documentos conclusivos expedidos pelas prefeituras.
+  - **Card 04 - Averbação em Cartório & CND:** Fundo Travertino Off-White (`#F5F1E9`) com textos em grafite e acentos em terracota, destacando regularização fiscal e segurança patrimonial na matrícula RGI.
+  - **Card 05 - Consultoria & Dossiê Patrimonial:** Fundo Grafite Profundo (`#1A1816`), selo pericial de Due Diligence para transações imobiliárias e inventários sem passivos.
+- **Engenharia e Responsividade Sem Dependências Pesadas:**
+  - Implementação pura com CSS `sticky` e offsets escalonados (`top-[75px]`, `top-[90px]`, `top-[105px]`, `top-[120px]`, `top-[135px]` no mobile; e `top-[100px]`, `top-[125px]`, `top-[150px]`, `top-[175px]`, `top-[200px]` no desktop), com `z-index` incremental de 10 a 50.
+  - Grid interno inteligente com 2 colunas no desktop (copy técnica, botões de ação e tags à esquerda; mostrador pericial/glassmorphism à direita) e coluna única perfeitamente ajustada no mobile sem qualquer overflow lateral.
+- **Validação Visual Rigorosa:**
+  - Capturas e auditoria visual via CDP do Edge confirmando transição fluida, legibilidade das fontes *Tenor Sans* e *Jost*, e empilhamento harmônico das abas.
+
 ## [0.7.17] - 2026-10-09
 ### Correção de Overflow Horizontal e Ajuste Responsivo da Seção 04 no Mobile
 - **Eliminação Definitiva de Vazamento Lateral da Tela:**

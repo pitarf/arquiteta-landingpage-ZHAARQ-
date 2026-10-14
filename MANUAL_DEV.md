@@ -8,10 +8,10 @@ Landing Page de alta conversão para o escritório de arquitetura **ZHAARQ**, de
 - **Tailwind CSS:** CDN com paleta arquitetônica estendida (Terracotta `#993819`, Dourado `#C5A880`, Grafite Dark `#121110`, Off-White `#F7F4EE`).
 - **Tipografia:** `Tenor Sans` (títulos e display contemporâneo de alto luxo e arquitetura sem serifa) + `Jost` (geometria pura Bauhaus de Paul Renner para textos e especificações técnicas).
 - **Padrão Editorial de Arquitetura (gstack Design-Review):**
-  - Hero com grid balanceado 7/5 e retrato da arquiteta em plano médio ancorado na base (`arquiteta_hero_cintura.webp`).
+  - Hero com grid balanceado 7/5 e retrato da arquiteta com atributos profissionais (pranchas, capacete e planner) ancorado na base (`arquiteta_hero_projetos.webp`).
   - Galeria de Projetos em 3 colunas perfeitamente simétricas (`aspect-[4/3]`).
   - Manifesto de Segurança Patrimonial com linhas hairline de 1px e métricas monumentais douradas.
-  - Índice Tipográfico de Especialidades (`01 //`, `02 //`...) com escopo pericial e tags normativas (sem ícones redondos de IA).
+  - Carrossel Vertical com Stacking Cards na Seção de Especialidades (cabeçalho `.services-sticky-header` fixo no topo com `z-index: 50` e fundo translúcido blur; 5 cartões esculturais empilháveis com `sticky`, offsets escalonados de topo logo abaixo do título fixo, margem ultra-curta de 20px para sobreposição imediata idêntica à referência, zeramento de padding-bottom residual na base e transição contínua para a seção de diagnóstico, animação JS de escala `scale(0.95)` e escurecimento gradual, sem bibliotecas pesadas de terceiros).
   - Dossiê Pericial com 4 fichas técnicas de inconformidade (Fiscal, Financiamento, Jurídico, Administrativo).
   - Régua Sequencial de 5 Fases de Engenharia e Trâmite com entregáveis formais e cards orgânicos inspirados na referência.
   - FAQ com linhas horizontais puras e transições suaves.
@@ -21,17 +21,17 @@ Landing Page de alta conversão para o escritório de arquitetura **ZHAARQ**, de
   - Toast Notifications para avisos sem interrupção agressiva.
   - Rastreamento dinâmico de conversões com repasse de UTMs, GCLID e disparo para `dataLayer`.
   - Banner LGPD com persistência em `localStorage`.
-  - Botão flutuante desktop e barra fixa mobile para contato via WhatsApp com ícone oficial em branco.
+  - Botão flutuante desktop e barra fixa mobile para contato via WhatsApp com ícone oficial em branco e número oficial configurado (`5511977453954`).
 
 ## 3. Estrutura de Arquivos
 ```text
 /
 ├── assets/
 │   ├── images/
-│   │   ├── hero_bg_fullwidth.webp      # Fotografia 100% full-width da Hero (PROJETO 1 - 2 2.jpeg)
-│   │   ├── arquiteta_hero_cintura.webp # Retrato da Arquiteta da cintura para cima na Hero
-│   │   ├── proj_real_1..3.webp         # Projetos reais executados (aspect-[4/3])
-│   │   ├── diagnostico_real.webp       # Vistoria técnica in loco
+│   │   ├── hero_bg_fullwidth.webp          # Fotografia 100% full-width da Hero (PROJETO 1 - 2 2.jpeg)
+│   │   ├── arquiteta_hero_projetos.webp    # Retrato da Arquiteta com atributos profissionais (pranchas, capacete e planner) na Hero
+│   │   ├── proj_real_1, proj_real_regularizacao, proj_real_desdobro.webp # Projetos reais executados (aspect-[4/3])
+│   │   ├── diagnostico_vistoria_trena.webp # Vistoria técnica in loco com prancheta e trena de agrimensura
 │   │   ├── case_1..4_*.webp            # Sequência real de 4 etapas (Obras -> Averbação)
 │   │   ├── arquiteta_real.webp         # Foto institucional no CREA-SP
 │   │   ├── whatsapp-icon-white.svg     # Ícone oficial vetorizado em branco puro
@@ -59,3 +59,14 @@ Basta abrir o arquivo [index.html](file:///c:/Git/React/Landing%20Page%20-%20aRQ
 python -m http.server 3000
 ```
 E acessar `http://localhost:3000`.
+
+## 6. Otimização com Graphify (Knowledge Graph AST & Redução de Tokens)
+O projeto conta com o **Graphify** instalado e integrado ao assistente de inteligência artificial:
+- **Finalidade:** Mapear a arquitetura, dependências de funções, nós do DOM e scripts em um Grafo de Conhecimento estruturado, evitando que o assistente precise reler repetidamente dezenas de arquivos inteiros a cada comando (economia drástica de tokens e tempo de resposta).
+- **Diretório de Saída:** `graphify-out/` (ignorado pelo Git via `.gitignore`), contendo `graph.json`, `graph.html` (visualizador interativo) e `GRAPH_REPORT.md`.
+- **Como Atualizar o Grafo:**
+  - **Automático via Git Hooks (Ativo):** A cada `git commit`, `git checkout` ou `git merge`, os hooks instalados atualizam o grafo silenciosamente em segundo plano.
+  - **Manual via Terminal:**
+```powershell
+graphify update .
+```

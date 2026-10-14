@@ -27,4 +27,5 @@ crop_*.png
 mobile_crop_*.png
 test_*.png
 whatsapp-reminders.png
-
+# Graphify (Knowledge Graph AST & Cache)
+graphify-out/

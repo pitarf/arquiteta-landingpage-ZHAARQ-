@@ -65,11 +65,28 @@
   - [x] Ampliação da Foto da Arquiteta e Ocupação do Espaço Vazio: aumento de escala para até 720px de altura, deslocamento lateral harmonioso e reposicionamento do badge técnico no ombro para preenchimento completo e equilibrado da Hero Section.
   - [x] Transição para Tipografia de Alto Luxo sem Serifa: substituição definitiva da fonte serifada (*Cormorant Garamond*) pela **Tenor Sans** (design contemporâneo de alto luxo e arquitetura sem serifa) com secundária **Syne**, eliminando qualquer aspecto rústico ou literário nos títulos.
   - [x] Correção de Overflow Horizontal no Mobile: bloqueio global de rolagem lateral (`overflow-x: hidden`), ajuste responsivo das métricas da Seção 04 eliminando corte do `CAU/SP` e contenção da imagem da arquiteta no celular.
+  - [x] Carrossel Vertical com Stacking Cards na Seção 05 (Especialidades): implementação de 5 cartões esculturais empilháveis (`position: sticky` com offsets progressivos e z-index 10-50), alternando fundos nobres (Grafite `#181715`, Terracota `#A64B2A`, Grafite Ébano `#121110`, Travertino `#F5F1E9` e Grafite `#1A1816`), tipografia *Tenor Sans*, colunas com metadados periciais e zero overflow lateral.
+  - [x] Correção e Ativação Plena da Animação de Stacking: substituição de `overflow-x: hidden` por `overflow-x: clip`, inclusão de `.stacking-container`, espaçamentos verticais de rolagem dedicados e animação JS fluida de escala (`scale: 0.95`) e escurecimento gradual (`brightness: 0.75`) com transform-origin no topo.
+  - [x] Calibração de Ritmo e Eliminação de Vácuo entre Cards: redução do gap entre cards para 32px (mobile) e 48px (desktop), eliminando vãos brancos no scroll e tornando a transição entre cards contínua e natural.
+  - [x] Ajuste Cirúrgico do Espaçamento para 20px: unificação da margem inferior entre todos os cartões para exatamente 20px com !important, estilo inline crítico e anti-cache para fidelidade total ao outro site de referência.
+  - [x] Eliminação do Vão Residual Pós-Carrossel: remoção do padding-bottom de `.stacking-container` e equalização dos paddings de transição entre a Seção 05 e a Seção 06 (gap reduzido de 237px para 25px no Desktop e 17px no Mobile).
+  - [x] Fixação Contínua do Título da Seção durante o Scroll (Sticky Header): criação de `.services-sticky-header` mantendo o título "NOSSAS ESPECIALIDADES" fixo no topo (logo abaixo da navbar) durante todo o empilhamento dos 5 cards, com z-index inteligente (50) e offsets progressivos recalibrados para os 5 cartões deslizando por baixo.
+  - [x] Nova Fotografia da Arquiteta com Características da Profissão na Hero: integração da nova imagem com pranchas técnicas, capacete de obras e caderno (`arquiteta_hero_projetos.webp`), conversão para WebP de alta performance (144 KB, redução de 83%), e reposicionamento milimétrico do badge de autoridade CAU.
+  - [x] Atualização do Escopo Técnico do Card 01 (Residência Unifamiliar): inclusão da cópia exata do processo legal completo (desde o projeto e alvará municipal até Habite-se, CND da Receita Federal e averbação em cartório).
+  - [x] Novo Case Real no Card 02 (Regularização de Residência Unifamiliar): inclusão da nova fotografia do sobrado com faixa de anistia/regularização em WebP (`proj_real_regularizacao.webp`), enquadramento em 4:3 e texto técnico com levantamento, projeto e Certificado de Regularização.
+  - [x] Novo Case Real no Card 03 (Regularização e Desdobro de Lote): integração da foto interna do lote com a edificação existente em WebP (`proj_real_desdobro.webp`), enquadramento 4:3, copy oficial de desdobro de terreno e inclusão do serviço de Desdobro e Unificação de Lotes nas especialidades e rodapé.
+  - [x] Nova Fotografia de Vistoria Técnica In Loco na Seção 06 (Diagnóstico): inclusão da foto real em campo da arquiteta com prancheta, caneta e trena de agrimensura profissional laranja (`diagnostico_vistoria_trena.webp`), otimizada em WebP (75 KB) com proporção adaptativa equilibrada com os 4 pareceres periciais.
+  - [x] Configuração Global do WhatsApp Oficial da ZHAARQ: integração do número real `5511977453954` (`(11) 97745-3954`) em todos os 19 pontos de conversão, rodapé institucional e fallback inteligente do `main.js`.
+- [x] **Instalação e Integração do Graphify (Otimização de Processamento & Tokens):**
+  - [x] Instalação do pacote oficial `graphifyy` (v0.9.90) com AST Tree-sitter e NetworkX.
+  - [x] Registro das regras em `.agents/rules/graphify.md` e workflows em `.agents/workflows/graphify.md`.
+  - [x] Extração e clusterização do Grafo de Conhecimento em `graphify-out/` com cache incremental.
+  - [x] Configuração de automação contínua via Git Hooks (`post-commit`, `post-checkout`, `post-merge`).
+  - [x] Inclusão de `graphify-out/` no `.gitignore` para proteção do build de produção.
 - [x] Servidor de desenvolvimento local iniciado e rodando ativamente na porta 3000 (`http://localhost:3000`).
 
 ### Fazendo
 - [ ] Validação visual e interação em tempo real com o usuário.
 
 ### Pendentes
-- [ ] Configuração do número real de telefone do WhatsApp (quando fornecido).
 - [ ] Publicação/Deploy em ambiente de produção (Netlify, Vercel ou hospedagem do cliente).

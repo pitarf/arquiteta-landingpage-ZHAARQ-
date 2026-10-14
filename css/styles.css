@@ -24,7 +24,7 @@
 }
 
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
   width: 100%;
 }
@@ -40,6 +40,62 @@ body {
 .font-editorial {
   font-family: 'Tenor Sans', 'Syne', sans-serif;
   letter-spacing: -0.01em;
+}
+
+/* Cabeçalho Sticky da Seção de Especialidades (Visível durante o scroll dos cards) */
+.services-sticky-header {
+  position: sticky;
+  top: 68px;
+  z-index: 50;
+  background-color: rgba(251, 249, 245, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(216, 206, 195, 0.8);
+  transition: all 0.25s ease;
+}
+
+@media (min-width: 640px) {
+  .services-sticky-header {
+    top: 76px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-sticky-header {
+    top: 88px;
+  }
+}
+
+/* Stacking Cards: Carrossel Vertical com Sobreposição e Efeito de Escala */
+.stacking-container {
+  position: relative;
+  padding-bottom: 0 !important;
+}
+
+.stack-card {
+  transform-origin: top center;
+  will-change: transform, filter;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s ease;
+  margin-bottom: 20px !important;
+}
+
+@media (min-width: 640px) {
+  .stacking-container {
+    padding-bottom: 0 !important;
+  }
+  .stack-card {
+    margin-bottom: 20px !important;
+  }
+}
+
+.stack-card:last-child {
+  margin-bottom: 0 !important;
 }
 
 /* Fundo com textura nobre e micro-ruído suave */

@@ -8,18 +8,18 @@ A Landing Page tem como finalidade primordial converter buscas no Google por "re
 - **Barra Flutuante para Celular & Botão Flutuante Desktop:** Em todas as resoluções, o visitante tem acesso rápido ao WhatsApp sem obstruir o conteúdo da página.
 - **Rastreamento de Tráfego:** Os parâmetros de campanha (`utm_source`, `utm_campaign`, etc.) e o identificador do Google Ads (`gclid`) são preservados e encaminhados na mensagem para mensurar a origem dos contatos.
 
-## 3. Como Alterar o Número do WhatsApp
-Para definir o número real de atendimento da ZHAARQ:
-1. Abra o arquivo [index.html](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/index.html).
-2. Localize os links com a classe `btn-whatsapp` e altere a URL `https://wa.me/5511999999999` para o número oficial (com DDI e DDD, ex: `5511987654321`).
-3. O script [main.js](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/js/main.js) preserva os dados de campanha automaticamente.
+## 3. Configuração do Número do WhatsApp
+O número oficial do WhatsApp da ZHAARQ está configurado globalmente em todas as chamadas de ação da página:
+- **Número Oficial:** `+55 (11) 97745-3954` (`5511977453954`).
+- **Comportamento Inteligente:** O script [main.js](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/js/main.js) preserva as mensagens contextuais de cada seção (projetos específicos, especialidades ou dúvidas gerais) e anexa automaticamente os parâmetros de campanha (`utm_source`, `utm_campaign`, `gclid`).
+- **Como alterar futuramente:** Caso o número mude, basta atualizar o atributo `href` dos links `.btn-whatsapp` no [index.html](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/index.html) e a constante padrão no [main.js](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/js/main.js).
 
 ## 4. Estrutura Visual e Conteúdo Real (Padrão Editorial)
-- **Hero:** Fotografia real em tela cheia (100% full-width) da edificação concluída com a presença institucional da Arquiteta Juliana Lucena com certificado na área em destaque.
-- **Projetos em Destaque:** Galeria assimétrica de arquitetura com prancha master de 7 colunas (Residência Unifamiliar) e projetos de apoio em 5 colunas com metadados de obra.
-- **Manifesto de Segurança Patrimonial:** Bloco escuro com métricas de autoridade em tipografia dourada Cormorant Garamond (`+100`, `98%`, `100%`, `CAU/SP`).
-- **Índice Editorial de Serviços:** Lista indexada de serviços com linhas hairline (`01 //`, `02 //`...), escopo pericial e tags normativas de órgãos públicos.
-- **Dossiê Pericial:** Análise de 4 inconformidades críticas com foto de vistoria in loco e pareceres periciais.
+- **Hero:** Fotografia real em tela cheia (100% full-width) da edificação concluída com a presença institucional da Arquiteta Juliana Lucena com atributos da profissão (pranchas técnicas, capacete e planner) na área em destaque à direita, acompanhada de selo de responsabilidade técnica CAU.
+- **Projetos em Destaque:** Galeria de 3 colunas com obras reais (Projeto 01 com escopo legal completo: projeto arquitetônico, alvará, Habite-se, CND da Receita Federal e averbação em cartório; Projeto 02 com regularização de sobrado unifamiliar com levantamento, projeto e Certificado de Regularização; e Projeto 03 com regularização de edificação e desdobro de lote para individualização de matrículas).
+- **Manifesto de Segurança Patrimonial:** Bloco escuro com métricas de autoridade em tipografia dourada Tenor Sans (`+100`, `98%`, `100%`, `CAU/SP`) responsiva e sem vazamentos no mobile.
+- **Carrossel Vertical de Especialidades (Stacking Cards):** O título da seção ("NOSSAS ESPECIALIDADES") permanece fixo no topo da tela logo abaixo do menu durante toda a navegação, enquanto os 5 cartões esculturais de arquitetura deslizam e se empilham em camadas sucessivas conforme o scroll (Regularização, Projetos As-Built, Habite-se & Licenças, Averbação & CND e Dossiê Patrimonial), com botões diretos para WhatsApp e selos técnicos.
+- **Dossiê Pericial:** Análise de 4 inconformidades críticas com foto autêntica de vistoria in loco (arquiteta com prancheta e trena profissional) e pareceres periciais.
 - **Régua Sequencial em 5 Fases:** Metodologia de trabalho com entregáveis formais e consolidação cartorária.
 - **Case Real Documentado:** Cronologia fotográfica de 4 etapas reais de evolução de obra até a averbação em cartório.
 - **Sobre a Arquiteta:** Perfil institucional com citação autoral, certificação profissional ativa no CAU/SP e tabela de credenciais.

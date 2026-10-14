@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLgpdBanner();
   initScrollReveal();
   initPremiumInteractions();
+  initVerticalStackingCards();
 });
 
 function getTrackingSuffix() {
@@ -62,9 +63,23 @@ function initWhatsAppTracking() {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
 
-      const phone = btn.getAttribute('data-phone') || '5511999999999';
+      const phone = btn.getAttribute('data-phone') || '5511977453954';
       const ctaLocation = btn.getAttribute('data-cta-location') || 'geral';
-      const fullMessage = baseMessage + getTrackingSuffix();
+
+      // Preserva mensagens customizadas por seção (projetos, especialidades, etc.) se presentes no href
+      let targetMessage = baseMessage;
+      try {
+        const href = btn.getAttribute('href');
+        if (href && href.includes('text=')) {
+          const queryPart = href.split('?')[1];
+          const urlParams = new URLSearchParams(queryPart);
+          if (urlParams.has('text')) {
+            targetMessage = urlParams.get('text');
+          }
+        }
+      } catch (err) {}
+
+      const fullMessage = targetMessage + getTrackingSuffix();
       const encodedMsg = encodeURIComponent(fullMessage);
       const url = `https://wa.me/${phone}?text=${encodedMsg}`;
 
@@ -347,3 +362,67 @@ function initPremiumInteractions() {
     if (frame) cancelAnimationFrame(frame);
   }, { once: true });
 }
+
+/**
+ * initVerticalStackingCards - Animação suave e dinâmica de sobreposição dos Stacking Cards
+ * Conforme o scroll avança e o próximo card sobe por cima do anterior:
+ * - O card inferior reduz suavemente de escala (com transform-origin: top center) e escurece com elegância;
+ * - O card seguinte sobe com sombra projetada sobrepondo-o com precisão;
+ * - Criação de profundidade tátil e editorial de alto luxo sem travar o scroll.
+ */
+function initVerticalStackingCards() {
+  const cards = Array.from(document.querySelectorAll('.stack-card'));
+  if (cards.length === 0) return;
+
+  let ticking = false;
+
+  function updateCards() {
+    cards.forEach((card, i) => {
+      if (i < cards.length - 1) {
+        const nextCard = cards[i + 1];
+        const currentRect = card.getBoundingClientRect();
+        const nextRect = nextCard.getBoundingClientRect();
+
+        // O próximo card começa a cobrir o card atual quando seu topo encosta na base do card atual
+        const overlap = currentRect.bottom - nextRect.top;
+        const totalHeight = currentRect.height;
+
+        if (overlap > 0) {
+          const progress = Math.min(Math.max(overlap / (totalHeight * 0.85), 0), 1);
+          const scale = 1 - (progress * 0.05); // Suave redução até 0.95
+          const brightness = 1 - (progress * 0.25); // Suave escurecimento até 0.75
+          const translateY = progress * -4; // Leve recuo para cima
+
+          card.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+          card.style.filter = `brightness(${brightness})`;
+        } else {
+          card.style.transform = 'scale(1) translateY(0px)';
+          card.style.filter = 'brightness(1)';
+        }
+      } else {
+        card.style.transform = 'scale(1) translateY(0px)';
+        card.style.filter = 'brightness(1)';
+      }
+    });
+
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateCards);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener('resize', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateCards);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // Disparo inicial
+  updateCards();
+}
+
