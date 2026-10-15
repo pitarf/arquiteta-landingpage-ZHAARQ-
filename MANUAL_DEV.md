@@ -32,7 +32,7 @@ Landing Page de alta conversão para o escritório de arquitetura **ZHAARQ**, de
 │   │   ├── arquiteta_hero_projetos.webp    # Retrato da Arquiteta com atributos profissionais (pranchas, capacete e planner) na Hero
 │   │   ├── proj_real_1, proj_real_regularizacao, proj_real_desdobro.webp # Projetos reais executados (aspect-[4/3])
 │   │   ├── diagnostico_vistoria_trena.webp # Vistoria técnica in loco com prancheta e trena de agrimensura
-│   │   ├── case_1..4_*.webp            # Sequência real de 4 etapas (Obras -> Averbação)
+│   │   ├── case_1_terreno.webp, case_2_projeto.webp, case_3_aprovacao.webp, case_4_conclusao.webp, case_5_receita.webp, case_6_cartorio.webp # Sequência real do Projeto Real (6 etapas)
 │   │   ├── arquiteta_real.webp         # Foto institucional no CREA-SP
 │   │   ├── whatsapp-icon-white.svg     # Ícone oficial vetorizado em branco puro
 │   │   └── logo-branca.webp / logo.webp
@@ -43,6 +43,7 @@ Landing Page de alta conversão para o escritório de arquitetura **ZHAARQ**, de
 │   └── main.js                         # Interatividade, rastreamento e eventos
 ├── documents/
 │   ├── BRIEFING_LANDING_PAGE_ZHAARQ.md # Transcrição do briefing original
+│   ├── PROMPT_STACKING_CARDS_CARROSSEL.md # Prompt mestre genérico e técnico de Stacking Cards
 │   └── task.md                         # Roadmap e controle de status
 ├── CHANGELOG.md                        # Histórico de versões
 ├── MANUAL_DEV.md                       # Manual técnico de desenvolvimento

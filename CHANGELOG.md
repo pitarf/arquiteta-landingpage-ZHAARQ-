@@ -2,6 +2,206 @@
 
 Todas as alterações notáveis deste projeto serão registradas neste arquivo.
 
+## [0.7.45] - 2026-10-15
+### Conclusão Integral do Projeto Real (Etapa 06 - Averbação no Cartório de Registro de Imóveis)
+- **Fotografia Oficial de Averbação Cartorária:**
+  - Integrada a fotografia oficial do processo de averbação em mesa de cartório (`assets/images/case_6_cartorio.webp`), exibindo a certidão timbrada de "AVERBAÇÃO", o livro oficial encapado em couro "Matrícula do Imóvel", caneta tinteiro, prancha arquitetônica e maquete volumétrica, em WebP nativo 4:3 (1024x768px).
+- **Adequação do Título e Cópia Técnica da Etapa 06:**
+  - Badge: `06. AVERBAÇÃO NO CARTÓRIO`.
+  - Título: **"Etapa final: atualização da matrícula do imóvel"**.
+  - Descrição técnica oficial:
+    > *"Após a regularização, realizamos a averbação da construção ou ampliação no Cartório de Registro de Imóveis, atualizando a matrícula e formalizando as informações da edificação."*
+- **Consolidação da Matriz Completa 3x2 (6 Etapas Consecutivas):**
+  - `01. CONDIÇÕES INICIAIS`: Registro do terreno e análise das condições existentes para o desenvolvimento do projeto.
+  - `02. DESENVOLVIMENTO`: Elaboração do Projeto Arquitetônico e definição das soluções técnicas e legais.
+  - `03. APROVAÇÃO`: Aprovação e Licenciamento técnico perante os órgãos competentes e Prefeitura.
+  - `04. CONCLUSÃO`: Conclusão da obra e obtenção do Habite-se / Certificado de Conclusão.
+  - `05. RECEITA FEDERAL`: Abertura do CNO, Aferição e Emissão da CND da Obra (com redução técnica de até 70%).
+  - `06. AVERBAÇÃO NO CARTÓRIO`: Atualização final da matrícula no Cartório de Registro de Imóveis.
+- **Validação Visual Responsiva:**
+  - Grade de 3 colunas no desktop (`lg:grid-cols-3`), 2 colunas em tablets (`sm:grid-cols-2`) e 1 coluna em mobile, assegurando harmonia editorial e proporções perfeitas sem overflow ou quebras.
+
+## [0.7.44] - 2026-10-15
+### Atualização da Etapa 05 do Projeto Real (Regularização Fiscal & CND na Receita Federal)
+- **Fotografia Oficial de Regularização Fiscal:**
+  - Integrada a fotografia em estúdio da regularização tributária da obra (`assets/images/case_5_receita.webp`), apresentando notebook com portal da Receita Federal, capacete de engenharia, pranchas e certidão física oficial "CND - Obra Regularizada" com chancela e QR Code, em WebP nativo 4:3 (1024x768px).
+- **Adequação do Título e Cópia Técnica da Etapa 05:**
+  - Badge: `05. RECEITA FEDERAL`.
+  - Título: **"Abertura do CNO, Aferição e Emissão da CND da Obra"**.
+  - Descrição técnica oficial completa com expertise em regularização previdenciária e estratégias técnicas com potencial de redução de até 70% perante a Receita Federal.
+- **Modularização da Grade para 3 Colunas (`lg:grid-cols-3`):**
+  - Grid expandido para acolher a cronologia completa de 01 a 06 com espaçamento balanceado e perfeita leitura em múltiplas linhas.
+- **Validação Visual Responsiva:**
+  - Capturas e validações em Desktop (1440px) e Mobile (390px) com legibilidade impecável e proporções harmônicas.
+
+## [0.7.43] - 2026-10-15
+### Atualização da Etapa 04 do Projeto Real (Conclusão Construtiva & Habite-se)
+- **Fotografia da Edificação Concluída:**
+  - Integrada a foto autêntica da residência finalizada com fachada em revestimento especial, telhado cerâmico, porta pivotante, esquadrias e calçada pavimentada (`assets/images/case_4_conclusao.webp`), convertida em WebP nativo na proporção matemática 4:3 (768x576px) com enquadramento arquitetônico perfeito.
+- **Adequação do Título e Cópia Técnica da Etapa 04:**
+  - Badge: `04. CONCLUSÃO`.
+  - Título: **"Habite-se"**.
+  - Descrição oficial:
+    > *"Conclusão da etapa construtiva e solicitação do Habite-se ou Certificado de Conclusão da obra, conforme aplicável, formalizando a conclusão da edificação perante a Prefeitura."*
+- **Consolidação da Sequência Completa do Projeto Real:**
+  - `01. CONDIÇÕES INICIAIS`: Local e Condições Iniciais (Terreno e análise inicial).
+  - `02. DESENVOLVIMENTO`: Elaboração do Projeto Arquitetônico (Plantas técnicas e soluções legais).
+  - `03. APROVAÇÃO`: Aprovação e Licenciamento (Acompanhamento perante os órgãos competentes).
+  - `04. CONCLUSÃO`: Habite-se (Conclusão da obra e formalização perante a Prefeitura).
+- **Validação Visual Responsiva:**
+  - Capturas e validações em Desktop (1440px) e Mobile (390px) com estética editorial premium, alinhamento simétrico e nitidez fotográfica.
+
+## [0.7.42] - 2026-10-15
+### Atualização da Etapa 03 do Projeto Real (Aprovação e Licenciamento Municipal)
+- **Fotografia Oficial de Aprovação e Licenciamento:**
+  - Integrada a fotografia oficial do projeto deferido na Prefeitura Municipal / Secretaria de Planejamento Urbano e Licenciamento (`assets/images/case_3_aprovacao.webp`), com carimbo "APROVADO", pranchas técnicas e chancela oficial, em WebP nativo 4:3 (1024x768px).
+- **Adequação do Título e Cópia Técnica da Etapa 03:**
+  - Badge: `03. APROVAÇÃO`.
+  - Título: **"Aprovação e Licenciamento"**.
+  - Descrição oficial:
+    > *"Acompanhamento técnico do processo junto aos órgãos competentes até a aprovação do projeto e emissão das licenças aplicáveis."*
+- **Consolidação da Sequência Visual do Projeto Real:**
+  - `01. CONDIÇÕES INICIAIS`: Registro do terreno e análise das condições existentes.
+  - `02. DESENVOLVIMENTO`: Elaboração do Projeto Arquitetônico e plantas técnicas.
+  - `03. APROVAÇÃO`: Aprovação e Licenciamento junto aos órgãos competentes.
+  - `04. AVERBAÇÃO`: Regularização na Receita Federal (CND) e averbação no Cartório de Registro de Imóveis.
+- **Validação Visual Responsiva:**
+  - Validação de renderização em Desktop (1440px) e Mobile (390px) com legibilidade impecável e proporção harmônica.
+
+## [0.7.41] - 2026-10-15
+### Atualização da Etapa 02 do Projeto Real (Desenvolvimento & Projeto Arquitetônico)
+- **Fotografia Otimizada da Arquiteta em Desenvolvimento:**
+  - Integrada a foto autêntica da Arquiteta Juliana Lucena no escritório desenvolvendo pranchas arquitetônicas (`assets/images/case_2_projeto.webp`), convertida em WebP nativo na proporção 4:3 (768x576px) com compressão de alta fidelidade e enquadramento perfeito.
+- **Adequação do Título e Cópia Técnica da Etapa 02:**
+  - Badge: `02. DESENVOLVIMENTO`.
+  - Título: **"Elaboração do Projeto Arquitetônico"**.
+  - Descrição oficial:
+    > *"Desenvolvimento das plantas técnicas e definição das soluções arquitetônicas, considerando as necessidades do cliente e os parâmetros legais aplicáveis ao projeto."*
+- **Consolidação da Sequência Visual do Projeto Real:**
+  - `01. CONDIÇÕES INICIAIS`: Registro do terreno e análise das condições existentes.
+  - `02. DESENVOLVIMENTO`: Elaboração do Projeto Arquitetônico e plantas técnicas.
+  - `03. HABITE-SE`: Conclusão da edificação e vistoria final com expedição do Habite-se.
+  - `04. AVERBAÇÃO`: Regularização na Receita Federal (CND) e averbação na matrícula do RGI.
+- **Validação Visual Responsiva:**
+  - Capturas de tela e validação em Desktop (1440px) e Mobile (390px) sem qualquer distorção visual.
+
+## [0.7.40] - 2026-10-15
+### Inclusão da Foto Real do Terreno e Atualização do Card 01 (Projeto Real)
+- **Fotografia Autêntica das Condições Iniciais:**
+  - Integrada a fotografia real do loteamento/terreno antes do início das obras (`assets/images/case_1_terreno.webp`), otimizada em WebP nativo na proporção 4:3 (1024x768px).
+- **Adequação do Título e Cópia da Etapa 01:**
+  - Badge: `01. CONDIÇÕES INICIAIS`.
+  - Título: **"Local e Condições Iniciais"**.
+  - Descrição oficial:
+    > *"Registro do terreno e análise das condições existentes para o desenvolvimento do projeto."*
+- **Consolidação da Narrativa Visual "Do Terreno à Regularização Completa":**
+  - A cronologia fotográfica 01 a 04 agora reflete com autenticidade integral a transformação completa:
+    1. `01. CONDIÇÕES INICIAIS`: O terreno vazio com terraplenagem e delimitação inicial.
+    2. `02. ACOMPANHAMENTO`: Execução da estrutura e alvenaria com a arquiteta in loco.
+    3. `03. HABITE-SE`: Conclusão da edificação e expedição do Habite-se municipal.
+    4. `04. AVERBAÇÃO`: Residência finalizada, CND emitida e averbação no Cartório de Registro de Imóveis.
+
+## [0.7.39] - 2026-10-15
+### Restauração do Layout da Lista Editorial Indexada na Seção 05 (Especialidades)
+- **Retorno ao Layout Minimalista e Editorial de Alto Padrão:**
+  - Atendendo à preferência da arquiteta, a estrutura de carrossel vertical empilhado (Stacking Cards) foi revertida para a consagrada **Lista Editorial Indexada** com linhas divisórias *hairline*, inspirada em ateliês de arquitetura contemporânea.
+  - Eliminação de scripts de rolagem forçada e estilos sticky intermediários, garantindo visualização panorâmica imediata de todos os serviços prestados.
+- **Manutenção Rigorosa de Textos e Títulos Atualizados:**
+  - **Item 01:** Mantida a inclusão de desdobro e unificação de lotes junto ao enquadramento em leis de anistia e zoneamento.
+  - **Item 02:** Mantido o escopo técnico de levantamento in loco, peças gráficas, cortes, fachadas e memoriais conforme ABNT e prefeituras.
+  - **Item 03:** Mantida a condução perante as Secretarias de Urbanismo/Obras, cumprimento de comunique-se e Habite-se.
+  - **Item 04:** Mantida a regularização fiscal (SERO/CND) e averbação na matrícula do RGI.
+  - **Item 05:** Atualizado para **"Diagnóstico Técnico e Estudo de Viabilidade"**, com a descrição técnica oficial completa sobre análise construtiva/documental perante prefeitura e licenças, e remoção integral das tags de viés jurídico (`Due Diligence` e `Inventário`).
+- **Validação Visual Multi-Dispositivo:**
+  - Capturadas e validadas as versões Desktop (1440px) e Mobile (390px), confirmando clareza de leitura, leveza e sofisticação visual sem qualquer perda de performance.
+
+## [0.7.38] - 2026-10-15
+### Reformulação da Seção 08 para "Projeto Real: Do Terreno à Regularização Completa" e Cronologia 01 a 04
+- **Eliminação do Conceito "Estudo de Caso" e Prazos Fixos:**
+  - Substituído o badge anterior por **"PROJETO REAL • DO INÍCIO À CONCLUSÃO"**.
+  - Removido o bloco de prazo fixo anterior (`Tempo Total: 82 dias`), alinhando com a política de transparência técnica e prudência quanto à variabilidade dos prazos municipais.
+- **Atualização da Cópia Oficial de Cabeçalho:**
+  - Título atualizado para: **"Do terreno à regularização completa."**
+  - Cópia técnica oficial aplicada na íntegra:
+    > *"Um processo real conduzido pela ZHAARQ, desde as etapas iniciais do projeto até a conclusão da obra, incluindo aprovação municipal, emissão do Habite-se, regularização previdenciária da construção com emissão da CND e averbação no Cartório de Registro de Imóveis."*
+- **Adequação da Cronologia 01 a 04 nas Etapas Fotográficas:**
+  - `01. PROJETO & OBRA` | *Início da Construção* (Desenvolvimento de projeto e execução física).
+  - `02. ACOMPANHAMENTO` | *Acompanhamento Técnico* (Vistorias in loco e conformidade urbanística).
+  - `03. HABITE-SE` | *Conclusão da Obra* (Vistoria final e expedição de Habite-se municipal).
+  - `04. AVERBAÇÃO` | *Matrícula Atualizada* (Regularização na Receita Federal com CND e averbação definitiva no Cartório de Registro de Imóveis).
+- **Validação Visual Multi-Dispositivo:**
+  - Capturadas e validadas as versões Desktop (1440px) e Mobile (390px), confirmando hierarquia editorial elegante e clareza da narrativa cronológica.
+
+## [0.7.37] - 2026-10-15
+### Nova Fotografia Profissional da Arquiteta Juliana Lucena no Ateliê ZHAARQ (Seção 09)
+- **Substituição por Imagem de Alto Padrão e Autoridade:**
+  - Substituída a foto institucional anterior da arquiteta em pé no CREA-SP pela nova fotografia de alta produção no escritório técnico (`assets/images/arquiteta_escritorio_projetos.webp`).
+  - A composição retrata a Arquiteta Juliana Lucena atuando diretamente sobre pranchas arquitetônicas, escalímetro, amostras de materiais, notebook e o logotipo oficial ZHAARQ iluminado na parede de fundo, transmitindo autoridade máxima, sofisticação e responsabilidade técnica.
+- **Otimização e Fidelidade:**
+  - Conversão para formato WebP a 92% de qualidade (682x1024px ocupando apenas 122 KB), com proporção perfeita `aspect-[2/3]` que valoriza todo o cenário arquitetônico sem cortes.
+- **Validação Visual:**
+  - Validada a integração harmônica com o badge flutuante "Juliana Lucena • CAU/SP Ativo" e equilíbrio com a coluna de credenciais à direita.
+
+## [0.7.36] - 2026-10-15
+### Atualização da Resposta da Pergunta 04 do FAQ (Início Sem Planta Antiga)
+- **Refinamento Técnico e Simplificação da Resposta:**
+  - Atualizada a resposta da Pergunta 04 sobre a ausência de planta antiga ou documentos originais com texto enxuto e preciso.
+  - Cópia técnica oficial aplicada na íntegra:
+    > *"Sim. Nossa equipe realiza o levantamento métrico do imóvel in loco, elabora as plantas arquitetônicas necessárias e solicita as certidões históricas pertinentes junto aos órgãos competentes."*
+- **Validação de Interface e Interatividade:**
+  - Testada a expansão do acordeão no navegador via script headless CDP, confirmando abertura fluida e visualização harmoniosa.
+
+## [0.7.35] - 2026-10-15
+### Atualização da Resposta da Pergunta 03 do FAQ (Prazos de Aprovação Municipal)
+- **Alinhamento com a Realidade dos Órgãos Públicos:**
+  - Substituída a estimativa fixa anterior de dias por posicionamento técnico transparente e prudente, adequado à morosidade das análises da Prefeitura de São Paulo e especificidades de cada município.
+  - Cópia técnica oficial aplicada na íntegra:
+    > *"O prazo depende do serviço contratado, da legislação aplicável, do município e da análise dos órgãos responsáveis. Cada processo possui suas particularidades, e a ZHAARQ acompanha todas as etapas necessárias, buscando atender às exigências técnicas e legais para a aprovação."*
+- **Validação de Interface e Interatividade:**
+  - Testado o acordeão interativo no navegador via script headless CDP, confirmando expansão suave a 60 FPS, inversão do ícone de controle (`+` para `−`) e legibilidade tipográfica harmoniosa.
+
+## [0.7.34] - 2026-10-15
+### Integração do Novo Logotipo ZHAARQ com Tipografia Ampliada & Máxima Legibilidade
+- **Substituição Oficial do Logotipo da Marca:**
+  - Integrada a nova versão do logotipo fornecida pelo usuário, contendo tipografia principal ampliada ("Z H A A R Q") e subtítulo simplificado para **"A R Q U I T E T U R A   E   S E R V I Ç O S"** com espaçamento editorial e altura de letra significativamente maior.
+- **Processamento Gráfico e Extração de Transparência:**
+  - Recorte cirúrgico da *bounding box* (eliminando mais de 25% de margens brancas vazias ao redor do símbolo, permitindo ganho real de escala).
+  - Extração de canal Alpha de alta fidelidade via subpixel antialiasing com inversão matemática de luminosidade.
+  - Geração das variantes em WebP de altíssima definição:
+    - `logo-branca.webp`: Traços em Off-White nobre (`#FBF9F5`) sobre fundo 100% transparente, garantindo contraste superior contra a Navbar e o Rodapé escuros.
+    - `logo.webp`: Traços em bronze/dourado original sobre fundo transparente para uso em favicon e fundos claros.
+- **Calibragem Responsiva de Escala no Layout:**
+  - Navbar: ampliação proporcional para `h-12 sm:h-13 md:h-15`, preservando o alinhamento da barra de navegação e os offsets do cabeçalho sticky.
+  - Rodapé Institucional: ampliação para `h-18 sm:h-22 md:h-24`, conferindo presença monumental e 100% de legibilidade às escritas.
+- **Validação Visual Multi-Dispositivo:**
+  - Testado e aprovado via Edge headless CDP no Desktop (1440px) e Mobile (390px), confirmando clareza cristalina das escritas em todas as resoluções.
+
+## [0.7.33] - 2026-10-15
+### Atualização do Card 05: Diagnóstico Técnico e Estudo de Viabilidade & Remoção de Termos Jurídicos
+- **Readequação do Escopo de Atuação do Card 05 (Stacking Cards):**
+  - Título atualizado para **Diagnóstico Técnico e Estudo de Viabilidade**, em estrita conformidade com a atuação técnica da arquiteta.
+  - Cópia técnica oficial aplicada na íntegra:
+    > *"Análise da situação construtiva e documental do imóvel, identificação de possíveis pendências junto à Prefeitura e demais órgãos competentes, com orientação sobre os procedimentos técnicos necessários para regularização imobiliária, viabilidade de novos projetos e obtenção de licenças."*
+- **Remoção de Elementos e Jargões de Natureza Jurídica:**
+  - Removidas integralmente as tags inferiores (`Due Diligence Imobiliária`, `Partilhas & Inventários`, `Auditoria de Passivos`), eliminando qualquer conotação com área do direito.
+  - Badge de cabeçalho refinado de `DUE DILIGENCE & PERÍCIA` para `DIAGNÓSTICO & VIABILIDADE`.
+  - Botão de conversão ajustado para "Solicitar Diagnóstico Técnico" com mensagem parametrizada no WhatsApp.
+  - Painel lateral direito reformulado para "Análise Técnica" e "Viabilidade Construtiva & Legal", focando em diretrizes urbanísticas e aprovações perante a prefeitura.
+  - Inclusão do serviço de Diagnóstico Técnico & Viabilidade no Rodapé Institucional.
+
+## [0.7.32] - 2026-10-15
+### Documentação do Prompt Mestre: Carrossel Vertical com Stacking Cards (Sticky Scroll)
+- **Criação do Documento Reutilizável de Engenharia:**
+  - Criado o arquivo [PROMPT_STACKING_CARDS_CARROSSEL.md](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/documents/PROMPT_STACKING_CARDS_CARROSSEL.md) em `/documents`.
+  - Contém um **Prompt Mestre Copiável e Detalhado** para instruir qualquer IA (ChatGPT, Claude, Gemini, Antigravity) ou desenvolvedor a implementar o componente de cartões empilháveis com rolagem magnética a 60 FPS.
+- **Sistematização das 6 Regras Críticas Anti-Bugs Validadas em Produção:**
+  - *Regra 1:* Uso obrigatório de `overflow-x: clip` no `html, body` para não quebrar o `position: sticky`.
+  - *Regra 2:* Fórmula matemática de offsets progressivos (`top: base + (n * step)`) por breakpoint.
+  - *Regra 3:* Eliminação definitiva do vácuo/gap em branco (`margin-bottom: 20px !important;` e `padding-bottom: 0 !important;`).
+  - *Regra 4:* Cabeçalho da seção fixo e legível (`position: sticky`, `z-50` e `backdrop-filter: blur(12px)`).
+  - *Regra 5:* Escala tátil e escurecimento gradual via JS leve (`scale(0.95)`, `brightness(0.75)` com `transform-origin: top center`).
+  - *Regra 6:* Responsividade mobile-first com checklist de QA para iOS/Android/Desktop.
+
 ## [0.7.31] - 2026-10-14
 ### Nova Fotografia de Vistoria Técnica In Loco na Seção de Diagnóstico (Seção 06)
 - **Substituição por Fotografia Técnica Real em Campo:**

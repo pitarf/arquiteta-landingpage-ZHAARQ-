@@ -29,3 +29,6 @@ test_*.png
 whatsapp-reminders.png
 # Graphify (Knowledge Graph AST & Cache)
 graphify-out/
+
+# Scripts e arquivos temporários de teste
+scratch/
