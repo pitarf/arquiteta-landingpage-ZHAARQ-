@@ -53,9 +53,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Syne:wght@500;600;700;800&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css?v=20261015_editorial">
+  <link rel="stylesheet" href="css/styles.css?v=0.7.52">
 </head>
 <body class="bg-[#FBF9F5] text-brand-title antialiased selection:bg-brand-terracotta selection:text-white pb-20 md:pb-0 font-sans">
+
+  <!-- ==========================================
+       TOP ANNOUNCEMENT BAR: ANISTIA MUNICIPAL VIGENTE
+       ========================================== -->
+  <aside aria-label="Aviso de Anistia Municipal" class="bg-[#181614] border-b border-brand-gold/30 text-white text-[11px] sm:text-xs py-2 px-3 sm:px-6 relative z-[70]">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 sm:gap-4 text-center sm:text-left">
+      <div class="flex items-center space-x-2">
+        <span class="flex h-2 w-2 relative flex-shrink-0">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+        </span>
+        <p class="text-[#E5DCD0] font-light leading-snug">
+          <strong class="text-brand-gold font-semibold uppercase tracking-wider">Anistia Municipal Ativa:</strong>
+          Aproveite para regularizar seu imóvel em <span class="text-white font-medium">São Paulo, Guarulhos, Suzano e Itaquaquecetuba</span>.
+        </p>
+      </div>
+      <a href="https://wa.me/5511977453954?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20as%20condi%C3%A7%C3%B5es%20da%20Lei%20da%20Anistia%20para%20o%20meu%20im%C3%B3vel." 
+         target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center space-x-1.5 text-brand-gold hover:text-white font-medium text-[11px] uppercase tracking-wider underline underline-offset-4 transition-colors flex-shrink-0">
+        <span>Consultar meu município</span>
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+      </a>
+    </div>
+  </aside>
 
   <!-- ==========================================
        01. CABEÇALHO / NAVBAR (IDÊNTICO À REFERÊNCIA)
@@ -63,9 +87,20 @@
   <header class="border-b border-[#2B2621]/40 bg-[#121110]/95 backdrop-blur-md sticky top-0 z-[60] transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
       
-      <!-- Logotipo Oficial ZHAARQ Branca com Tipografia Dourada -->
-      <a href="#" class="flex items-center space-x-3 group" title="ZHAARQ Arquitetura">
-        <img src="assets/images/logo-branca.webp" alt="ZHAARQ Arquitetura e Regularização" class="h-12 sm:h-13 md:h-15 w-auto object-contain transition-transform group-hover:scale-105">
+      <!-- Logotipo Oficial ZHAARQ Horizontal com Símbolo Arquitetônico e Tipografia Vetorial Nítida -->
+      <a href="#" class="flex items-center space-x-2 sm:space-x-3 group select-none flex-shrink-0" title="ZHAARQ Arquitetura e Regularização">
+        <img src="assets/images/logo-symbol-gold.webp" 
+             alt="Símbolo ZHAARQ Arquitetura" 
+             class="h-10 sm:h-11 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 flex-shrink-0 drop-shadow-[0_2px_8px_rgba(196,150,107,0.15)]">
+        <div class="flex flex-col justify-center">
+          <span class="font-editorial text-lg sm:text-xl md:text-2xl tracking-[0.2em] sm:tracking-[0.24em] text-[#FBF9F5] group-hover:text-brand-gold-light transition-colors uppercase leading-none font-medium">
+            ZHAARQ
+          </span>
+          <div class="h-[1px] w-full bg-gradient-to-r from-brand-gold/60 via-brand-gold to-brand-gold/60 my-1 sm:my-1.5"></div>
+          <span class="text-[7.5px] sm:text-[8.5px] md:text-[9.5px] tracking-[0.24em] sm:tracking-[0.28em] text-[#C4B9AC] uppercase font-normal leading-none whitespace-nowrap">
+            ARQUITETURA E SERVIÇOS
+          </span>
+        </div>
       </a>
 
       <!-- Menu Central de Navegação Exato -->
@@ -79,13 +114,14 @@
       </nav>
 
       <!-- Botão Superior Terracotta Analisar Meu Imóvel com Seta -->
-      <div class="flex items-center">
+      <div class="flex items-center flex-shrink-0">
         <a href="https://wa.me/5511977453954?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20t%C3%A9cnica%20do%20meu%20im%C3%B3vel." 
            target="_blank" rel="noopener noreferrer" 
            data-cta-location="header"
-           class="btn-whatsapp inline-flex items-center space-x-2 bg-brand-terracotta hover:bg-brand-terracotta-hover text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold shadow-lg shadow-brand-terracotta/30 transition-all transform hover:-translate-y-0.5">
-          <span>Analisar meu imóvel</span>
-          <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+           class="btn-whatsapp inline-flex items-center space-x-1.5 sm:space-x-2 bg-brand-terracotta hover:bg-brand-terracotta-hover text-white px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold shadow-lg shadow-brand-terracotta/30 transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
+          <span class="hidden xs:inline sm:inline">Analisar meu imóvel</span>
+          <span class="xs:hidden inline sm:hidden">Analisar imóvel</span>
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
         </a>
       </div>
 
@@ -113,6 +149,77 @@
         <!-- Coluna de Conteúdo Tipográfico da Hero (7 de 12 colunas no desktop) -->
         <div class="lg:col-span-7 space-y-6 pt-4 pb-8 sm:pb-12 lg:pb-16">
           
+          <!-- Destaque de Amparo Legal: Anistia Municipal nos Municípios Atendidos -->
+          <div class="p-3 sm:p-4 rounded-2xl bg-[#121110]/85 border border-brand-gold/40 backdrop-blur-md shadow-2xl max-w-xl space-y-2">
+            <div class="flex items-center justify-between flex-wrap gap-1.5 sm:gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="flex h-2 w-2 relative">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                </span>
+                <span class="text-[10px] sm:text-[11px] font-bold text-brand-gold tracking-[0.18em] uppercase">
+                  LEIS DE ANISTIA MUNICIPAIS VIGENTES
+                </span>
+              </div>
+              <span class="text-[9px] sm:text-[10px] uppercase font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-full">
+                Aproveite para Regularizar
+              </span>
+            </div>
+
+            <p class="text-[11px] sm:text-xs text-[#E5DCD0] font-light leading-relaxed">
+              Oportunidade legal com processos simplificados para regularização de edificações nos municípios atendidos:
+            </p>
+
+            <!-- Grid 2x2 com os 4 Municípios e Leis Oficiais (Links Diretos para WhatsApp) -->
+            <div class="grid grid-cols-2 gap-1.5 sm:gap-2 pt-0.5 text-[10px] sm:text-[11px]">
+              
+              <!-- São Paulo -->
+              <a href="https://wa.me/5511977453954?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20regulariza%C3%A7%C3%A3o%20do%20meu%20im%C3%B3vel%20pela%20Lei%20da%20Anistia%20de%20S%C3%A3o%20Paulo%20(Lei%2017.202%2F2019)." 
+                 target="_blank" rel="noopener noreferrer"
+                 class="group flex items-center justify-between p-1.5 sm:p-2 rounded-xl bg-white/[0.04] hover:bg-brand-terracotta/25 border border-white/10 hover:border-brand-gold/60 transition-all">
+                <div class="leading-tight">
+                  <div class="font-medium text-white group-hover:text-brand-gold transition-colors text-[11px] sm:text-xs">São Paulo</div>
+                  <div class="text-[9px] sm:text-[10px] text-brand-gold/80 font-mono">Lei 17.202/19</div>
+                </div>
+                <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white/40 group-hover:text-brand-gold group-hover:translate-x-0.5 transition-all flex-shrink-0 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+              </a>
+
+              <!-- Guarulhos -->
+              <a href="https://wa.me/5511977453954?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20regulariza%C3%A7%C3%A3o%20do%20meu%20im%C3%B3vel%20pela%20Lei%20da%20Anistia%20de%20Guarulhos%20(Lei%208.530%2F2026)." 
+                 target="_blank" rel="noopener noreferrer"
+                 class="group flex items-center justify-between p-1.5 sm:p-2 rounded-xl bg-white/[0.04] hover:bg-brand-terracotta/25 border border-white/10 hover:border-brand-gold/60 transition-all">
+                <div class="leading-tight">
+                  <div class="font-medium text-white group-hover:text-brand-gold transition-colors text-[11px] sm:text-xs">Guarulhos</div>
+                  <div class="text-[9px] sm:text-[10px] text-brand-gold/80 font-mono">Lei 8.530/26</div>
+                </div>
+                <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white/40 group-hover:text-brand-gold group-hover:translate-x-0.5 transition-all flex-shrink-0 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+              </a>
+
+              <!-- Suzano -->
+              <a href="https://wa.me/5511977453954?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20regulariza%C3%A7%C3%A3o%20do%20meu%20im%C3%B3vel%20pela%20Lei%20da%20Anistia%20de%20Suzano%20(LC%20423%2F2026)." 
+                 target="_blank" rel="noopener noreferrer"
+                 class="group flex items-center justify-between p-1.5 sm:p-2 rounded-xl bg-white/[0.04] hover:bg-brand-terracotta/25 border border-white/10 hover:border-brand-gold/60 transition-all">
+                <div class="leading-tight">
+                  <div class="font-medium text-white group-hover:text-brand-gold transition-colors text-[11px] sm:text-xs">Suzano</div>
+                  <div class="text-[9px] sm:text-[10px] text-brand-gold/80 font-mono">LC nº 423/26</div>
+                </div>
+                <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white/40 group-hover:text-brand-gold group-hover:translate-x-0.5 transition-all flex-shrink-0 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+              </a>
+
+              <!-- Itaquaquecetuba -->
+              <a href="https://wa.me/5511977453954?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20regulariza%C3%A7%C3%A3o%20do%20meu%20im%C3%B3vel%20pela%20Lei%20de%20Regulariza%C3%A7%C3%A3o%20de%20Itaquaquecetuba%20(LC%20395%2F2024)." 
+                 target="_blank" rel="noopener noreferrer"
+                 class="group flex items-center justify-between p-1.5 sm:p-2 rounded-xl bg-white/[0.04] hover:bg-brand-terracotta/25 border border-white/10 hover:border-brand-gold/60 transition-all">
+                <div class="leading-tight">
+                  <div class="font-medium text-white group-hover:text-brand-gold transition-colors text-[11px] sm:text-xs">Itaquaquecetuba</div>
+                  <div class="text-[9px] sm:text-[10px] text-brand-gold/80 font-mono">LC nº 395/24</div>
+                </div>
+                <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white/40 group-hover:text-brand-gold group-hover:translate-x-0.5 transition-all flex-shrink-0 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+              </a>
+
+            </div>
+          </div>
+
           <!-- Tagline Superior em Dourado Caixa Alta -->
           <div class="inline-block">
             <span class="text-[11px] font-semibold text-brand-gold tracking-[0.22em] uppercase">
@@ -239,11 +346,11 @@
         </div>
       </div>
 
-      <!-- Grid de 3 Projetos em Destaque (Equalizado e Balanceado) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+      <!-- Grid Desktop (3 Colunas) / Carrossel Fluido Mobile (Swipe com Snap) -->
+      <div id="projetos-carousel" class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch overflow-x-auto md:overflow-x-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-4 px-4 sm:-mx-6 sm:px-6 md:mx-0 md:px-0 no-scrollbar scroll-smooth">
         
         <!-- Card 1: Residência Unifamiliar Contemporânea -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between group">
+        <div class="project-card-item w-[86vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-center md:flex-shrink md:snap-align-none bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between group">
           <div>
             <div class="relative overflow-hidden aspect-[4/3] bg-[#121110]">
               <img src="assets/images/proj_real_1.webp" 
@@ -284,7 +391,7 @@
         </div>
 
         <!-- Card 2: Regularização de Residência Unifamiliar -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between group">
+        <div class="project-card-item w-[86vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-center md:flex-shrink md:snap-align-none bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between group">
           <div>
             <div class="relative overflow-hidden aspect-[4/3] bg-[#121110]">
               <img src="assets/images/proj_real_regularizacao.webp" 
@@ -325,7 +432,7 @@
         </div>
 
         <!-- Card 3: Regularização e Desdobro de Lote -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between group">
+        <div class="project-card-item w-[86vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-center md:flex-shrink md:snap-align-none bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between group">
           <div>
             <div class="relative overflow-hidden aspect-[4/3] bg-[#121110]">
               <img src="assets/images/proj_real_desdobro.webp" 
@@ -365,6 +472,25 @@
           </div>
         </div>
 
+      </div>
+
+      <!-- Indicadores de Carrossel para Celular (Mobile Dots) -->
+      <div class="flex md:hidden items-center justify-center space-x-1 pt-4 pb-1">
+        <button type="button" aria-label="Ir para o projeto 1" class="carousel-dot py-3 px-1.5 flex items-center justify-center focus:outline-none" data-index="0">
+          <span class="dot-pill w-6 h-1.5 rounded-full bg-brand-terracotta transition-all duration-300"></span>
+        </button>
+        <button type="button" aria-label="Ir para o projeto 2" class="carousel-dot py-3 px-1.5 flex items-center justify-center focus:outline-none" data-index="1">
+          <span class="dot-pill w-2 h-1.5 rounded-full bg-brand-border hover:bg-brand-gold transition-all duration-300"></span>
+        </button>
+        <button type="button" aria-label="Ir para o projeto 3" class="carousel-dot py-3 px-1.5 flex items-center justify-center focus:outline-none" data-index="2">
+          <span class="dot-pill w-2 h-1.5 rounded-full bg-brand-border hover:bg-brand-gold transition-all duration-300"></span>
+        </button>
+      </div>
+
+      <!-- Dica de Deslize sutil para Mobile -->
+      <div class="flex md:hidden items-center justify-center space-x-1.5 text-[11px] text-brand-muted/70 pt-1 pb-3 font-light">
+        <svg class="w-3.5 h-3.5 animate-pulse text-brand-terracotta" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+        <span>Deslize para o lado para ver outros projetos</span>
       </div>
     </div>
   </section>
@@ -731,10 +857,10 @@
       </div>
 
       <!-- Régua de 5 Fases Sequenciais: Layout Orgânico Editorial com Onda Superior -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 items-stretch">
+      <div id="etapas-carousel" class="flex md:grid md:grid-cols-2 lg:grid-cols-5 gap-6 items-stretch overflow-x-auto md:overflow-x-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-4 px-4 sm:-mx-6 sm:px-6 md:mx-0 md:px-0 no-scrollbar scroll-smooth">
         
         <!-- Fase 01 -->
-        <div class="relative group h-full transition-transform duration-300 hover:-translate-y-1">
+        <div class="etapa-card-item w-[86vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-center md:flex-shrink md:snap-align-none relative group h-full min-h-[300px] transition-transform duration-300 hover:-translate-y-1">
           <svg viewBox="0 0 240 320" preserveAspectRatio="none" class="absolute inset-0 w-full h-full pointer-events-none organic-card-shadow">
             <path d="M 28 6
                      C 60 6, 110 32, 212 30
@@ -768,7 +894,7 @@
         </div>
 
         <!-- Fase 02 -->
-        <div class="relative group h-full transition-transform duration-300 hover:-translate-y-1">
+        <div class="etapa-card-item w-[86vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-center md:flex-shrink md:snap-align-none relative group h-full min-h-[300px] transition-transform duration-300 hover:-translate-y-1">
           <svg viewBox="0 0 240 320" preserveAspectRatio="none" class="absolute inset-0 w-full h-full pointer-events-none organic-card-shadow">
             <path d="M 28 6
                      C 60 6, 110 32, 212 30
@@ -802,7 +928,7 @@
         </div>
 
         <!-- Fase 03 -->
-        <div class="relative group h-full transition-transform duration-300 hover:-translate-y-1">
+        <div class="etapa-card-item w-[86vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-center md:flex-shrink md:snap-align-none relative group h-full min-h-[300px] transition-transform duration-300 hover:-translate-y-1">
           <svg viewBox="0 0 240 320" preserveAspectRatio="none" class="absolute inset-0 w-full h-full pointer-events-none organic-card-shadow">
             <path d="M 28 6
                      C 60 6, 110 32, 212 30
@@ -836,7 +962,7 @@
         </div>
 
         <!-- Fase 04 -->
-        <div class="relative group h-full transition-transform duration-300 hover:-translate-y-1">
+        <div class="etapa-card-item w-[86vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-center md:flex-shrink md:snap-align-none relative group h-full min-h-[300px] transition-transform duration-300 hover:-translate-y-1">
           <svg viewBox="0 0 240 320" preserveAspectRatio="none" class="absolute inset-0 w-full h-full pointer-events-none organic-card-shadow">
             <path d="M 28 6
                      C 60 6, 110 32, 212 30
@@ -870,7 +996,7 @@
         </div>
 
         <!-- Fase 05 -->
-        <div class="relative group h-full transition-transform duration-300 hover:-translate-y-1">
+        <div class="etapa-card-item w-[86vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-center md:flex-shrink md:snap-align-none relative group h-full min-h-[300px] transition-transform duration-300 hover:-translate-y-1">
           <svg viewBox="0 0 240 320" preserveAspectRatio="none" class="absolute inset-0 w-full h-full pointer-events-none organic-card-shadow">
             <path d="M 28 6
                      C 60 6, 110 32, 212 30
@@ -903,6 +1029,31 @@
           </div>
         </div>
 
+      </div>
+
+      <!-- Indicadores de Carrossel para Celular (Mobile Dots - 5 Etapas) -->
+      <div class="flex md:hidden items-center justify-center space-x-1 pt-4 pb-1">
+        <button type="button" aria-label="Ir para a etapa 1" class="etapas-carousel-dot py-3 px-1.5 flex items-center justify-center focus:outline-none" data-index="0">
+          <span class="dot-pill w-6 h-1.5 rounded-full bg-brand-terracotta transition-all duration-300"></span>
+        </button>
+        <button type="button" aria-label="Ir para a etapa 2" class="etapas-carousel-dot py-3 px-1.5 flex items-center justify-center focus:outline-none" data-index="1">
+          <span class="dot-pill w-2 h-1.5 rounded-full bg-brand-border hover:bg-brand-gold transition-all duration-300"></span>
+        </button>
+        <button type="button" aria-label="Ir para a etapa 3" class="etapas-carousel-dot py-3 px-1.5 flex items-center justify-center focus:outline-none" data-index="2">
+          <span class="dot-pill w-2 h-1.5 rounded-full bg-brand-border hover:bg-brand-gold transition-all duration-300"></span>
+        </button>
+        <button type="button" aria-label="Ir para a etapa 4" class="etapas-carousel-dot py-3 px-1.5 flex items-center justify-center focus:outline-none" data-index="3">
+          <span class="dot-pill w-2 h-1.5 rounded-full bg-brand-border hover:bg-brand-gold transition-all duration-300"></span>
+        </button>
+        <button type="button" aria-label="Ir para a etapa 5" class="etapas-carousel-dot py-3 px-1.5 flex items-center justify-center focus:outline-none" data-index="4">
+          <span class="dot-pill w-2 h-1.5 rounded-full bg-brand-border hover:bg-brand-gold transition-all duration-300"></span>
+        </button>
+      </div>
+
+      <!-- Dica de Deslize sutil para Mobile -->
+      <div class="flex md:hidden items-center justify-center space-x-1.5 text-[11px] text-brand-muted/70 pt-1 pb-3 font-light">
+        <svg class="w-3.5 h-3.5 animate-pulse text-brand-terracotta" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+        <span>Deslize para o lado para ver todas as 5 etapas</span>
       </div>
 
     </div>
@@ -945,10 +1096,10 @@
       </div>
 
       <!-- Fotografias em Grade 3 Colunas (Cronologia Sequencial) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <div id="casereal-carousel" class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch overflow-x-auto md:overflow-x-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-4 px-4 sm:-mx-6 sm:px-6 md:mx-0 md:px-0 no-scrollbar scroll-smooth">
         
         <!-- Etapa 01: Local e Condições Iniciais -->
-        <div class="bg-[#FBF9F5] p-4 rounded-2xl border border-brand-border shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-start">
+        <div class="casereal-card-item w-[86vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-center md:flex-shrink md:snap-align-none bg-[#FBF9F5] p-4 rounded-2xl border border-brand-border shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-start">
           <div class="relative rounded-xl overflow-hidden aspect-[4/3] mb-4 bg-[#121110]">
             <img src="assets/images/case_1_terreno.webp" 
                  alt="Local e condições iniciais do terreno" 
@@ -967,7 +1118,7 @@
         </div>
 
         <!-- Etapa 02: Elaboração do Projeto Arquitetônico -->
-        <div class="bg-[#FBF9F5] p-4 rounded-2xl border border-brand-border shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-start">
+        <div class="casereal-card-item w-[86vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-center md:flex-shrink md:snap-align-none bg-[#FBF9F5] p-4 rounded-2xl border border-brand-border shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-start">
           <div class="relative rounded-xl overflow-hidden aspect-[4/3] mb-4 bg-[#121110]">
             <img src="assets/images/case_2_projeto.webp" 
                  alt="Elaboração do Projeto Arquitetônico" 
@@ -986,7 +1137,7 @@
         </div>
 
         <!-- Etapa 03: Aprovação e Licenciamento -->
-        <div class="bg-[#FBF9F5] p-4 rounded-2xl border border-brand-border shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-start">
+        <div class="casereal-card-item w-[86vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-center md:flex-shrink md:snap-align-none bg-[#FBF9F5] p-4 rounded-2xl border border-brand-border shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-start">
           <div class="relative rounded-xl overflow-hidden aspect-[4/3] mb-4 bg-[#121110]">
             <img src="assets/images/case_3_aprovacao.webp" 
                  alt="Aprovação e Licenciamento do Projeto Arquitetônico" 
@@ -1005,7 +1156,7 @@
         </div>
 
         <!-- Etapa 04: Conclusão & Habite-se -->
-        <div class="bg-[#FBF9F5] p-4 rounded-2xl border border-brand-border shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-start">
+        <div class="casereal-card-item w-[86vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-center md:flex-shrink md:snap-align-none bg-[#FBF9F5] p-4 rounded-2xl border border-brand-border shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-start">
           <div class="relative rounded-xl overflow-hidden aspect-[4/3] mb-4 bg-[#121110]">
             <img src="assets/images/case_4_conclusao.webp" 
                  alt="Conclusão da obra e obtenção do Habite-se" 
@@ -1024,7 +1175,7 @@
         </div>
 
         <!-- Etapa 05: Regularização junto à Receita Federal -->
-        <div class="bg-[#FBF9F5] p-4 rounded-2xl border border-brand-border shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-start">
+        <div class="casereal-card-item w-[86vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-center md:flex-shrink md:snap-align-none bg-[#FBF9F5] p-4 rounded-2xl border border-brand-border shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-start">
           <div class="relative rounded-xl overflow-hidden aspect-[4/3] mb-4 bg-[#121110]">
             <img src="assets/images/case_5_receita.webp" 
                  alt="Regularização da Obra na Receita Federal e Emissão da CND" 
@@ -1046,7 +1197,7 @@
         </div>
 
         <!-- Etapa 06: Averbação no Cartório de Registro de Imóveis -->
-        <div class="bg-[#FBF9F5] p-4 rounded-2xl border border-brand-border shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-start">
+        <div class="casereal-card-item w-[86vw] sm:w-[70vw] md:w-auto flex-shrink-0 snap-center md:flex-shrink md:snap-align-none bg-[#FBF9F5] p-4 rounded-2xl border border-brand-border shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-start">
           <div class="relative rounded-xl overflow-hidden aspect-[4/3] mb-4 bg-[#121110]">
             <img src="assets/images/case_6_cartorio.webp" 
                  alt="Averbação no Cartório de Registro de Imóveis e Atualização da Matrícula" 
@@ -1064,6 +1215,34 @@
           </div>
         </div>
 
+      </div>
+
+      <!-- Indicadores de Carrossel para Celular (Mobile Dots - 6 Etapas) -->
+      <div class="flex md:hidden items-center justify-center space-x-1 pt-4 pb-1">
+        <button type="button" aria-label="Ir para a etapa 1" class="casereal-carousel-dot py-3 px-1.5 flex items-center justify-center focus:outline-none" data-index="0">
+          <span class="dot-pill w-6 h-1.5 rounded-full bg-brand-terracotta transition-all duration-300"></span>
+        </button>
+        <button type="button" aria-label="Ir para a etapa 2" class="casereal-carousel-dot py-3 px-1.5 flex items-center justify-center focus:outline-none" data-index="1">
+          <span class="dot-pill w-2 h-1.5 rounded-full bg-brand-border hover:bg-brand-gold transition-all duration-300"></span>
+        </button>
+        <button type="button" aria-label="Ir para a etapa 3" class="casereal-carousel-dot py-3 px-1.5 flex items-center justify-center focus:outline-none" data-index="2">
+          <span class="dot-pill w-2 h-1.5 rounded-full bg-brand-border hover:bg-brand-gold transition-all duration-300"></span>
+        </button>
+        <button type="button" aria-label="Ir para a etapa 4" class="casereal-carousel-dot py-3 px-1.5 flex items-center justify-center focus:outline-none" data-index="3">
+          <span class="dot-pill w-2 h-1.5 rounded-full bg-brand-border hover:bg-brand-gold transition-all duration-300"></span>
+        </button>
+        <button type="button" aria-label="Ir para a etapa 5" class="casereal-carousel-dot py-3 px-1.5 flex items-center justify-center focus:outline-none" data-index="4">
+          <span class="dot-pill w-2 h-1.5 rounded-full bg-brand-border hover:bg-brand-gold transition-all duration-300"></span>
+        </button>
+        <button type="button" aria-label="Ir para a etapa 6" class="casereal-carousel-dot py-3 px-1.5 flex items-center justify-center focus:outline-none" data-index="5">
+          <span class="dot-pill w-2 h-1.5 rounded-full bg-brand-border hover:bg-brand-gold transition-all duration-300"></span>
+        </button>
+      </div>
+
+      <!-- Dica de Deslize sutil para Mobile -->
+      <div class="flex md:hidden items-center justify-center space-x-1.5 text-[11px] text-brand-muted/70 pt-1 pb-4 font-light">
+        <svg class="w-3.5 h-3.5 animate-pulse text-brand-terracotta" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+        <span>Deslize para o lado para ver todas as 6 etapas do projeto real</span>
       </div>
 
     </div>
@@ -1496,6 +1675,6 @@
   </a>
 
   <!-- Scripts -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=0.7.52"></script>
 </body>
 </html>

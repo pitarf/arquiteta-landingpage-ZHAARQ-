@@ -753,3 +753,15 @@ body {
   border: 1px solid rgba(216, 182, 133, 0.45);
 }
 
+/* ==========================================
+   CARROSSEL MOBILE (NO SCROLLBAR & TOUCH OPTIMIZATIONS)
+   ========================================== */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+

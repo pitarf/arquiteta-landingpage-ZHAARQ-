@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initLgpdBanner();
   initScrollReveal();
   initPremiumInteractions();
+  initProjectsCarousel();
+  initEtapasCarousel();
+  initCaseRealCarousel();
 });
 
 function getTrackingSuffix() {
@@ -356,6 +359,116 @@ function initPremiumInteractions() {
   hero.addEventListener('pointerleave', reset);
 
   frame = requestAnimationFrame(render);
-
 }
+
+/**
+ * Gerenciador de Carrossel Mobile Touch com Sincronização Geométrica de Dots
+ * Suporta swipe nativo, snap magnético e navegação suave por clique/toque nos dots
+ * 
+ * @param {string} carouselId - ID do container com scroll horizontal
+ * @param {string} dotSelector - Seletor CSS dos botões indicadores
+ * @param {string} cardSelector - Seletor CSS dos cards de item
+ */
+function setupMobileCarousel(carouselId, dotSelector, cardSelector) {
+  const carousel = document.getElementById(carouselId);
+  const dotButtons = document.querySelectorAll(dotSelector);
+  if (!carousel || !dotButtons.length) return;
+
+  const cards = carousel.querySelectorAll(cardSelector);
+  if (!cards.length) return;
+
+  function updateActiveDot() {
+    const carouselRect = carousel.getBoundingClientRect();
+    const carouselCenter = carouselRect.left + carouselRect.width / 2;
+
+    let minDistance = Infinity;
+    let activeIndex = 0;
+
+    cards.forEach((card, index) => {
+      const cardRect = card.getBoundingClientRect();
+      const cardCenter = cardRect.left + cardRect.width / 2;
+      const distance = Math.abs(carouselCenter - cardCenter);
+      if (distance < minDistance) {
+        minDistance = distance;
+        activeIndex = index;
+      }
+    });
+
+    // Se estiver no final extremo do scroll (tolerância de 15px)
+    if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 15) {
+      activeIndex = cards.length - 1;
+    }
+    // Se estiver no início extremo
+    if (carousel.scrollLeft <= 10) {
+      activeIndex = 0;
+    }
+
+    dotButtons.forEach((btn, index) => {
+      const pill = btn.querySelector('.dot-pill') || btn;
+      if (index === activeIndex) {
+        pill.classList.add('w-6', 'bg-brand-terracotta');
+        pill.classList.remove('w-2', 'bg-brand-border');
+      } else {
+        pill.classList.remove('w-6', 'bg-brand-terracotta');
+        pill.classList.add('w-2', 'bg-brand-border');
+      }
+    });
+  }
+
+  // Scroll com requestAnimationFrame a 60fps para fluidez total no toque
+  let ticking = false;
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateActiveDot();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+
+  carousel.addEventListener('scroll', onScroll, { passive: true });
+  carousel.addEventListener('scrollend', updateActiveDot, { passive: true });
+  carousel.addEventListener('touchend', () => setTimeout(updateActiveDot, 50), { passive: true });
+
+  // Clique e toque nos dots com área de toque acessível
+  dotButtons.forEach((btn) => {
+    const handleNavigation = (e) => {
+      e.preventDefault();
+      const index = parseInt(btn.getAttribute('data-index'), 10);
+      if (cards[index]) {
+        cards[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        setTimeout(updateActiveDot, 350);
+      }
+    };
+    btn.addEventListener('click', handleNavigation);
+    btn.addEventListener('touchend', handleNavigation, { passive: false });
+  });
+
+  // Atualização inicial
+  updateActiveDot();
+}
+
+/**
+ * Carrossel Mobile na seção de Projetos em Destaque
+ */
+function initProjectsCarousel() {
+  setupMobileCarousel('projetos-carousel', '.carousel-dot', '.project-card-item');
+}
+
+/**
+ * Carrossel Mobile na seção de Metodologia / Fluxo ("Do início à regularização" - 5 Fases)
+ */
+function initEtapasCarousel() {
+  setupMobileCarousel('etapas-carousel', '.etapas-carousel-dot', '.etapa-card-item');
+}
+
+/**
+ * Carrossel Mobile na seção de Projeto Real ("Do terreno à regularização completa" - 6 Etapas)
+ */
+function initCaseRealCarousel() {
+  setupMobileCarousel('casereal-carousel', '.casereal-carousel-dot', '.casereal-card-item');
+}
+
+
 

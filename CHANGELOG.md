@@ -2,6 +2,90 @@
 
 Todas as alterações notáveis deste projeto serão registradas neste arquivo.
 
+## [0.7.52] - 2026-10-16
+### Reformulação Horizontal do Logotipo na Navbar com Símbolo Dourado e Tipografia Vetorial Nítida
+- **Diagnóstico da Ilegibilidade na Navbar:**
+  - O logotipo anterior utilizava uma imagem rasterizada vertical empilhada (`logo-branca.webp`), dividindo a altura da barra (`h-12` = 48px) entre o símbolo superior e duas linhas de texto. No smartphone, o texto inferior *"ARQUITETURA E SERVIÇOS"* ficava reduzido a ~3.2 pixels físicos, resultando em borrões ilegíveis.
+- **Implementação do Logotipo Horizontal Oficial (Padrão de Alta Autoridade):**
+  - **Símbolo Arquitetônico Dourado:** Extração isolada e calibragem do símbolo oficial da marca (`assets/images/logo-symbol-gold.webp`) com fundo transparente antialiased, preservando as linhas arquitetônicas com gradiente bronze/dourado e o checklist de conformidade técnica, exatamente como na referência conceitual (`ref_hero.webp`).
+  - **Tipografia Vetorial Nativa:** Em vez de depender de pixels rasterizados WebP em baixa resolução, a tipografia foi migrada para renderização vetorial nativa do navegador com GPU:
+    - *"ZHAARQ"* em `Tenor Sans` com kerning ampliado (`tracking-[0.2em] sm:tracking-[0.24em]`) e tom marfim nobre (`#FBF9F5`).
+    - Linha divisória *hairline* com gradiente dourado sutil (`bg-gradient-to-r from-brand-gold/60 via-brand-gold to-brand-gold/60`).
+    - *"ARQUITETURA E SERVIÇOS"* em `Jost` caixa alta (`tracking-[0.24em] sm:tracking-[0.28em]`) em tom areia mineral (`#C4B9AC`), 100% nítido e perfeitamente legível tanto em telas HiDPI/Retina quanto em smartphones convencionais.
+- **Equilíbrio Responsivo na Navbar Mobile:**
+  - Calibragem de respiro horizontal e aplicação de `whitespace-nowrap` no botão superior de CTA (*"Analisar meu imóvel"*), prevenindo quebras acidentais de linha em telas compactas (360px a 390px) e mantendo espaçamento fluido entre o logotipo e o botão.
+- **Prevenção de Cache (Cache Busting):**
+  - Atualização dos links de assets para `css/styles.css?v=0.7.52` e `js/main.js?v=0.7.52`.
+- **Validação Visual Rigorosa:**
+  - Capturas via CDP Headless (Edge) comprovando legibilidade absoluta no mobile (`test_logo_navbar_mobile.png`), no desktop (`test_logo_navbar_desktop.png`) e durante o scroll com vidro fumê ativo (`navbar_scrolled_viewport.png`).
+
+## [0.7.51] - 2026-10-16
+### Correção da Sincronização Geométrica dos Dots e Ampliação da Área de Toque Touch no Mobile
+- **Diagnóstico da Causa Raiz:**
+  - O cálculo anterior dependia de uma divisão teórica de `scrollLeft / cardWidth` que se tornava imprecisa devido aos gaps flex (`gap-6` = 24px) e margens negativas, além dos botões dos dots terem apenas 6px de altura visual (`h-1.5`), impedindo o clique com os dedos em smartphones.
+- **Motor Unificado de Carrossel Mobile (`setupMobileCarousel`):**
+  - Implementado algoritmo geométrico de distância mínima ao centro: o script calcula a distância absoluta entre o centro de cada card e o centro da viewport do container (`carouselCenter - cardCenter`), identificando matematicamente o card visível com 100% de precisão em qualquer resolução de celular.
+  - Sincronização a 60fps via `requestAnimationFrame` com múltiplos gatilhos responsivos: `scroll`, `scrollend` e `touchend`.
+  - Tratamento especial para extremos físicos: `activeIndex = 0` no início do scroll e `activeIndex = cards.length - 1` ao atingir o limite direito.
+- **Ampliação da Área de Toque dos Dots (Acessibilidade Mobile):**
+  - Botões indicadores reestruturados com target touch confortável (`py-3 px-1.5`, elevando a área clicável para mais de 30px de altura) contendo elemento visual interno `<span class="dot-pill">`.
+  - Suporte a eventos de `click` e `touchend` direto nos dots para resposta tátil instantânea no smartphone.
+- **Prevenção de Cache (Cache Busting):**
+  - Atualização dos links de assets para `css/styles.css?v=0.7.51` e `js/main.js?v=0.7.51`, forçando a atualização imediata nos celulares e navegadores sem necessidade de limpeza manual de cache.
+- **Validação Visual Rigorosa:**
+  - Captura `casereal_card6_active_verified.png` comprovando que o Card 06 (Averbação no Cartório) acende perfeitamente o Dot 06 em terracota e desativa os anteriores.
+
+## [0.7.50] - 2026-10-16
+### Carrossel Touch com Snap e 6 Dots no Mobile (Projeto Real: Do Terreno à Regularização)
+- **Transformação Responsiva da Seção de Case Real (`#case-real`):**
+  - **Experiência Mobile Otimizada:** Os 6 cards fotográficos do projeto real (01. Condições Iniciais, 02. Desenvolvimento, 03. Aprovação, 04. Conclusão / Habite-se, 05. Receita Federal / CND, e 06. Averbação no Cartório) agora deslizam suavemente em formato de carrossel horizontal nativo com toque (*swipe* e *CSS scroll-snap*), sem barra de rolagem cinza (`.no-scrollbar`).
+  - **Efeito Visual *Peek*:** Cards dimensionados com largura calibrada (`w-[86vw] sm:w-[70vw] md:w-auto`), mantendo a ponta do card seguinte à mostra na lateral direita da tela.
+  - **6 Indicadores de Paginação Interativos (*Dots*):** Conjunto de 6 botões de paginação (`.casereal-carousel-dot`) posicionados abaixo dos cards, sincronizados em tempo real via JavaScript com *debouncing* (40ms) conforme a rolagem do usuário, com navegação suave por clique direto no ponto.
+  - **Dica Visual de Usabilidade:** Indicação de apoio com ícone pulsante (*"Deslize para o lado para ver todas as 6 etapas do projeto real"*) visível unicamente em smartphones (`flex md:hidden`).
+  - **Preservação Integral do Desktop:** A visualização em computadores e tablets (`md:`) permanece rigorosamente na matriz simétrica de 3 colunas por 2 linhas (`md:grid md:grid-cols-2 lg:grid-cols-3`).
+- **Validação Visual via CDP Headless (Edge):**
+  - Geradas capturas comprovando o snap magnético das Etapas 1 e 2 no smartphone (390x844px), a exibição dos 6 dots e a preservação da matriz 3x2 no desktop (1440px).
+
+## [0.7.49] - 2026-10-16
+### Carrossel Touch com Snap e 5 Dots no Mobile (Metodologia: Do Início à Regularização)
+- **Transformação Responsiva da Seção de Fluxo de Trabalho (`#como-funciona`):**
+  - **Experiência Mobile Otimizada:** Os 5 cards orgânicos de fases de trabalho (Diagnóstico Preliminar, Projeto Técnico As-Built, Protocolo & Aprovação, Conclusão & Habite-se, e Averbação no Cartório) agora deslizam suavemente no formato de carrossel horizontal nativo com toque (*swipe* e *CSS scroll-snap*), eliminando a rolagem vertical excessiva em celulares.
+  - **Efeito Visual *Peek* & Proporção Estável:** Cards com largura calibrada (`w-[86vw] sm:w-[70vw] md:w-auto`) e altura mínima uniforme (`min-h-[300px]`), mantendo a borda lateral da próxima etapa sutilmente visível à direita.
+  - **5 Indicadores de Paginação Interativos (*Dots*):** Conjunto de 5 botões de navegação (`.etapas-carousel-dot`) na base da seção, sincronizados automaticamente via JavaScript com *debouncing* (40ms) conforme o usuário rola a tela ou clica diretamente nos pontos.
+  - **Dica Visual de Usabilidade:** Indicação de apoio com ícone pulsante (*"Deslize para o lado para ver todas as 5 etapas"*) visível unicamente em smartphones (`flex md:hidden`).
+  - **Preservação Integral do Desktop:** Em monitores e tablets (`md:` e `lg:`), a seção mantém rigorosamente a régua sequencial com o grid de 5 colunas simétricas (`lg:grid-cols-5`).
+- **Validação Visual via CDP Headless (Edge):**
+  - Geradas capturas comparativas comprovando o snap magnético das Etapas 1 e 2 no celular (390x844px) e a integridade da grade de 5 colunas no desktop (1440px).
+
+## [0.7.48] - 2026-10-16
+### Carrossel Touch com Snap e Indicadores de Paginação no Mobile (Projetos em Destaque)
+- **Transformação Responsiva da Seção de Projetos (`#projetos`):**
+  - **Experiência Mobile:** Os 3 cards de obras reais agora se comportam como um carrossel horizontal suave e nativo (`overflow-x: auto`, `snap-x snap-mandatory`, `scroll-smooth`), sem barra de rolagem cinza antiestética (`.no-scrollbar`).
+  - **Efeito Visual *Peek*:** Cards dimensionados com largura calibrada (`w-[86vw] sm:w-[70vw]`), mantendo a ponta do card seguinte visível na lateral direita para induzir o deslize natural por toque (*swipe*).
+  - **Sangria Negativa Inteligente:** Uso de `-mx-4 px-4` garantindo que o primeiro card comece alinhado com as margens da página, mas deslize até as bordas físicas da tela do smartphone.
+  - **Indicadores de Paginação Interativos (*Dots*):** 3 botões estilizados na base dos cards sincronizados em tempo real via JavaScript Vanilla com *debouncing*, permitindo navegação tanto por toque direto no card quanto por clique nos pontos indicadores.
+  - **Dica Visual de Usabilidade:** Mensagem sutil com ícone animado (*"Deslize para o lado para ver outros projetos"*) exibida exclusivamente em telas móveis (`flex md:hidden`).
+  - **Preservação Integral do Desktop:** A visualização em computadores e tablets acima de 768px (`md:`) permanece rigorosamente em grid simétrico de 3 colunas (`md:grid md:grid-cols-2 lg:grid-cols-3`).
+- **Otimização de Estilos no CSS ([css/styles.css](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/css/styles.css)):**
+  - Adicionado utilitário `.no-scrollbar` com suporte cross-browser completo (`-ms-overflow-style: none`, `scrollbar-width: none`, `&::-webkit-scrollbar: display: none`).
+- **Validação Visual via CDP Headless (Edge):**
+  - Geradas capturas comparativas comprovando o snap preciso do Card 1 e Card 2 em smartphone (390x844px) e a conservação da grade simétrica no desktop (1440px).
+
+## [0.7.47] - 2026-10-16
+### Destaque de Anistia Municipal & Amparo Legal na Tela Inicial (Hero & Top Bar)
+- **Top Announcement Bar de Anistia Municipal:**
+  - Integrada barra superior discreta e sofisticada no topo da página (`<aside>`), com alerta âmbar pulsante e chamada para as leis de anistia vigentes em São Paulo, Guarulhos, Suzano e Itaquaquecetuba.
+- **Card de Amparo Legal na Hero Section:**
+  - Criado card pericial com acabamento em vidro escuro (*glassmorphism*), borda em ouro envelhecido e efeito de profundidade, posicionado na área superior esquerda da Hero sem cobrir a fotografia ou a presença da arquiteta.
+  - Implementado grid 2x2 responsivo com as 4 legislações municipais oficiais fornecidas:
+    1. **São Paulo:** Lei nº 17.202/2019
+    2. **Guarulhos:** Lei nº 8.530/2026
+    3. **Suzano:** Lei Complementar nº 423/2026
+    4. **Itaquaquecetuba:** Lei Complementar nº 395/2024
+  - **Conversão Contextualizada via WhatsApp:** Cada chip direciona o visitante para o atendimento técnico da ZHAARQ com a mensagem pré-configurada da legislação daquele município específico.
+- **Validação Visual Responsiva:**
+  - Capturas e validações em Desktop (1440px) e Mobile (390px) com legibilidade imediata e preservação da hierarquia do título principal.
+
 ## [0.7.46] - 2026-10-15
 ### Correção de Alinhamento Superior dos Cards do Projeto Real (Top-Aligned)
 - **Alinhamento Uniforme dos Textos no Topo:**
