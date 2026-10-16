@@ -2,6 +2,14 @@
 
 Todas as alterações notáveis deste projeto serão registradas neste arquivo.
 
+## [0.7.46] - 2026-10-15
+### Correção de Alinhamento Superior dos Cards do Projeto Real (Top-Aligned)
+- **Alinhamento Uniforme dos Textos no Topo:**
+  - Substituição da propriedade `justify-between` por `justify-start` nos containers dos 6 cards da seção `#case-real` ([index.html](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/index.html)).
+  - Correção do espaçamento vertical irregular: os títulos e descrições agora iniciam rigorosamente na mesma linha horizontal superior logo abaixo da foto (`mb-4`), eliminando o vão em branco que empurrava o texto dos cards com menos conteúdo (como a Etapa 04 - Habite-se) para o rodapé do card.
+- **Validação Visual:**
+  - Captura e validação da grade 3x2 em desktop demonstrando o alinhamento milimétrico e simétrico de todas as 6 etapas fotográficas.
+
 ## [0.7.45] - 2026-10-15
 ### Conclusão Integral do Projeto Real (Etapa 06 - Averbação no Cartório de Registro de Imóveis)
 - **Fotografia Oficial de Averbação Cartorária:**

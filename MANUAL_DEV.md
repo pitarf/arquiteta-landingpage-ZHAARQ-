@@ -14,6 +14,7 @@ Landing Page de alta conversão para o escritório de arquitetura **ZHAARQ**, de
   - Carrossel Vertical com Stacking Cards na Seção de Especialidades (cabeçalho `.services-sticky-header` fixo no topo com `z-index: 50` e fundo translúcido blur; 5 cartões esculturais empilháveis com `sticky`, offsets escalonados de topo logo abaixo do título fixo, margem ultra-curta de 20px para sobreposição imediata idêntica à referência, zeramento de padding-bottom residual na base e transição contínua para a seção de diagnóstico, animação JS de escala `scale(0.95)` e escurecimento gradual, sem bibliotecas pesadas de terceiros).
   - Dossiê Pericial com 4 fichas técnicas de inconformidade (Fiscal, Financiamento, Jurídico, Administrativo).
   - Régua Sequencial de 5 Fases de Engenharia e Trâmite com entregáveis formais e cards orgânicos inspirados na referência.
+  - Matriz 3x2 do Case Real com 6 etapas fotográficas em proporção 4:3 e alinhamento superior (`justify-start`), garantindo alinhamento horizontal uniforme de títulos e textos em todas as colunas.
   - FAQ com linhas horizontais puras e transições suaves.
   - Rodapé Institucional em 4 colunas clássicas com divisórias verticais.
 - **JavaScript Vanilla Modular (`js/main.js`):** Sem bibliotecas pesadas:
