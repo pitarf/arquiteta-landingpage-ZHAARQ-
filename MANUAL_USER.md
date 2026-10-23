@@ -26,3 +26,17 @@ O número oficial do WhatsApp da ZHAARQ está configurado globalmente em todas a
 - **Sobre a Arquiteta:** Perfil institucional com retrato de alta autoridade da Arquiteta Juliana Lucena atuando no ateliê ZHAARQ sobre pranchas arquitetônicas, logotipo iluminado e instrumentos de projeto, citação autoral, certificação ativa no CAU/SP e credenciais.
 - **FAQ Expansível:** Acordeão em linhas minimalistas com respostas diretas para quebrar objeções imediatas.
 - **Super CTA e Rodapé:** Bloco escultural com atendimento via WhatsApp e rodapé arquitetônico completo em 4 colunas.
+
+## 5. Onde Hospedar e Como Manter o Site Online
+A Landing Page foi desenvolvida com arquitetura ultra-rápida e leve (estática), podendo ser hospedada com custo zero ou muito baixo e máxima segurança:
+
+### Opção 1: Hostinger (Ideal para quem já tem hospedagem e e-mails profissionais)
+- **Vantagem:** Permite manter o site, o domínio (`zhaarq.com.br`) e os e-mails corporativos da equipe em uma única fatura e painel.
+- **Como publicar:** Basta acessar o hPanel da Hostinger, abrir o **Gerenciador de Arquivos** e fazer o upload dos arquivos da pasta do projeto dentro de `public_html/`. O arquivo [.htaccess](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/.htaccess) já configurado garantirá certificado SSL seguro (cadeado verde/HTTPS) e carregamento veloz.
+
+### Opção 2: Vercel (Ideal para máxima velocidade e atualizações automáticas via GitHub)
+- **Vantagem:** Gratuita no plano inicial, conta com rede de servidores ultrarrápidos no Brasil (São Paulo) e atualiza o site automaticamente em segundos a cada novo salvamento no GitHub (`git push`).
+- **Como publicar:** Basta conectar a conta do GitHub na Vercel e selecionar o repositório `pitarf/arquiteta-landingpage-ZHAARQ-`. O site ganha endereço oficial com certificado SSL automático.
+
+### Recomendação Prática:
+Se você já paga a Hostinger para ter as contas de e-mail corporativo da ZHAARQ, pode subir diretamente nela em `public_html/`. Se desejar automação total e velocidade máxima de CDN, a Vercel é a melhor escolha técnica. Ambas são 100% compatíveis!

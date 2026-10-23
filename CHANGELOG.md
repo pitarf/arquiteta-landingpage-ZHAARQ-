@@ -2,6 +2,32 @@
 
 Todas as alterações notáveis deste projeto serão registradas neste arquivo.
 
+## [0.7.54] - 2026-10-23
+### Infraestrutura de Produção e Suporte Turnkey para Hospedagem (Hostinger & Vercel)
+- **Configuração Especializada para Hostinger (`.htaccess`):**
+  - Criação do arquivo de servidor `.htaccess` otimizado para LiteSpeed / Apache.
+  - Redirecionamento automático e forçado para conexão segura HTTPS (porta 443).
+  - Compressão GZIP / Deflate ativada para tipos de texto e código (`text/html`, `text/css`, `application/javascript`, `image/svg+xml`).
+  - Políticas de cache de alto desempenho (`mod_expires` e `mod_headers`) com expiração de 1 ano para WebP, SVG, WOFF2, CSS e JS (`max-age=31536000, public`).
+  - Prevenção de navegação em diretórios abertos (`Options -Indexes`).
+- **Configuração Especializada para Vercel Edge (`vercel.json`):**
+  - Criação do manifesto oficial de deploy na Vercel com roteamento limpo de rotas estáticas (`cleanUrls: true`).
+  - Injeção de cabeçalhos de segurança HTTP modernos: `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`.
+  - Configuração de cache imutável para assets estáticos na rede global Edge (`public, max-age=31536000, immutable`).
+- **Documentação de Publicação:**
+  - Inclusão dos guias práticos e técnicos passo a passo em [MANUAL_DEV.md](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/MANUAL_DEV.md) e [MANUAL_USER.md](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/MANUAL_USER.md).
+
+## [0.7.53] - 2026-10-23
+### Atualização e Unificação da Copy Técnica da Etapa 05 do Projeto Real (Receita Federal & CND)
+- **Unificação da Descrição do Card 05 (`#case-real`):**
+  - Substituição da divisão em dois parágrafos por texto único coeso, direto e profissional:
+    > *"Abertura do CNO, aferição da obra e emissão da CND junto à Receita Federal, com regularização das contribuições previdenciárias e aplicação de estratégias técnicas para buscar a redução de até 70% do valor inicialmente calculado, conforme as características da obra e os critérios legais aplicáveis."*
+  - Equalização do espaçamento vertical com `space-y-1` para harmonizar com a estrutura simétrica dos demais 5 cards de etapas.
+- **Prevenção de Cache (Cache Busting):**
+  - Atualização dos links de assets para `css/styles.css?v=0.7.53` e `js/main.js?v=0.7.53`.
+- **Validação Visual Rigorosa:**
+  - Capturas via CDP Headless (Edge) comprovando alinhamento estético no desktop (`casereal_desktop_card5_updated.png`) e no carrossel touch do smartphone (`casereal_mobile_card5_updated.png`).
+
 ## [0.7.52] - 2026-10-16
 ### Reformulação Horizontal do Logotipo na Navbar com Símbolo Dourado e Tipografia Vetorial Nítida
 - **Diagnóstico da Ilegibilidade na Navbar:**

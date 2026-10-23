@@ -98,6 +98,10 @@
   - [x] Carrossel Mobile Touch com Snap e 6 Dots no Projeto Real: conversão dos 6 cards fotográficos da seção `#case-real` em carrossel deslizável horizontal por toque no smartphone (`w-[86vw]`, `snap-center`), barra de rolagem oculta, 6 botões de dots sincronizados via JS vanilla e preservação da matriz 3x2 no desktop.
   - [x] Correção de Sincronização Geométrica dos Dots & Targets de Toque Touch: reestruturação do motor de carrossel móvel (`setupMobileCarousel`) com cálculo geométrico central a 60fps (`requestAnimationFrame`), eliminação de erros por divisão de largura, botões de dots acessíveis com target de clique ampliado (`py-3 px-1.5`) e cache busting nos assets (`?v=0.7.51`).
   - [x] Reformulação Horizontal do Logotipo na Navbar com Máxima Legibilidade: substituição do arquivo vertical empilhado por layout horizontal de alta resolução inspirado na referência original (`ref_hero.webp`), combinando o símbolo arquitetônico dourado oficial (`logo-symbol-gold.webp`) com tipografia vetorial nativa do navegador (`Tenor Sans` e `Jost`), divisor com gradiente dourado e estabilização responsiva sem quebra do botão CTA no mobile (`?v=0.7.52`).
+  - [x] Atualização e Unificação da Copy Técnica da Etapa 05 do Projeto Real: unificação dos dois parágrafos do Card 05 (Receita Federal & CND) em texto único objetivo e alinhado aos critérios legais e técnicos, com padronização de espaçamento (`space-y-1`) e validação visual (`?v=0.7.53`).
+  - [x] Preparação de Infraestrutura Turnkey para Hostinger: criação do arquivo [.htaccess](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/.htaccess) com redirecionamento HTTPS obrigatório, compressão GZIP e cache estático de alta performance (1 ano) para WebP, SVG, CSS e JS em servidores Apache/LiteSpeed.
+  - [x] Preparação de Infraestrutura Turnkey para Vercel: criação do arquivo [vercel.json](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/vercel.json) com roteamento direto, cabeçalhos de proteção (X-Frame-Options, X-Content-Type-Options) e cache no Edge Network global.
+  - [x] Documentação Completa de Deploy nos Manuais: inclusão dos procedimentos de publicação passo a passo no [MANUAL_DEV.md](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/MANUAL_DEV.md) e [MANUAL_USER.md](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/MANUAL_USER.md).
 - [x] **Instalação e Integração do Graphify (Otimização de Processamento & Tokens):**
   - [x] Instalação do pacote oficial `graphifyy` (v0.9.90) com AST Tree-sitter e NetworkX.
   - [x] Registro das regras em `.agents/rules/graphify.md` e workflows em `.agents/workflows/graphify.md`.
@@ -107,7 +111,8 @@
 - [x] Servidor de desenvolvimento local iniciado e rodando ativamente na porta 3000 (`http://localhost:3000`).
 
 ### Fazendo
-- [ ] Validação visual e interação em tempo real com o usuário.
+- [ ] Apoio ao usuário na escolha entre Hostinger e Vercel e execução do deploy.
 
 ### Pendentes
-- [ ] Publicação/Deploy em ambiente de produção (Netlify, Vercel ou hospedagem do cliente).
+- [ ] Ativação final do domínio oficial da ZHAARQ e emissão do certificado SSL em produção.
+

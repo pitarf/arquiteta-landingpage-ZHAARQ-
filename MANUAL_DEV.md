@@ -65,8 +65,6 @@ Basta abrir o arquivo [index.html](file:///c:/Git/React/Landing%20Page%20-%20aRQ
 ```powershell
 python -m http.server 3000
 ```
-E acessar `http://localhost:3000`.
-
 ## 6. Otimização com Graphify (Knowledge Graph AST & Redução de Tokens)
 O projeto conta com o **Graphify** instalado e integrado ao assistente de inteligência artificial:
 - **Finalidade:** Mapear a arquitetura, dependências de funções, nós do DOM e scripts em um Grafo de Conhecimento estruturado, evitando que o assistente precise reler repetidamente dezenas de arquivos inteiros a cada comando (economia drástica de tokens e tempo de resposta).
@@ -77,3 +75,28 @@ O projeto conta com o **Graphify** instalado e integrado ao assistente de inteli
 ```powershell
 graphify update .
 ```
+
+## 7. Guia de Publicação e Hospedagem (Hostinger & Vercel)
+A Landing Page possui arquitetura **100% estática (JAMstack)**: não necessita de banco de dados, interpretador PHP nem servidor Node.js em tempo de execução. Roda com altíssimo desempenho em qualquer servidor web ou CDN global.
+
+### Opção A: Hostinger (Hospedagem Compartilhada / Cloud)
+- **Arquivo de Configuração:** [.htaccess](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/.htaccess) incluído na raiz.
+- **Recursos Configurados:** Redirecionamento forçado para HTTPS, compressão GZIP/Deflate para HTML/CSS/JS e cache estático (`ExpiresByType` / `Cache-Control`) de 1 ano para WebP, SVG, fontes e estilos.
+- **Passo a Passo de Publicação:**
+  1. No painel da Hostinger (hPanel), acesse **Sites** > **Gerenciador de Arquivos** (ou conecte via FTP/SFTP).
+  2. Navegue até o diretório raiz `public_html/`.
+  3. Envie todos os arquivos e pastas do projeto (`index.html`, `.htaccess`, `css/`, `js/`, `assets/`, etc.).
+  4. Ative o certificado SSL gratuito (Let's Encrypt) pelo painel da Hostinger.
+  5. O site estará online imediatamente com e-mails corporativos (`@zhaarq.com.br`) funcionando normalmente sob a mesma hospedagem.
+
+### Opção B: Vercel (Edge CDN Global)
+- **Arquivo de Configuração:** [vercel.json](file:///c:/Git/React/Landing%20Page%20-%20aRQUITETA/vercel.json) incluído na raiz.
+- **Recursos Configurados:** Roteamento de rotas limpas, cabeçalhos de segurança contra Clickjacking e XSS (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`) e cache imutável no Edge Network.
+- **Passo a Passo de Publicação:**
+  1. Acesse o painel da [Vercel](https://vercel.com) e clique em **Add New Project**.
+  2. Importe o repositório oficial do GitHub: `pitarf/arquiteta-landingpage-ZHAARQ-`.
+  3. No campo **Framework Preset**, selecione **Other**. Em **Root Directory**, deixe `./`.
+  4. Clique em **Deploy**. O deploy leva cerca de 15 segundos.
+  5. Para associar o domínio próprio (ex: `zhaarq.com.br`), acesse **Settings > Domains** na Vercel e insira o apontamento DNS tipo `A` ou `CNAME`. A Vercel gera o certificado SSL automaticamente.
+  6. **Deploy Contínuo:** Cada `git push origin main` atualizará a página em produção automaticamente.
+
